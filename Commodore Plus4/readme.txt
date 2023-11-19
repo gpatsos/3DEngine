@@ -1,6 +1,17 @@
-3D Engine v2.5 (Commodore BASIC 3.5)
+3D Engine (Commodore BASIC 3.5)
 for the Commodore plus/4
 by Georgios Patsos 10.09.2020
+
+Version differences:
+
+v1.0:
+First release. Included for historic reasons. Use v2.0 or v2.5.
+
+v2.0: 
+slower but more precise, because it calculates the Normals by itself. Userinterface is not refined.
+
+v2.5:
+faster but not so precise, because it imports the Normals from Blender. Userinterface is more refined. It has also the autocenter and autoscale feature.
 
 Introduction:
 With this software you can render Wavefront Obj-Files on a commodore plus/4, 16 or 116.The code also works on a commodore 128.
