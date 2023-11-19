@@ -1,5 +1,4 @@
-3D Engine  (Commodore BASIC 3.5)
-for the Commodore plus/4
+3D Engine  (BASIC)
 by Georgios Patsos 
 
 Version differences:
@@ -14,7 +13,7 @@ v2.5:
 faster but not so precise, because it imports the Normals from Blender. Userinterface is more refined. It has also the autocenter and autoscale feature.
 
 Introduction:
-With this software you can render Wavefront Obj-Files on a commodore plus/4, 16 or 116.The code also works on a commodore 128.
+With this software you can render Wavefront Obj-Files on different homecomputers froms the 80's in BASIC. I will add more supported Systems from time to time.
 
 The idea for this experimental BASIC renderer is from 1985, when i got a commodore plus/4, my first computer. Consider it as experimental, it won't render every 3D model perfectly, but you can achieve good results. I tested the software on a real plus/4 and with the Yape-Emulator on full throttle (2000%) and DRIVE 8 mode in IEC Level/Performance mode. 
 
