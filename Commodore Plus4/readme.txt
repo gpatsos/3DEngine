@@ -84,9 +84,9 @@ Delivered files:
 
  * suzanne.png
 
-This small project recieved general positive recations. Many people from all over the world, sceners, 3D artists, artists, egineers (NASA), programmers, filmakers, teachers, university-professors, gamedevelopers, youtubers, hobbyists and enthusiast like me, also people who arent involved in computers, contacted me to express how much they like the renders. These simple wireframe graphics seem to have a generall appeal to everyone.
+This small project recieved general positive recations. Many people from all over the world, sceners, 3D artists, artists, engineers (NASA), programmers, filmakers, teachers, university-professors, gamedevelopers, youtubers, hobbyists and enthusiast like me, also people who arent involved in computers, contacted me to express how much they like the renders. These simple wireframe graphics seem to have a generall appeal to everyone.
 
-Their positive feed always kept me motivated to improve this little programm and push the boundaries further and further.
+Their positive feedback always kept me motivated to improve this little programm and push the boundaries further and further.
 
 If you want to thank me and keep my motiviation up you can 
 
