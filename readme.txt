@@ -1,69 +1,31 @@
-3D Engine 2.5 (BASIC)
+3D Engine  (Commodore BASIC 3.5)
+for the Commodore plus/4
+by Georgios Patsos 
 
-https://www.youtube.com/@GeorgesChannel
-https://ko-fi.com/georgeschannel
-http://www.georgeschannel.de
+Version differences:
+
+v1.0:
+First release. Included for historic reasons. Use v2.0 or v2.5.
+
+v2.0: 
+slower but more precise, because it calculates the Normals by itself. Userinterface is not refined.
+
+v2.5:
+faster but not so precise, because it imports the Normals from Blender. Userinterface is more refined. It has also the autocenter and autoscale feature.
 
 Introduction:
-With this very experimental software you can render Wavefront Obj-Files on various 8bit/16bit machines mainly from the 80's/90's. 
+With this software you can render Wavefront Obj-Files on a commodore plus/4, 16 or 116.The code also works on a commodore 128.
 
-The project startet on the Commodore Plus/4 in 2019 and its the main version, where all new features will implemented first.
+The idea for this experimental BASIC renderer is from 1985, when i got a commodore plus/4, my first computer. Consider it as experimental, it won't render every 3D model perfectly, but you can achieve good results. I tested the software on a real plus/4 and with the Yape-Emulator on full throttle (2000%) and DRIVE 8 mode in IEC Level/Performance mode. 
 
-The project is in constant development and the ports for different machines are in different states. I will add and update the various ports into this repository from time to time.
+The code is kept small by intention with a very simple user-interface to have more RAM for the model-data left. Its also written by intention in BASIC to be easy portable on other Systems.
 
-The code is usually unoptimized, not bugfree and it won't render every 3D model perfectly, but with some effort and experience you can achieve good results. Its kept small by intention with a very simple user-interface to have more RAM for the model-data left. Its also written by intention in BASIC to be easy portable on other systems.
+New Youtube tutorial (English): https://youtu.be/Zo7tMpFoxLY
+Watch my channel to see some other models i have renderd with this small BASIC-Engine on other platforms like the Atari ST.
 
-How to run the program:
-1. Put the two files vertex.seq and planes.seq into the accessable directory or disc
-2. Run the BASIC-Code (i choose copy&paste from an editor into emulator). It loads vertex.seq and parses later planes.seq (sequential files).
 
-Usage:
-After the vertices are loaded the model-vertices (3d-points) are drawn first. 
-When the Symbol (!) appears in upper left, you have following choices by pressing one of the following keys:
-                                       
-L - START RENDERING              
-I - INFO: DISPLAY CURRENT VALUES        
-                                        
-X - ANGLE X-AXIS
-Y - ANGLE Y-AXIS
-Z - ANGLE Z-AXIS
-                                        
-V - VERTICAL POSITION
-H - HORIZONTAL POSITION
-                                        
-M - ZOOM-FACTOR
-C - DRAW ONLY FACES WITH AREA OVER CP
-E - FISHEYE
-D - SWITCH BETWEEN WIREFRAME (cd=0) AND FILLED FACES(cd=1)
-
-F - Alternates the frame color (helps when zooming and positioning the model)
-
-U - SCALE MODEL UP TO BORDER
-N - CENTER MODEL
-
-B - RESTART PROGRAM
-Q - QUIT PROGRAMM
-
-How to render your own object:
- 1. Create a 3d-Model in Blender 2.79 (or other 3d-Programm) with max 800 verts (or more depending of your free BASIC memory)
- 2. Keep the models as simple as possible, convex and avoid too complex faces. Ideal are triangles or squares faces.
- 3. Export your model as OBJ File with "write Normals" Option clicked
- 4. Convert the OBJ File with converter_p4_Normals.exe (Dotnet-Application). It outputs two files: vertex.seq and planes.seq
- 5. Put the two files vertex.seq and planes.seq into the accesable directory/disc
- 6. Run the BASIC-Code (i choose copy&paste from an editor). It loads vertex.seq and parses later planes.seq (sequential files).
-
-Youtube tutorial (English, Commodore Plus/4 version): 
-https://youtu.be/Zo7tMpFoxLY
-
-Important Variables in the code:
-Line 30 gx=0:gy=135:gz=210 
-(Rotation of the object around the midpoint in x,y,z axis in degrees)
-
-Line 50 dx=130:dy=90: l=14: cp=2  
-(dx,dy:Position of the midpoint in the Screen (Standard dx=160, dy=100), l = Scalefactor, cp=Filters all faces out, which have area value smaller 2)
-
-Epilog:
 This small project recieved general positive recations. Many people from all over the world, sceners, 3D artists, artists, engineers (NASA), programmers, filmakers, teachers, university-professors, gamedevelopers, youtubers, hobbyists and enthusiast like me, also people who arent involved in computers, contacted me to express how much they like the renders. These simple wireframe graphics seem to have a generall appeal to everyone.
+
 Their positive feedback always kept me motivated to improve this little programm and push the boundaries further and further.
 
 If you want to thank me and keep my motiviation up you can 
@@ -78,3 +40,4 @@ If you want to thank me and keep my motiviation up you can
 
 Greetings
 George from "George's Channel"
+
