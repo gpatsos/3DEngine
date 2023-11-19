@@ -60,7 +60,11 @@ Line 30 gx=0:gy=135:gz=210
 (Rotation of the object around the midpoint in x,y,z axis in degrees)
 
 Line 50 dx=130:dy=90: l=14: cp=2  
-(dx,dy:Position of the midpoint in the Screen (Standard dx=160, dy=100), l = Scalefactor, cp=Filters all faces out, which have area value smaller 2
+(dx,dy:Position of the midpoint in the Screen (Standard dx=160, dy=100), l = Scalefactor, cp=Filters all faces out, which have area value smaller 2)
+
+Epilog:
+This small project recieved general positive recations. Many people from all over the world, sceners, 3D artists, artists, engineers (NASA), programmers, filmakers, teachers, university-professors, gamedevelopers, youtubers, hobbyists and enthusiast like me, also people who arent involved in computers, contacted me to express how much they like the renders. These simple wireframe graphics seem to have a generall appeal to everyone.
+Their positive feedback always kept me motivated to improve this little programm and push the boundaries further and further.
 
 If you want to thank me and keep my motiviation up you can 
 
@@ -71,7 +75,6 @@ If you want to thank me and keep my motiviation up you can
  https://www.youtube.com/@GeorgesChannel
 
 * just give some positive ands constructive feedback
-
 
 Greetings
 George from "George's Channel"
