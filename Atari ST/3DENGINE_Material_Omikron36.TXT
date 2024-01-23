@@ -1,0 +1,212 @@
+5 COMPILER "flags 7; 68020"
+10 DEFSNG "A-Z": CLS : CLIP 0,0,640,480: PRINT CHR$(27)+"f"
+11 GOSUB 2400: REM ON ERROR GOTO 20
+12 OPEN "I",1,"c:\palette.seq"
+13 FOR I!=0 TO 15
+14 INPUT #1,R!,G!,B!,Name$
+15 Fbw%= INT((7*R!) SHL 8)+ INT((7*G!) SHL 4)+ INT(7*B!)
+16 PRINT R!,G!,B!,Fbw%,Name$
+17 Fa!=I!: XBIOS (R!,7,P2h%(Fa!),Fbw%):
+18 NEXT
+19 CLOSE : REPEAT :A$= INKEY$ : UNTIL A$>""
+20 Gx!=0:Gy!=210:Gz!=180:P!= PI /180: FILL COLOR =0: PBOX 0,0 TO 640,400
+30 Cf!=0:Cd!=1:Cc!=100: LINE COLOR =Cd!
+40 Fs!=1200:Dx!=320:Dy!=220:L!=80:Cp!=.5
+60 OPEN "I",1,"c:\vertex.seq"
+70 INPUT #1,C$,D$,H$,U$
+75 C%L= VAL(C$):D%L= VAL(D$):H%L= VAL(H$): DIM U%L( VAL(U$)): DIM Sl%L( VAL(U$)): DIM Xi!( VAL(U$))
+76 REM PRINT C$,D$,U$,H$,U$
+80 DIM X%(C%L): DIM Y%(C%L): DIM Z%(C%L):
+90 DIM Vx%(C%L): DIM Vy%(C%L): DIM Vz%(C%L)
+100 DIM Oo%L(50000): DIM Oi%L(50000): DIM Ff%L(200000)
+101 DIM Col!(20): FOR I!=0 TO 19:Col!(I!)=0: NEXT I!
+110 PRINT @(0,0);"Loading Vertices"
+120 FOR A%L=1 TO C%L
+130 INPUT #1,X%(A%L),Y%(A%L),Z%(A%L)
+150 IF A%L MOD 1000=0 THEN PRINT @(1,0); STR$(A%L)+"/"+ STR$(C%L)
+160 NEXT A%L
+170 CLOSE
+190 GOTO 470
+220 REPEAT :A$= INKEY$ : UNTIL A$>"":A$= RIGHT$(A$,1): LINE COLOR =Cd!
+230 IF A$="x" THEN Gx!=Gx!+5
+240 IF A$="y" THEN Gy!=Gy!+10
+250 IF A$="c" THEN Gz!=Gz!+15
+270 IF A$="b" THEN Gx!=Gx!-5
+280 IF A$="n" THEN Gy!=Gy!-15
+290 IF A$="m" THEN Gz!=Gz!-15
+320 IF A$="w" THEN Dy!=Dy!-20
+330 IF A$="a" THEN Dx!=Dx!-20
+340 IF A$="d" THEN Dx!=Dx!+20
+350 IF A$="s" THEN Dy!=Dy!+20
+355 IF A$="p" THEN GOSUB 2400
+370 IF A$="q" THEN Fs!=Fs!+1
+380 IF A$="e" THEN Fs!=Fs!-1
+390 IF A$="t" THEN L!=L!+1
+400 IF A$="g" THEN L!=L!-1
+410 IF A$="l" THEN GOTO 680
+430 IF A$="i" THEN PRINT @(0,0);"gx:"+ STR$(Gx!)+" dx:"+ STR$(Dx!)+" l:"+ STR$(L!)
+440 IF A$="i" THEN PRINT @(1,0);"gy:"+ STR$(Gy!)+" dy:"+ STR$(Dy!)+" t:"+ STR$(Tim!/200)
+450 IF A$="i" THEN PRINT @(2,0);"gz:"+ STR$(Gz!)+" fs:"+ STR$(Fs!): GOTO 220
+470 REM 7290
+480 CLS : PBOX 0,0 TO 640,480
+500 Rx!=Gx!*P!
+510 Ry!=Gy!*P!
+520 Rz!=Gz!*P!
+530 Cx!= COS(Rx!):Sx!= SIN(Rx!)
+540 Cy!= COS(Ry!):Sy!= SIN(Ry!)
+550 Cz!= COS(Rz!):Sz!= SIN(Rz!)
+551 Maxz!=-9999:Minz!=9999
+570 FOR Np%L=1 TO C%L
+580 Xp!=X%(Np%L)/D%L*L!
+590 Yp!=Y%(Np%L)/D%L*L!
+600 Zp!=Z%(Np%L)/D%L*L!
+620 GOSUB 1300
+630 X1%=Dx!+ INT((Xp!*Fs!)/(Zp!+Fs!))
+640 Y1%=Dy!+ INT((Yp!*Fs!)/(Zp!+Fs!))
+641 Vx%(Np%L)=X1%
+642 Vy%(Np%L)=Y1%
+643 Vz%(Np%L)=Zp!
+650 DRAW X1%,Y1%
+651 IF Zp!<Minz! THEN Minz!=Zp!
+652 IF Zp!>Maxz! THEN Maxz!=Zp!
+660 NEXT
+670 PRINT @(0,0);"!": GOTO 220
+680 REM 700
+690 Tim!= TIMER
+700 OPEN "I",1,"c:\planes.seq"
+710 I%=1:Fr%L=0:Ff%L=0:Ii%L=0:Fv%L=0
+715 PRINT @(0,0);"Find Faces": LINE COLOR =1: FILL COLOR =1: OUTLINE ON : FILL STYLE =0,1
+720 FOR A%L=1 TO H%L
+730 INPUT #1,V%L
+740 U%L(I%)=V%L
+750 IF V%L>0 THEN I%=I%+1: ELSE Fr%L=Fr%L+1: GOSUB 790:I%=1
+770 NEXT
+780 CLOSE : GOSUB 1500:Tim!= TIMER -Tim!: GOTO 220
+790 REM 11000
+810 G%=3:P0%L=U%L(G%-2):A9%=0:Oo%L=0
+820 REM 11003
+830 P1%L=U%L(G%-2):P2%L=U%L(G%-1):P3%L=U%L(G%)
+840 REM gosub 1290
+850 IF G%>3 THEN X1%=X2%:Y1%=Y2%:Z1%=Z1%
+855 IF G%>3 THEN X2%=X3%:Y2%=Y3%:Z2%=Z3%: GOTO 980
+860 Xp!=X%(P1%L)
+870 Yp!=Y%(P1%L)
+880 Zp!=Z%(P1%L)
+890 GOSUB 1290
+900 X1%=Xp!:Y1%=Yp!:Z1%=Zp!
+920 Xp!=X%(P2%L)
+930 Yp!=Y%(P2%L)
+940 Zp!=Z%(P2%L)
+950 GOSUB 1290
+960 X2%=Xp!:Y2%=Yp!:Z2%=Zp!
+980 Xp!=X%(P3%L)
+990 Yp!=Y%(P3%L)
+1000 Zp!=Z%(P3%L)
+1010 GOSUB 1290
+1020 X3%=Xp!:Y3%=Yp!:Z3%=Zp!
+1030 IF G%>3 THEN GOTO 1150
+1040 Lx%=X2%-X1%:Px%=X3%-X1%
+1050 Ly%=Y2%-Y1%:Py%=Y3%-Y1%
+1060 Lz%=Z2%-Z1%:Pz%=Z3%-Z1%
+1080 Xn%L=(Ly%*Pz%)-(Lz%*Py%)
+1090 Yn%L=(Lz%*Px%)-(Lx%*Pz%)
+1100 Zn%L=(Lx%*Py%)-(Ly%*Px%)
+1120 REM Le= SQR(Xn%L*Xn%L+Yn%L*Yn%L+Zn%L*Zn%L)
+1130 REM IF Le<>0 THEN Xn=Xn%L/Le:Yn=Yn%L/Le:Zn=Zn%L/Le
+1140 REM W=Xn*X1%+Yn*Y1%+Zn*Z1%
+1145 REM IF W<0 THEN RETURN
+1150 REM IF Zn%L>0 THEN RETURN
+1160 GOSUB 1350: GOSUB 2390
+1161 IF Ar!<=Cp! THEN RETURN
+1180 G%=G%+1:Oo%L=Oo%L+Z1%
+1190 IF U%L(G%)>0 THEN GOTO 820: ELSE K%=G%: GOSUB 1800:Oo%L=((Oo%L+Z2%+Z3%)/(G%-1))*100: REM gosub 1800
+1200 Ff%L=Ff%L+1: REM PRINT @(1,0);"f:"+ STR$(Ff%L)
+1210 Fv%L=Fv%L+G%: REM PRINT @(2,0);"v:"+ STR$(Fv%L)
+1220 Oo%L(Ff%L)=Oo%L: REM Oo%L(ff)=(z1+z2+z3)
+1221 Oi%L(Ff%L)=Ii%L+1
+1230 FOR Yy%=1 TO G%-1
+1240 Ff%L(Ii%L+Yy%)=U%L(Yy%)
+1250 NEXT
+1260 Ff%L(Ii%L+G%)=V%L:Ii%L=Ii%L+G%: REM statt V%L, Fr%L*(-1)
+1270 RETURN
+1290 REM 40000
+1300 Yt!=Yp!:Yp!=Cx!*Yt!-Sx!*Zp!:Zp!=Sx!*Yt!+Cx!*Zp!
+1310 Xt!=Xp!:Xp!=Cy!*Xt!+Sy!*Zp!:Zp!=-Sy!*Xt!+Cy!*Zp!
+1320 Xt!=Xp!:Xp!=Cz!*Xt!-Sz!*Yp!:Yp!=Sz!*Xt!+Cz!*Yp!
+1330 RETURN
+1350 REM 40004
+1360 X1%=Vx%(P1%L):Y1%=Vy%(P1%L)
+1370 X2%=Vx%(P2%L):Y2%=Vy%(P2%L)
+1380 X3%=Vx%(P3%L):Y3%=Vy%(P3%L)
+1390 RETURN
+1410 REM 40020
+1420 REM shell sort
+1421 REM SORT Oo%L(Ff%L) TO Oi%L(Ff%L): RETURN
+1430 W1%L=Ff%L
+1431 PRINT @(2,0);"         "
+1432 PRINT @(3,0);"         "
+1435 PRINT @(1,0); STR$(Ff%L)+"->"+ STR$(W1%L)+"    "
+1440 IF W1%L<=0 THEN GOTO 1480
+1445 W1%L= INT(W1%L/2):W2%L=Ff%L-W1%L
+1450 V%=0
+1455 FOR N1%L=0 TO W2%L
+1460 W3%L=N1%L+W1%L
+1465 IF Oo%L(N1%L)<Oo%L(W3%L) THEN GOSUB 1477:V%=1
+1470 NEXT N1%L
+1475 IF V%>0 THEN GOTO 1450
+1476 GOTO 1435
+1477 SWAP Oo%L(N1%L),Oo%L(W3%L): SWAP Oi%L(N1%L),Oi%L(W3%L)
+1480 RETURN
+1500 REM 41999
+1510 REM zeichnesichtbarefaces
+1520 PRINT @(0,0);"Sort": PRINT @(2,0);""
+1530 GOSUB 1410
+1540 CLS : FILL COLOR =0: PBOX 0,0 TO 640,480
+1550 K%=1: OUTLINE ON : FILL STYLE =1,1
+1560 FOR J%L=1 TO Ff%L
+1570 FOR I%L=Oi%L(J%L) TO Fv%L
+1580 U%L(K%)=Ff%L(I%L)
+1590 IF Ff%L(I%L)>0 THEN U%L(K%)=Ff%L(I%L):K%=K%+1
+1600 IF Ff%L(I%L)<0 THEN GOSUB 1800:K%=1:I%L=Fv%L+1: REM GOTO 1640
+1620 NEXT I%L
+1640 NEXT J%L
+1650 LINE COLOR =1
+1660 RETURN
+1670 REM 50000
+1800 It%=I%:Uk%L=U%L(K%):U%L(K%)=U%L(1)
+1810 REM 1810
+1900 DIM Pts%(1,K%):Zf!=0
+2000 FOR I%=1 TO K%
+2010 Pts%(0,I%-1)=Vx%(U%L(I%)):Pts%(1,I%-1)=Vy%(U%L(I%))
+2011 Zf!=Zf!+Vz%(U%L(I%))
+2030 NEXT
+2031 Fa!=Uk%L*(-1): REM Farbwert
+2032 REM GOSUB 2500
+2033 REM PRINT @(0,0); STR$(Uk%L)
+2034 FILL COLOR =Fa!: REM IF Fa>=3 THEN FILL COLOR =Fa-1
+2035 REM IF Fa=1 OR Fa=3 THEN FILL COLOR =0
+2036 REM IF Fa=2 THEN FILL COLOR =1
+2040 LINE COLOR =1: PPOLYGON Pts%(0,K%): POLYGON Pts%(0,K%)
+2050 I%=It%:U%L(K%)=Uk%L: FILL COLOR =0
+2060 RETURN
+2390 Ar!=0
+2391 Aj%L=I%-1
+2392 FOR Ai%L=1 TO I%-1
+2393 Ar!=Ar!+(Vx%(U%L(Aj%L))+Vx%(U%L(Ai%L)))*(Vy%(U%L(Aj%L))-Vy%(U%L(Ai%L)))
+2394 Aj%L=Ai%L
+2395 NEXT Ai%L
+2396 Ar!= ABS(Ar!/2)
+2397 RETURN
+2400 DIM H2p%(16): REM Hardware to PaletteIndex
+2401 H2p%(0)=0:H2p%(1)=2:H2p%(2)=3:H2p%(3)=6:H2p%(4)=4
+2402 H2p%(5)=7:H2p%(6)=5:H2p%(7)=8:H2p%(8)=9
+2403 H2p%(9)=10:H2p%(10)=11:H2p%(11)=14:H2p%(12)=12
+2404 H2p%(13)=15:H2p%(14)=13:H2p%(15)=1
+2410 DIM P2h%(16): REM Palette to HardwareIndex
+2411 P2h%(0)=0:P2h%(1)=15:P2h%(2)=1:P2h%(3)=2:P2h%(4)=4
+2412 P2h%(5)=6:P2h%(6)=3:P2h%(7)=5:P2h%(8)=7
+2413 P2h%(9)=8:P2h%(10)=9:P2h%(11)=10:P2h%(12)=12
+2414 P2h%(13)=14:P2h%(14)=11:P2h%(15)=13: RETURN
+2500 REM IF Fa<=8 THEN XBIOS (R,7,P2h%(Fa),Fbw%)
+2501 RETURN
+
