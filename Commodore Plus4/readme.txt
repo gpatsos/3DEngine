@@ -101,6 +101,9 @@ Their positive feedback always kept me motivated to improve this little programm
 
 If you want to thank me and keep my motiviation up you can 
 
+* become a patreon: 
+  https://www.patreon.com/georgeschannel
+
 * buy me a coffe here:
   https://ko-fi.com/georgeschannel
 

@@ -27,7 +27,9 @@ This small project recieved general positive recations. Many people from all ove
 
 Their positive feedback always kept me motivated to improve this little programm and push the boundaries further and further.
 
-If you want to thank me and keep my motiviation up you can 
+If you want to thank me and keep my motiviation up you can (optional)
+* become a patreon: 
+  https://www.patreon.com/georgeschannel
 
 * buy me a coffe here:
   https://ko-fi.com/georgeschannel
