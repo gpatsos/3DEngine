@@ -19,7 +19,7 @@ The idea for this experimental BASIC renderer is from 1985, when i got a commodo
 
 The code is kept small by intention with a very simple user-interface to have more RAM for the model-data left. Its also written by intention in BASIC to be easy portable on other Systems.
 
-New Youtube tutorial (English): https://youtu.be/Zo7tMpFoxLY
+New Youtube tutorial (English): (stay tuned for new video soon)
 Watch my channel to see some other models i have renderd with this small BASIC-Engine on other platforms like the Atari ST.
 
 
