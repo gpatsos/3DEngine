@@ -1,6 +1,6 @@
 3D Engine (Commodore BASIC 3.5)
-for the Commodore plus/4
-by Georgios Patsos 10.09.2020
+for the Commodore Plus/4
+by Georgios Patsos 2020-09-10
 
 Version differences:
 
@@ -14,11 +14,11 @@ v2.5:
 faster but not so precise, because it imports the Normals from Blender. Userinterface is more refined. It has also the autocenter and autoscale feature.
 
 Introduction:
-With this software you can render Wavefront Obj-Files on a commodore plus/4, 16 or 116.The code also works on a commodore 128.
+This software can render Wavefront Obj-files on a Commodore Plus/4, 16 or 116. The code also works on a Commodore 128.
 
-The idea for this experimental BASIC renderer is from 1985, when i got a commodore plus/4, my first computer. Consider it as experimental, it won't render every 3D model perfectly, but you can achieve good results. I tested the software on a real plus/4 and with the Yape-Emulator on full throttle (2000%) and DRIVE 8 mode in IEC Level/Performance mode. 
+The idea for this experimental BASIC renderer is from 1985, when i got a Commodore Plus/4, my first computer. Consider it as experimental, it won't render every 3D model perfectly, but you can achieve good results. I tested the software on a real Plus/4 and with the Yape-Emulator on full throttle (2000%) and DRIVE 8 mode in IEC Level/Performance mode. 
 
-The code is kept small by intention with a very simple user-interface to have more RAM for the model-data left. Its also written by intention in BASIC to be easy portable on other Systems.
+The code is kept small by intention with a very simple user-interface to have more RAM for the model-data left. Its also written by intention in Commodore BASIC 3.5 to be easy portable on other Systems.
 
 Improvements in Version 2.5:
 * The exported obj-files have to contain the Face-Normals.
@@ -26,22 +26,22 @@ Improvements in Version 2.5:
 * you can render bigger model up to ~2800 verts, because of overall reduced code (20% less).
 * Reworked user-interface. The parameter-values are typed in directly now.
 * Importants Arrays are dimensioned according to the available memory.
-* Improved render precision, because the face-normals are imported and not calculated any more.
+* Improved render speed but less precision, because the face-normals are imported and not calculated any more.
 
-Improvements in Version 2.0:
+Improvements in the previous Version 2.0:
 * You can render about 30% bigger models up to ~2500 verts
 * Rendertime is reduced by 60 %
 * Frame color can be alternated with "F" (helps when zooming and positioning the model)
 * Screen memory can be saved in a file with "P"
 
 How to render your own object (Yape):
- *  Create a 3d-Model in Blender (or other 3d-Programm) with max 25000 verts. But stay under 1000 verts at your first tries.
- *  Keep the models as simple as possible, convex and avoid too complex faces. Ideal are triangles or squares faces.
- *  Export your model as OBJ File with "write Normals" Option clicked
- *  Convert the OBJ File with converter_p4_Normals.exe (Dotnet-application). It outputs two files: vertex.seq and planes.seq
- *  Put DRIVE 8 in IEC level/Performance mode, choose a IEC-Folder and put vertex.seq and planes.seq in the IEC folder.
- *  Run the 3dengine BASIC-Code (i choose copy&paste from an editor). It loads vertex.seq and parses later planes.seq.
- *  Put the emulator in Full Throttle (Yape: Alt+W)
+* Create a 3d-Model in Blender (or other 3d-Programm) with max 2500 verts. But stay under 1000 verts at your first tries.
+* Keep the models as simple as possible, convex and avoid too complex faces. Ideal are triangles or squares faces.
+* Export your model as OBJ File with "write Normals" Option clicked
+* Convert the OBJ File with converter_p4_Normals.exe (Dotnet-application). It outputs two files: vertex.seq and planes.seq
+* Put DRIVE 8 in IEC level/Performance mode, choose a IEC-Folder and put vertex.seq and planes.seq in the IEC folder.
+* Run the 3dengine BASIC-Code (i choose copy&paste from an editor). It loads vertex.seq and parses later planes.seq.
+* Put the emulator in "Full Throttle" mode (Yape: Alt+W)
 
 New Youtube tutorial (English): https://youtu.be/Zo7tMpFoxLY
 Watch my channel to see some other models i have renderd with this small BASIC-Engine on other platforms like the Atari ST.
@@ -82,7 +82,7 @@ Delivered files:
    Converts an OBJ file (e.g from Blender) into vertex.seq and planes.seq.
 
  * 3dengine25.bas
-   The sourcecode of the 3dengine V2.0
+   The sourcecode of the 3dengine V2.5
 
  * 3deng25.prg
    Programm-file. Needs: vertex.seq and planes.seq
@@ -95,9 +95,9 @@ Delivered files:
 
  * suzanne.png
 
-This small project recieved general positive recations. Many people from all over the world, sceners, 3D artists, artists, engineers (NASA), programmers, filmakers, teachers, university-professors, gamedevelopers, youtubers, hobbyists and enthusiast like me, also people who arent involved in computers, contacted me to express how much they like the renders. These simple wireframe graphics seem to have a generall appeal to everyone.
+This small project recieved general positive reactions. Many people from all over the world, sceners, 3D artists, artists, engineers (NASA), programmers, filmakers, teachers, university-professors, gamedevelopers, youtubers, hobbyists and enthusiast like me, also people who arent involved in computers contacted me to express how much they like the renders. These simple wireframe graphics seem to have a generall appeal to everyone.
 
-Their positive feedback always kept me motivated to improve this little programm and push the boundaries further and further.
+Their positive feedback always kept me motivated to improve this little program and push the boundaries further and further.
 
 If you want to thank me and keep my motiviation up you can 
 
