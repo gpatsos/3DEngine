@@ -1,0 +1,321 @@
+sections
+4000 - 6e0f : DATA, code
+6e0f - 6e8c : DATA, data
+6e8c - 83e0 : BSS, bss
+83e0 - ed00 : HEAP, heap
+ed00 - fc49 : STACK, stack
+00f7 - 00f7 : ZEROPAGE, zeropage
+1080 - 1158 : DATA, lowcode
+1001 - 1063 : DATA, startup
+fcf8 - fd00 : SSTACK, sstack
+fcf8 - fcf8 : SSTACK, init_hires@stack
+fcf8 - fcf8 : SSTACK, memset@stack
+fcf8 - fcf8 : SSTACK, ultra_fast_clear@stack
+fcf8 - fcf8 : SSTACK, krnio_setnam@stack
+fcf8 - fcf8 : SSTACK, krnio_open@stack
+fcd8 - fcf8 : SSTACK, fopen@stack
+fcf8 - fcf8 : SSTACK, puts@stack
+fce8 - fcf8 : SSTACK, nformi@stack
+fce8 - fcf8 : SSTACK, nforml@stack
+fcef - fcf8 : SSTACK, nformf@stack
+fca1 - fce8 : SSTACK, printf@stack
+fcf8 - fcf8 : SSTACK, krnio_chkin@stack
+fcf8 - fcf8 : SSTACK, krnio_chrin@stack
+fcf8 - fcf8 : SSTACK, krnio_status@stack
+fcf8 - fcf8 : SSTACK, krnio_clrchn@stack
+fcf8 - fcf8 : SSTACK, fgets@stack
+fcf8 - fcf8 : SSTACK, parse_next_int@stack
+fcf8 - fcf8 : SSTACK, drawline@stack
+fcf8 - fcf8 : SSTACK, krnio_close@stack
+fc57 - fca1 : SSTACK, load_vertex_data@stack
+fcf8 - fcf8 : SSTACK, fgetc@stack
+fcce - fcd8 : SSTACK, load_plane_data@stack
+fcf8 - fcf8 : SSTACK, SetViewPage1@stack
+fcd0 - fcf8 : SSTACK, render_full_rotation@stack
+fcf4 - fcf8 : SSTACK, render_wireframe@stack
+fcf8 - fcf8 : SSTACK, scan_edge@stack
+fcf1 - fcf8 : SSTACK, draw_plane@stack
+fcdf - fcf1 : SSTACK, sort_and_render_faces@stack
+fcf8 - fcf8 : SSTACK, SetViewPage2@stack
+fcf8 - fcf8 : SSTACK, switchVisiblePage@stack
+fcf8 - fcf8 : SSTACK, switchDrawPage@stack
+fcf8 - fcf8 : SSTACK, wait_for_key@stack
+fcdf - fcdf : SSTACK, DoTranslate@stack
+fc49 - fc57 : SSTACK, main@stack
+
+regions
+4000 - ed00 : 6e8c, 43e0, main
+1100 - 1800 : 0000, 0000, lower
+00f7 - 00ff : 0000, 0000, zeropage
+1001 - 1080 : 1063, 0062, startup
+1080 - 1180 : 1158, 00d8, lowcode
+
+objects
+00f7 - 00f7 : ZeroStart, START:zeropage
+00f7 - 00f7 : ZeroEnd, END:zeropage
+1001 - 1063 : startup, NATIVE_CODE:startup
+1080 - 1099 : p4irq, NATIVE_CODE:lowcode
+1099 - 10a1 : p4irqx, NATIVE_CODE:lowcode
+10a1 - 10bd : krnio_setnam, NATIVE_CODE:lowcode
+10bd - 10f1 : krnio_open, NATIVE_CODE:lowcode
+10f1 - 10fb : bsout, NATIVE_CODE:lowcode
+10fb - 1116 : krnio_chkin, NATIVE_CODE:lowcode
+1116 - 1124 : krnio_chrin, NATIVE_CODE:lowcode
+1124 - 1136 : krnio_status, NATIVE_CODE:lowcode
+1136 - 1140 : krnio_clrchn, NATIVE_CODE:lowcode
+1140 - 114e : krnio_close, NATIVE_CODE:lowcode
+114e - 1158 : bsget, NATIVE_CODE:lowcode
+4000 - 431e : main, NATIVE_CODE:code
+431e - 4375 : init_hires, NATIVE_CODE:code
+4375 - 438d : ultra_fast_clear, NATIVE_CODE:code
+438d - 43a9 : memset, NATIVE_CODE:code
+43a9 - 460d : load_vertex_data, NATIVE_CODE:code
+460d - 4615 : fopen@proxy, NATIVE_CODE:code
+4615 - 47a8 : fopen, NATIVE_CODE:code
+47a8 - 47b3 : *, DATA:code
+47b3 - 47b5 : *, DATA:code
+47b5 - 4b1a : printf, NATIVE_CODE:code
+4b1a - 4b22 : puts@proxy, NATIVE_CODE:code
+4b22 - 4b58 : puts, NATIVE_CODE:code
+4b58 - 4c73 : nformi, NATIVE_CODE:code
+4c73 - 4dbd : nforml, NATIVE_CODE:code
+4dbd - 5296 : nformf, NATIVE_CODE:code
+5296 - 52ad : *, DATA:code
+52ad - 52b5 : fgets@proxy, NATIVE_CODE:code
+52b5 - 5323 : fgets, NATIVE_CODE:code
+5323 - 532b : parse_next_int@proxy, NATIVE_CODE:code
+532b - 53f7 : parse_next_int, NATIVE_CODE:code
+53f7 - 556e : drawline, NATIVE_CODE:code
+556e - 5733 : load_plane_data, NATIVE_CODE:code
+5733 - 573e : *, DATA:code
+573e - 57a7 : fgetc, NATIVE_CODE:code
+57a7 - 57b2 : SetViewPage1, NATIVE_CODE:code
+57b2 - 5bf8 : render_full_rotation, NATIVE_CODE:code
+5bf8 - 5f87 : sort_and_render_faces, NATIVE_CODE:code
+5f87 - 60ba : render_wireframe, NATIVE_CODE:code
+60ba - 6440 : draw_plane, NATIVE_CODE:code
+6440 - 6553 : scan_edge, NATIVE_CODE:code
+6553 - 6562 : switchVisiblePage, NATIVE_CODE:code
+6562 - 656d : SetViewPage2, NATIVE_CODE:code
+656d - 661f : DoTranslate, NATIVE_CODE:code
+661f - 663a : switchDrawPage, NATIVE_CODE:code
+663a - 6656 : wait_for_key, NATIVE_CODE:code
+6656 - 668c : mul32by8, NATIVE_CODE:code
+668c - 66d1 : freg, NATIVE_CODE:code
+66d1 - 67be : faddsub, NATIVE_CODE:code
+67be - 6858 : crt_fmul, NATIVE_CODE:code
+6858 - 6886 : crt_fmul8, NATIVE_CODE:code
+6886 - 6934 : crt_fdiv, NATIVE_CODE:code
+6934 - 693c : mul16@proxy, NATIVE_CODE:code
+693c - 697e : mul16, NATIVE_CODE:code
+697e - 6990 : divs16@proxy, NATIVE_CODE:code
+6990 - 69ab : divs16, NATIVE_CODE:code
+69ab - 69b9 : negaccu, NATIVE_CODE:code
+69b9 - 69c7 : negtmp, NATIVE_CODE:code
+69c7 - 69cb : divmod@proxy, NATIVE_CODE:code
+69cb - 6a50 : divmod, NATIVE_CODE:code
+6a50 - 6a58 : mods16@proxy, NATIVE_CODE:code
+6a58 - 6a77 : mods16, NATIVE_CODE:code
+6aa1 - 6aaf : negtmpb, NATIVE_CODE:code
+6aaf - 6afb : f32_to_i16, NATIVE_CODE:code
+6afb - 6b19 : sint16_to_float, NATIVE_CODE:code
+6b19 - 6b42 : uint16_to_float, NATIVE_CODE:code
+6b42 - 6baa : mul32, NATIVE_CODE:code
+6baa - 6bae : divs32@proxy, NATIVE_CODE:code
+6bae - 6bc9 : divs32, NATIVE_CODE:code
+6bc9 - 6be3 : negaccu32, NATIVE_CODE:code
+6be3 - 6bfd : negtmp32, NATIVE_CODE:code
+6c1b - 6cf2 : divmod32, NATIVE_CODE:code
+6cf2 - 6cfa : crt_malloc@proxy, NATIVE_CODE:code
+6cfa - 6dc8 : crt_malloc, NATIVE_CODE:code
+6dc8 - 6dd3 : mul16@proxy, NATIVE_CODE:code
+6dd3 - 6dde : mul16@proxy, NATIVE_CODE:code
+6dde - 6df1 : divs16@proxy, NATIVE_CODE:code
+6df1 - 6dfc : freg@proxy, NATIVE_CODE:code
+6dfc - 6e0f : freg@proxy, NATIVE_CODE:code
+6e0f - 6e10 : spentry, DATA:data
+6e10 - 6e12 : bitmap, DATA:data
+6e12 - 6e2e : fround5, DATA:data
+6e2e - 6e36 : bit_tab, DATA:data
+6e36 - 6e38 : drawing_mode, DATA:data
+6e38 - 6e3a : plane_data, DATA:data
+6e3a - 6e3c : plane_data_count, DATA:data
+6e3c - 6e84 : sin_tab, DATA:data
+6e84 - 6e86 : wireframeOn, DATA:data
+6e86 - 6e88 : PaintersOn, DATA:data
+6e88 - 6e8a : backcolor, DATA:data
+6e8a - 6e8c : linecolor, DATA:data
+6e8c - 6e94 : files, DATA:bss
+6e8c - 6e8c : BSSStart, START:bss
+6e94 - 6ea4 : krnio_pstatus, DATA:bss
+6ea4 - 6ea6 : c, DATA:bss
+6ea6 - 6ea8 : d, DATA:bss
+6ea8 - 6eaa : h, DATA:bss
+6eaa - 6eac : u, DATA:bss
+6eac - 6eae : x_pct, DATA:bss
+6eae - 6eb0 : y_pct, DATA:bss
+6eb0 - 6eb2 : z_pct, DATA:bss
+6eb2 - 6eb4 : z_rotated, DATA:bss
+6eb4 - 6eb6 : vx_pct, DATA:bss
+6eb6 - 6eb8 : vy_pct, DATA:bss
+6eb8 - 6eba : u_array, DATA:bss
+6eba - 6ebc : a, DATA:bss
+6ebc - 70bc : bucket_head, DATA:bss
+70bc - 78bc : face_offset, DATA:bss
+78bc - 80bc : face_next, DATA:bss
+80bc - 824c : min_x, DATA:bss
+824c - 83dc : max_x, DATA:bss
+83dc - 83e0 : HeapNode, DATA:bss
+83e0 - 83e0 : BSSEnd, END:bss
+83e0 - 83e0 : HeapStart, START:heap
+ed00 - ed00 : HeapEnd, END:heap
+fc49 - fc49 : StackEnd, END:stack
+fc49 - fc57 : main@stack, BSS:main@stack
+fc57 - fc61 : load_vertex_data@stack, BSS:load_vertex_data@stack
+fc61 - fca1 : line, BSS:load_vertex_data@stack
+fca1 - fcae : printf@stack, BSS:printf@stack
+fcae - fcb6 : si, BSS:printf@stack
+fcb6 - fce8 : buff, BSS:printf@stack
+fcce - fcd8 : load_plane_data@stack, BSS:load_plane_data@stack
+fcd0 - fcf8 : render_full_rotation@stack, BSS:render_full_rotation@stack
+fcd8 - fcf8 : cbmname, BSS:fopen@stack
+fcdf - fcf1 : sort_and_render_faces@stack, BSS:sort_and_render_faces@stack
+fce8 - fcf8 : buffer, BSS:nforml@stack
+fce8 - fcf8 : buffer, BSS:nformi@stack
+fcef - fcf8 : nformf@stack, BSS:nformf@stack
+fcf1 - fcf8 : draw_plane@stack, BSS:draw_plane@stack
+fcf4 - fcf8 : render_wireframe@stack, BSS:render_wireframe@stack
+fcf8 - fd00 : sstack, STACK:sstack
+
+objects by size
+70bc (0800) : face_offset, DATA:bss
+78bc (0800) : face_next, DATA:bss
+4dbd (04d9) : nformf, NATIVE_CODE:code
+57b2 (0446) : render_full_rotation, NATIVE_CODE:code
+5bf8 (038f) : sort_and_render_faces, NATIVE_CODE:code
+60ba (0386) : draw_plane, NATIVE_CODE:code
+47b5 (0365) : printf, NATIVE_CODE:code
+4000 (031e) : main, NATIVE_CODE:code
+43a9 (0264) : load_vertex_data, NATIVE_CODE:code
+6ebc (0200) : bucket_head, DATA:bss
+556e (01c5) : load_plane_data, NATIVE_CODE:code
+4615 (0193) : fopen, NATIVE_CODE:code
+80bc (0190) : min_x, DATA:bss
+824c (0190) : max_x, DATA:bss
+53f7 (0177) : drawline, NATIVE_CODE:code
+4c73 (014a) : nforml, NATIVE_CODE:code
+5f87 (0133) : render_wireframe, NATIVE_CODE:code
+4b58 (011b) : nformi, NATIVE_CODE:code
+6440 (0113) : scan_edge, NATIVE_CODE:code
+66d1 (00ed) : faddsub, NATIVE_CODE:code
+6c1b (00d7) : divmod32, NATIVE_CODE:code
+6cfa (00ce) : crt_malloc, NATIVE_CODE:code
+532b (00cc) : parse_next_int, NATIVE_CODE:code
+656d (00b2) : DoTranslate, NATIVE_CODE:code
+6886 (00ae) : crt_fdiv, NATIVE_CODE:code
+67be (009a) : crt_fmul, NATIVE_CODE:code
+69cb (0085) : divmod, NATIVE_CODE:code
+52b5 (006e) : fgets, NATIVE_CODE:code
+573e (0069) : fgetc, NATIVE_CODE:code
+6b42 (0068) : mul32, NATIVE_CODE:code
+1001 (0062) : startup, NATIVE_CODE:startup
+431e (0057) : init_hires, NATIVE_CODE:code
+6aaf (004c) : f32_to_i16, NATIVE_CODE:code
+6e3c (0048) : sin_tab, DATA:data
+668c (0045) : freg, NATIVE_CODE:code
+693c (0042) : mul16, NATIVE_CODE:code
+fc61 (0040) : line, BSS:load_vertex_data@stack
+4b22 (0036) : puts, NATIVE_CODE:code
+6656 (0036) : mul32by8, NATIVE_CODE:code
+10bd (0034) : krnio_open, NATIVE_CODE:lowcode
+fcb6 (0032) : buff, BSS:printf@stack
+6858 (002e) : crt_fmul8, NATIVE_CODE:code
+6b19 (0029) : uint16_to_float, NATIVE_CODE:code
+fcd0 (0028) : render_full_rotation@stack, BSS:render_full_rotation@stack
+fcd8 (0020) : cbmname, BSS:fopen@stack
+6a58 (001f) : mods16, NATIVE_CODE:code
+6afb (001e) : sint16_to_float, NATIVE_CODE:code
+10a1 (001c) : krnio_setnam, NATIVE_CODE:lowcode
+438d (001c) : memset, NATIVE_CODE:code
+663a (001c) : wait_for_key, NATIVE_CODE:code
+6e12 (001c) : fround5, DATA:data
+10fb (001b) : krnio_chkin, NATIVE_CODE:lowcode
+661f (001b) : switchDrawPage, NATIVE_CODE:code
+6990 (001b) : divs16, NATIVE_CODE:code
+6bae (001b) : divs32, NATIVE_CODE:code
+6bc9 (001a) : negaccu32, NATIVE_CODE:code
+6be3 (001a) : negtmp32, NATIVE_CODE:code
+1080 (0019) : p4irq, NATIVE_CODE:lowcode
+4375 (0018) : ultra_fast_clear, NATIVE_CODE:code
+6dde (0013) : divs16@proxy, NATIVE_CODE:code
+6dfc (0013) : freg@proxy, NATIVE_CODE:code
+1124 (0012) : krnio_status, NATIVE_CODE:lowcode
+697e (0012) : divs16@proxy, NATIVE_CODE:code
+fcdf (0012) : sort_and_render_faces@stack, BSS:sort_and_render_faces@stack
+6e94 (0010) : krnio_pstatus, DATA:bss
+fce8 (0010) : buffer, BSS:nforml@stack
+fce8 (0010) : buffer, BSS:nformi@stack
+6553 (000f) : switchVisiblePage, NATIVE_CODE:code
+1116 (000e) : krnio_chrin, NATIVE_CODE:lowcode
+1140 (000e) : krnio_close, NATIVE_CODE:lowcode
+69ab (000e) : negaccu, NATIVE_CODE:code
+69b9 (000e) : negtmp, NATIVE_CODE:code
+6aa1 (000e) : negtmpb, NATIVE_CODE:code
+fc49 (000e) : main@stack, BSS:main@stack
+fca1 (000d) : printf@stack, BSS:printf@stack
+57a7 (000b) : SetViewPage1, NATIVE_CODE:code
+6562 (000b) : SetViewPage2, NATIVE_CODE:code
+6dc8 (000b) : mul16@proxy, NATIVE_CODE:code
+6dd3 (000b) : mul16@proxy, NATIVE_CODE:code
+6df1 (000b) : freg@proxy, NATIVE_CODE:code
+10f1 (000a) : bsout, NATIVE_CODE:lowcode
+1136 (000a) : krnio_clrchn, NATIVE_CODE:lowcode
+114e (000a) : bsget, NATIVE_CODE:lowcode
+fc57 (000a) : load_vertex_data@stack, BSS:load_vertex_data@stack
+fcce (000a) : load_plane_data@stack, BSS:load_plane_data@stack
+fcef (0009) : nformf@stack, BSS:nformf@stack
+1099 (0008) : p4irqx, NATIVE_CODE:lowcode
+460d (0008) : fopen@proxy, NATIVE_CODE:code
+4b1a (0008) : puts@proxy, NATIVE_CODE:code
+52ad (0008) : fgets@proxy, NATIVE_CODE:code
+5323 (0008) : parse_next_int@proxy, NATIVE_CODE:code
+6934 (0008) : mul16@proxy, NATIVE_CODE:code
+6a50 (0008) : mods16@proxy, NATIVE_CODE:code
+6cf2 (0008) : crt_malloc@proxy, NATIVE_CODE:code
+6e2e (0008) : bit_tab, DATA:data
+6e8c (0008) : files, DATA:bss
+fcae (0008) : si, BSS:printf@stack
+fcf8 (0008) : sstack, STACK:sstack
+fcf1 (0007) : draw_plane@stack, BSS:draw_plane@stack
+69c7 (0004) : divmod@proxy, NATIVE_CODE:code
+6baa (0004) : divs32@proxy, NATIVE_CODE:code
+83dc (0004) : HeapNode, DATA:bss
+fcf4 (0004) : render_wireframe@stack, BSS:render_wireframe@stack
+6e10 (0002) : bitmap, DATA:data
+6e36 (0002) : drawing_mode, DATA:data
+6e38 (0002) : plane_data, DATA:data
+6e3a (0002) : plane_data_count, DATA:data
+6e84 (0002) : wireframeOn, DATA:data
+6e86 (0002) : PaintersOn, DATA:data
+6e88 (0002) : backcolor, DATA:data
+6e8a (0002) : linecolor, DATA:data
+6ea4 (0002) : c, DATA:bss
+6ea6 (0002) : d, DATA:bss
+6ea8 (0002) : h, DATA:bss
+6eaa (0002) : u, DATA:bss
+6eac (0002) : x_pct, DATA:bss
+6eae (0002) : y_pct, DATA:bss
+6eb0 (0002) : z_pct, DATA:bss
+6eb2 (0002) : z_rotated, DATA:bss
+6eb4 (0002) : vx_pct, DATA:bss
+6eb6 (0002) : vy_pct, DATA:bss
+6eb8 (0002) : u_array, DATA:bss
+6eba (0002) : a, DATA:bss
+6e0f (0001) : spentry, DATA:data
+00f7 (0000) : ZeroStart, START:zeropage
+00f7 (0000) : ZeroEnd, END:zeropage
+6e8c (0000) : BSSStart, START:bss
+83e0 (0000) : BSSEnd, END:bss
+83e0 (0000) : HeapStart, START:heap
+ed00 (0000) : HeapEnd, END:heap
+fc49 (0000) : StackEnd, END:stack

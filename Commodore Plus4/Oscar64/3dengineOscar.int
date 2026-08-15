@@ -1,0 +1,3355 @@
+--------------------------------------------------------------------
+main: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:635
+$00 R0(I), $10 R1(I), $12 R2(I), $14 R3(I), $16 R4(I), $18 R5(I), $1a R6(I), $1c R7(I), $02 R8(B), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 637)		JSR		<-	V(-1 '')+0 	{}
+0001 ( 650)		CALLN		<-	V(1 'init_hires')+0 	{}
+0002 ( 652)		CALLN		<-	V(2 'ultra_fast_clear')+0 	{}
+0003 ( 654)		CALLN		<-	V(4 'load_vertex_data')+0 	{}
+0004 ( 655)		LOADG2	R0(I)[-32768..32767]	<-	V(42 'h' A)+0 	{}
+0005 ( 655)		STOREC2		<-	V(8 '')+0 , R0(IF)[-32768..32767]	{}
+0006 ( 655)		CALLN		<-	V(21 'load_plane_data')+0 	{}
+0007 ( 589)		STOREC2		<-	V(0 '')+0 , CI:30	{}
+0008 ( 589)		STOREC2		<-	V(2 '')+0 , CI:30	{}
+0009 ( 589)		STOREC2		<-	V(4 '')+0 , CI:30	{}
+000a ( 589)		STOREC2		<-	V(6 '')+0 , CI:160	{}
+000b ( 589)		STOREC2		<-	V(8 '')+0 , CI:100	{}
+000c ( 589)		STOREC2		<-	V(10 '')+0 , CI:9	{}
+000d ( 589)		STOREG2		<-	V(-1 'sstack')+0 , CI:400	{}
+000e ( 657)		CALLN		<-	V(23 'SetViewPage1')+0 	{}
+000f (  88)		STOREG2		<-	V(8 'bitmap')+0 , CI:49152	{}
+0010 ( 660)		LOADG2	R0(I)[-32768..32767]	<-	V(40 'c' A)+0 	{}
+0011 ( 589)		STOREG2		<-	V(-1 'sstack')+2 , R0(IF)[-32768..32767]	{}
+0012 ( 589)		CALLN		<-	V(24 'render_full_rotation')+0 	{}
+0013 ( 591)		CALLN		<-	V(2 'ultra_fast_clear')+0 	{}
+0014 ( 592)		STOREG2		<-	V(-1 'sstack')+0 , CI:400	{}
+0015 ( 592)		CALLN		<-	V(25 'sort_and_render_faces')+0 	{}
+0016 ( 594)		CALLN		<-	V(29 'switchVisiblePage')+0 	{}
+0017 ( 595)		CALLN		<-	V(31 'switchDrawPage')+0 	{}
+0018 ( 642)		CONST	R1(I)[30..30]	<-	CI:30	{}
+0019 ( 642)		CONST	R2(I)[30..30]	<-	CI:30	{}
+001a ( 642)		CONST	R3(I)[30..30]	<-	CI:30	{}
+001b ( 642)		CONST	R4(I)[9..9]	<-	CI:9	{}
+001c ( 645)		CONST	R5(I)[160..160]	<-	CI:160	{}
+001d ( 645)		CONST	R6(I)[100..100]	<-	CI:100	{}
+001e ( 648)		CONST	R7(C)[0..0]	<-	CI:0	{}
+001f ( 664)		JUMP		<-		{}
+		==> 1
+L1: <= D-1: (14) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 664)		CALLN	R0(C)	<-	V(32 'wait_for_key')+0 	{}
+0001 ( 668)		RELOP19	R8(B)[0..1]	<-	R0(C), CC:68	{}
+0002 ( 668)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 5
+		==> 20
+L5: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 674)		BINOP1	R0(I)	<-	R2(IF), CI:5	{}
+0001 ( 674)		JUMP		<-		{}
+		==> 43
+L43: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 675)		BINOP7	R2(I)	<-	R0(IF), CI:360	{}
+0001 ( 675)		JUMP		<-		{}
+		==> 45
+L45: <= D-1: (7)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 697)		LOADG2	R0(I)[-32768..32767]	<-	V(40 'c' A)+0 	{}
+0001 ( 589)		STOREG2		<-	V(-1 'sstack')+2 , R0(IF)[-32768..32767]	{}
+0002 ( 697)		JUMP		<-		{}
+		==> 46
+L46: <= D-1: (3)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 589)		STOREC2		<-	V(0 '')+0 , R1(I)	{}
+0001 ( 589)		STOREC2		<-	V(2 '')+0 , R2(I)	{}
+0002 ( 589)		STOREC2		<-	V(4 '')+0 , R3(I)	{}
+0003 ( 589)		STOREC2		<-	V(6 '')+0 , R5(I)	{}
+0004 ( 589)		STOREC2		<-	V(8 '')+0 , R6(I)	{}
+0005 ( 589)		STOREC2		<-	V(10 '')+0 , R4(I)[1..]	{}
+0006 ( 589)		STOREG2		<-	V(-1 'sstack')+0 , CI:400	{}
+0007 ( 589)		CALLN		<-	V(24 'render_full_rotation')+0 	{}
+0008 ( 591)		CALLN		<-	V(2 'ultra_fast_clear')+0 	{}
+0009 ( 592)		STOREG2		<-	V(-1 'sstack')+0 , CI:400	{}
+000a ( 592)		CALLN		<-	V(25 'sort_and_render_faces')+0 	{}
+000b ( 594)		CALLN		<-	V(29 'switchVisiblePage')+0 	{}
+000c ( 595)		CALLN		<-	V(31 'switchDrawPage')+0 	{}
+000d ( 671)		JUMP		<-		{}
+		==> 1
+L20: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP28	R8(B)[0..1]	<-	R0(C), CC:68	{}
+0001 ( 668)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 22
+		==> 21
+L22: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP19	R8(B)[0..1]	<-	R0(C)[0..67], CC:45	{}
+0001 ( 668)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 14
+		==> 23
+L14: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 690)		LOADG2	R0(I)[-32768..32767]	<-	V(40 'c' A)+0 	{}
+0001 ( 589)		STOREG2		<-	V(-1 'sstack')+2 , R0(IF)[-32768..32767]	{}
+0002 ( 690)		RELOP23	R0(B)[0..1]	<-	R4(I)[1..], CI:1	{}
+0003 ( 690)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 15
+		==> 46
+L15: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 690)		BINOP2	R4(I)[1..32766]	<-	R4(IF)[2..32767], CI:1	{}
+0001 ( 690)		JUMP		<-		{}
+		==> 46
+L23: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP28	R8(B)[0..1]	<-	R0(C)[0..67], CC:45	{}
+0001 ( 668)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 25
+		==> 24
+L25: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP19	R8(B)[0..1]	<-	R0(C)[0..44], CC:32	{}
+0001 ( 668)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 2
+		==> 26
+L2: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 713)		RETV		<-	CI:0	{}
+L26: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP28	R8(B)[0..1]	<-	R0(C)[0..44], CC:32	{}
+0001 ( 668)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 28
+		==> 27
+L28: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP19	R8(B)[0..1]	<-	R0(C)[0..31], CC:17	{}
+0001 ( 668)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 10
+		==> 29
+L10: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 683)		STOREG2		<-	V(-1 'sstack')+2 , CI:0	{}
+0001 ( 683)		STOREG2		<-	V(-1 'sstack')+4 , CI:5	{}
+0002 ( 683)		STOREG2		<-	V(-1 'sstack')+6 , CI:400	{}
+0003 ( 683)		CALLN		<-	V(33 'DoTranslate')+0 	{}
+0004 ( 683)		BINOP1	R6(I)	<-	R6(IF), CI:5	{}
+0005 ( 683)		JUMP		<-		{}
+		==> 1
+L29: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP19	R0(B)[0..1]	<-	R0(CF)[0..31], CC:29	{}
+0001 ( 668)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 12
+		==> 1
+L12: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 685)		STOREG2		<-	V(-1 'sstack')+2 , CI:5	{}
+0001 ( 685)		STOREG2		<-	V(-1 'sstack')+4 , CI:0	{}
+0002 ( 685)		STOREG2		<-	V(-1 'sstack')+6 , CI:400	{}
+0003 ( 685)		CALLN		<-	V(33 'DoTranslate')+0 	{}
+0004 ( 685)		BINOP1	R5(I)	<-	R5(IF), CI:5	{}
+0005 ( 685)		JUMP		<-		{}
+		==> 1
+L27: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP19	R0(B)[0..1]	<-	R0(CF)[32..44], CC:43	{}
+0001 ( 668)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 13
+		==> 1
+L13: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 689)		BINOP1	R4(I)[2..]	<-	R4(IF)[1..], CI:1	{}
+0001 ( 689)		JUMP		<-		{}
+		==> 45
+L24: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP19	R8(B)[0..1]	<-	R0(C)[45..67], CC:66	{}
+0001 ( 668)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 19
+		==> 30
+L19: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 705)		CONV37	R0(I)[0..255]	<-	R7(CF)[-128..1]	{}
+0001 ( 705)		BINOP2	R7(I)[-254..1]	<-	CI:1, R0(IF)[0..255]	{}
+0002 ( 122)		STOREA1		<-	V(-1 '')+65305 , R7(C)[-254..1]	{V}
+0003 ( 705)		JUMP		<-		{}
+		==> 1
+L30: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP28	R8(B)[0..1]	<-	R0(C)[45..67], CC:66	{}
+0001 ( 668)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 31
+		==> 18
+L31: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP19	R0(B)[0..1]	<-	R0(CF)[45..65], CC:65	{}
+0001 ( 668)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 6
+		==> 1
+L6: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 675)		BINOP1	R0(I)	<-	R2(IF), CI:355	{}
+0001 ( 675)		JUMP		<-		{}
+		==> 43
+L18: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 700)		LOADG2	R0(I)[-32768..32767]	<-	V(102 'backcolor')+0 	{}
+0001 ( 700)		BINOP2	R0(I)[-32766..32769]	<-	CI:1, R0(IF)[-32768..32767]	{}
+0002 ( 700)		STOREG2		<-	V(102 'backcolor')+0 , R0(IF)[-32766..32769]	{}
+0003 ( 701)		LOADG2	R0(I)[-32768..32767]	<-	V(103 'linecolor')+0 	{}
+0004 ( 701)		BINOP2	R0(I)[-32766..32769]	<-	CI:1, R0(IF)[-32768..32767]	{}
+0005 ( 701)		STOREG2		<-	V(103 'linecolor')+0 , R0(IF)[-32766..32769]	{}
+0006 ( 702)		JUMP		<-		{}
+		==> 45
+L21: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP19	R8(B)[0..1]	<-	R0(C), CC:87	{}
+0001 ( 668)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 3
+		==> 32
+L3: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 670)		BINOP1	R0(I)	<-	R1(IF), CI:5	{}
+0001 ( 670)		JUMP		<-		{}
+		==> 42
+L42: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 671)		BINOP7	R1(I)	<-	R0(IF), CI:360	{}
+0001 ( 671)		JUMP		<-		{}
+		==> 45
+L32: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP28	R8(B)[0..1]	<-	R0(C), CC:87	{}
+0001 ( 668)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 34
+		==> 33
+L34: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP19	R8(B)[0..1]	<-	R0(C)[0..86], CC:81	{}
+0001 ( 668)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 8
+		==> 35
+L8: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 679)		BINOP1	R0(I)	<-	R3(IF), CI:355	{}
+0001 ( 679)		JUMP		<-		{}
+		==> 44
+L44: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 679)		BINOP7	R3(I)	<-	R0(IF), CI:360	{}
+0001 ( 679)		JUMP		<-		{}
+		==> 45
+L35: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP28	R8(B)[0..1]	<-	R0(C)[0..86], CC:81	{}
+0001 ( 668)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 37
+		==> 36
+L37: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP19	R8(B)[0..1]	<-	R0(C)[0..80], CC:69	{}
+0001 ( 668)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 7
+		==> 38
+L7: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 678)		BINOP1	R0(I)	<-	R3(IF), CI:5	{}
+0001 ( 678)		JUMP		<-		{}
+		==> 44
+L38: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP19	R0(B)[0..1]	<-	R0(CF)[0..80], CC:80	{}
+0001 ( 668)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 17
+		==> 1
+L17: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 697)		STOREG2		<-	V(90 'wireframeOn')+0 , CI:0	{}
+0001 ( 697)		LOADG2	R0(I)[-32768..32767]	<-	V(95 'PaintersOn')+0 	{}
+0002 ( 697)		BINOP2	R0(I)[-32766..32769]	<-	CI:1, R0(IF)[-32768..32767]	{}
+0003 ( 697)		STOREG2		<-	V(95 'PaintersOn')+0 , R0(IF)[-32766..32769]	{}
+0004 ( 697)		JUMP		<-		{}
+		==> 45
+L36: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP19	R0(B)[0..1]	<-	R0(CF)[81..86], CC:83	{}
+0001 ( 668)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 4
+		==> 1
+L4: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 671)		BINOP1	R0(I)	<-	R1(IF), CI:355	{}
+0001 ( 671)		JUMP		<-		{}
+		==> 42
+L33: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP19	R8(B)[0..1]	<-	R0(C), CC:145	{}
+0001 ( 668)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 9
+		==> 39
+L9: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 682)		STOREG2		<-	V(-1 'sstack')+2 , CI:0	{}
+0001 ( 682)		STOREG2		<-	V(-1 'sstack')+4 , CI:-5	{}
+0002 ( 682)		STOREG2		<-	V(-1 'sstack')+6 , CI:400	{}
+0003 ( 682)		CALLN		<-	V(33 'DoTranslate')+0 	{}
+0004 ( 682)		BINOP2	R6(I)	<-	R6(IF), CI:5	{}
+0005 ( 682)		JUMP		<-		{}
+		==> 1
+L39: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP28	R8(B)[0..1]	<-	R0(C), CC:145	{}
+0001 ( 668)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 41
+		==> 40
+L41: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP19	R0(B)[0..1]	<-	R0(CF)[0..144], CC:88	{}
+0001 ( 668)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 16
+		==> 1
+L16: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 696)		LOADG2	R0(I)[-32768..32767]	<-	V(90 'wireframeOn')+0 	{}
+0001 ( 696)		BINOP2	R0(I)[-32766..32769]	<-	CI:1, R0(IF)[-32768..32767]	{}
+0002 ( 696)		STOREG2		<-	V(90 'wireframeOn')+0 , R0(IF)[-32766..32769]	{}
+0003 ( 696)		JUMP		<-		{}
+		==> 45
+L40: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 668)		RELOP19	R0(B)[0..1]	<-	R0(CF), CC:157	{}
+0001 ( 668)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 11
+		==> 1
+L11: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 684)		STOREG2		<-	V(-1 'sstack')+2 , CI:-5	{}
+0001 ( 684)		STOREG2		<-	V(-1 'sstack')+4 , CI:0	{}
+0002 ( 684)		STOREG2		<-	V(-1 'sstack')+6 , CI:400	{}
+0003 ( 684)		CALLN		<-	V(33 'DoTranslate')+0 	{}
+0004 ( 684)		BINOP2	R5(I)	<-	R5(IF), CI:5	{}
+0005 ( 684)		JUMP		<-		{}
+		==> 1
+--------------------------------------------------------------------
+init_hires: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:133
+$00 R0(N), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 135)		JSR		<-	V(-1 '')+0 	{}
+0001 ( 122)		STOREA1		<-	V(-1 '')+65305 , CC:0	{V}
+0002 ( 156)		FILLA1000		<-	V(-1 '')+6144 , CC:4	{}
+0003 ( 157)		FILLA1000		<-	V(-1 '')+7168 , CC:240	{}
+0004 ( 158)		RET		<-		{}
+--------------------------------------------------------------------
+ultra_fast_clear: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:580
+$00 R0(I), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 584)		STOREC2		<-	V(2 '')+0 , CI:0	{}
+0001 ( 584)		STOREC2		<-	V(4 '')+0 , CI:8000	{}
+0002 ( 584)		LOADG2	R0(I)[0..65535]	<-	V(8 'bitmap')+0 	{}
+0003 ( 584)		CAST	R0(P)	<-	R0(IF)[0..65535]	{}
+0004 ( 584)		STOREC2		<-	V(0 '')+0 , R0(PF)	{}
+0005 ( 584)		CALLN		<-	V(3 'memset')+0 	{}
+0006 ( 585)		RET		<-		{}
+--------------------------------------------------------------------
+memset: D:/Arbeit/dev/oscar64/include/string.h:28
+
+L0: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/string.c
+0000 ( 270)		JSR		<-	V(0 '')+0 , V(4 '')+0 , V(2 '')+0 , V(-1 '')+0 	{}
+0001 ( 291)		RET		<-		{}
+--------------------------------------------------------------------
+load_vertex_data: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:256
+$00 R0(L), $10 R1(L), $12 R2(P), $00 R3(P), $14 R4(I), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 262)		CONST	R0(P)[0..0]	<-	CG0(12:0 '')	{S}
+0001 ( 262)		STOREC2		<-	V(3 '')+0 , R0(PF)+0 {V(12 '')} [0..0]	{}
+0002 ( 262)		CONST	R0(P)[0..0]	<-	CG0(13:0 '')	{S}
+0003 ( 262)		STOREC2		<-	V(5 '')+0 , R0(PF)+0 {V(13 '')} [0..0]	{}
+0004 ( 262)		CALLN	R2(P)	<-	V(5 'fopen')+0 	{}
+0005 ( 263)		RELOP19	R0(B)[0..1]	<-	R2(P), V(-1 '')+0 	{}
+0006 ( 263)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 1
+		==> 2
+L1: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 264)		CONST	R0(P)[0..0]	<-	CG0(35:0 '')	{S}
+0001 ( 264)		STOREG2		<-	V(-1 'sstack')+0 , R0(PF)+0 {V(35 '')} [0..0]	{}
+0002 ( 264)		CALLN		<-	V(8 'printf')+0 	{}
+0003 ( 265)		JUMP		<-		{}
+		==> 3
+L3: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 265)		JUMP		<-		{I}
+		==> 3
+L2: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 269)		STOREC2		<-	V(3 '')+0 , R2(P)	{}
+0001 ( 258)		CONST	R1(P)[0..0]	<-	CG64(62:0 'line' A)	{S}
+0002 ( 269)		STOREC2		<-	V(1 '')+0 , R1(P)+0 {V(62 'line' A)} [0..0]	{}
+0003 ( 269)		CALLN	R0(P)	<-	V(13 'fgets')+0 	{}
+0004 ( 269)		BRANCH		<-	R0(PF)	{}
+		==> 4
+		==> 9
+L4: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 271)		STOREC2		<-	V(0 '')+0 , R1(PF)+0 {V(62 'line' A)} [0..0]	{}
+0001 ( 271)		CONST	R0(P)[0..0]	<-	CG2(40:0 'c' A)	{S}
+0002 ( 271)		STOREC2		<-	V(2 '')+0 , R0(PF)+0 {V(40 'c' A)} [0..0]	{}
+0003 ( 271)		CALLN	R0(P)	<-	V(18 'parse_next_int')+0 	{}
+0004 ( 272)		STOREC2		<-	V(0 '')+0 , R0(PF)	{}
+0005 ( 272)		CONST	R0(P)[0..0]	<-	CG2(41:0 'd' A)	{S}
+0006 ( 272)		STOREC2		<-	V(2 '')+0 , R0(PF)+0 {V(41 'd' A)} [0..0]	{}
+0007 ( 272)		CALLN	R0(P)	<-	V(18 'parse_next_int')+0 	{}
+0008 ( 273)		STOREC2		<-	V(0 '')+0 , R0(PF)	{}
+0009 ( 273)		CONST	R0(P)[0..0]	<-	CG2(42:0 'h' A)	{S}
+000a ( 273)		STOREC2		<-	V(2 '')+0 , R0(PF)+0 {V(42 'h' A)} [0..0]	{}
+000b ( 273)		CALLN	R0(P)	<-	V(18 'parse_next_int')+0 	{}
+000c ( 274)		STOREC2		<-	V(0 '')+0 , R0(PF)	{}
+000d ( 274)		CONST	R0(P)[0..0]	<-	CG2(43:0 'u' A)	{S}
+000e ( 274)		STOREC2		<-	V(2 '')+0 , R0(PF)+0 {V(43 'u' A)} [0..0]	{}
+000f ( 274)		CALLN		<-	V(18 'parse_next_int')+0 	{}
+0010 ( 277)		LOADG2	R0(I)[-32768..32767]	<-	V(40 'c' A)+0 	{}
+0011 ( 277)		BINOP16	R0(I)[-32768..65534]	<-	R0(IF)[-32768..32767], CI:1	{}
+0012 ( 277)		MALLOC	R1(P)+0{R1}	<-	R0(I)[-32768..65534]	{}
+0013 ( 277)		STOREG2		<-	V(44 'x_pct')+0 , R1(PF)+0{R1}	{}
+0014 ( 278)		MALLOC	R1(P)+0{R2}	<-	R0(I)[-32768..65534]	{}
+0015 ( 278)		STOREG2		<-	V(45 'y_pct')+0 , R1(PF)+0{R2}	{}
+0016 ( 279)		MALLOC	R1(P)+0{R3}	<-	R0(I)[-32768..65534]	{}
+0017 ( 279)		STOREG2		<-	V(46 'z_pct')+0 , R1(PF)+0{R3}	{}
+0018 ( 280)		MALLOC	R1(P)+0{R4}	<-	R0(I)[-32768..65534]	{}
+0019 ( 280)		STOREG2		<-	V(47 'z_rotated')+0 , R1(PF)+0{R4}	{}
+001a ( 281)		MALLOC	R1(P)+0{R5}	<-	R0(I)[-32768..65534]	{}
+001b ( 281)		STOREG2		<-	V(48 'vx_pct')+0 , R1(PF)+0{R5}	{}
+001c ( 282)		MALLOC	R0(P)+0{R6}	<-	R0(IF)[-32768..65534]	{}
+001d ( 282)		STOREG2		<-	V(49 'vy_pct')+0 , R0(PF)+0{R6}	{}
+001e ( 283)		LOADG2	R0(I)[-32768..32767]	<-	V(43 'u' A)+0 	{}
+001f ( 283)		BINOP16	R0(I)[-32768..65534]	<-	R0(IF)[-32768..32767], CI:1	{}
+0020 ( 283)		MALLOC	R0(P)+0{R7}	<-	R0(IF)[-32768..65534]	{}
+0021 ( 283)		STOREG2		<-	V(50 'u_array')+0 , R0(PF)+0{R7}	{}
+0022 ( 287)		JUMP		<-		{}
+		==> 9
+L9: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 287)		STOREG2		<-	V(51 'a')+0 , CI:1	{}
+0001 ( 287)		LOADG2	R0(I)[-32768..32767]	<-	V(40 'c' A)+0 	{}
+0002 ( 287)		RELOP22	R0(B)[0..1]	<-	CI:1, R0(IF)[-32768..32767]	{}
+0003 ( 287)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 10
+		==> 7
+L10: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 288)		CONST	R3(P)[0..0]	<-	CG64(62:0 'line' A)	{IS}
+0001 ( 288)		JUMP		<-		{}
+		==> 6
+L6: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 288)		STOREC2		<-	V(1 '')+0 , R3(P)+0 {V(62 'line' A)} [0..0]	{}
+0001 ( 288)		STOREC2		<-	V(3 '')+0 , R2(P)	{}
+0002 ( 288)		CALLN	R0(P)	<-	V(13 'fgets')+0 	{}
+0003 ( 290)		LOADG2	R4(I)[-32768..32767]	<-	V(51 'a')+0 	{}
+0004 ( 288)		BRANCH		<-	R0(PF)	{}
+		==> 8
+		==> 5
+L8: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 290)		STOREC2		<-	V(0 '')+0 , R3(P)+0 {V(62 'line' A)} [0..0]	{}
+0001 ( 290)		BINOP16	R0(I)[-32768..65534]	<-	R4(I)[-32768..32767], CI:1	{}
+0002 ( 290)		BINOP2	R1(I)	<-	R0(IF)[-32768..65534], CI:2	{}
+0003 ( 290)		LOADG2	R0(P)	<-	V(44 'x_pct')+0 	{}
+0004 ( 290)		LEAI	R0(P)+0	<-	R0(PF)+0, R1(I)	{}
+0005 ( 290)		STOREC2		<-	V(2 '')+0 , R0(PF)	{}
+0006 ( 290)		CALLN	R0(P)	<-	V(18 'parse_next_int')+0 	{}
+0007 ( 291)		STOREC2		<-	V(0 '')+0 , R0(PF)	{}
+0008 ( 291)		LOADG2	R0(P)	<-	V(45 'y_pct')+0 	{}
+0009 ( 291)		LEAI	R0(P)+0	<-	R0(PF)+0, R1(I)	{}
+000a ( 291)		STOREC2		<-	V(2 '')+0 , R0(PF)	{}
+000b ( 291)		CALLN	R0(P)	<-	V(18 'parse_next_int')+0 	{}
+000c ( 292)		STOREC2		<-	V(0 '')+0 , R0(PF)	{}
+000d ( 292)		LOADG2	R0(P)	<-	V(46 'z_pct')+0 	{}
+000e ( 292)		LEAI	R0(P)+0	<-	R0(PF)+0, R1(IF)	{}
+000f ( 292)		STOREC2		<-	V(2 '')+0 , R0(PF)	{}
+0010 ( 292)		CALLN		<-	V(18 'parse_next_int')+0 	{}
+0011 ( 295)		STOREC2		<-	V(2 '')+0 , CI:0	{}
+0012 ( 295)		STOREC2		<-	V(6 '')+0 , CI:1	{}
+0013 ( 294)		LOADG2	R0(I)[-32768..32767]	<-	V(40 'c' A)+0 	{}
+0014 ( 294)		CONV42	R0(L)[-32768..32767]	<-	R0(IF)[-32768..32767]	{}
+0015 ( 294)		BINOP5	R0(L)	<-	CL:20480, R0(LF)[-32768..32767]	{}
+0016 ( 294)		CONV42	R1(L)[-32768..32767]	<-	R4(I)[-32768..32767]	{}
+0017 ( 294)		BINOP3	R0(L)	<-	R1(LF)[-32768..32767], R0(LF)	{}
+0018 ( 294)		BINOP18	R0(L)[-33554432..33554431]	<-	R0(LF), CL:6	{}
+0019 ( 295)		STOREC2		<-	V(0 '')+0 , R0(I)[-33554432..33554431]	{}
+001a ( 295)		STOREC2		<-	V(4 '')+0 , R0(IF)[-33554432..33554431]	{}
+001b ( 295)		CALLN		<-	V(19 'drawline')+0 	{}
+001c ( 287)		JUMP		<-		{}
+		==> 5
+L5: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 287)		BINOP1	R0(I)[-32767..32768]	<-	R4(IF)[-32768..32767], CI:1	{}
+0001 ( 287)		STOREG2		<-	V(51 'a')+0 , R0(I)[-32767..32768]	{}
+0002 ( 287)		LOADG2	R1(I)[-32768..32767]	<-	V(40 'c' A)+0 	{}
+0003 ( 287)		RELOP22	R0(B)[0..1]	<-	R0(IF)[-32767..32768], R1(IF)[-32768..32767]	{}
+0004 ( 287)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 6
+		==> 7
+L7: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1121)		LOADI1	R0(C)[-128..127]	<-	R2(P)+0	{}
+0001 (1121)		STOREC1		<-	V(0 '')+0 , R0(CF)[-128..127]	{}
+0002 (1121)		CALLN		<-	V(20 'krnio_close')+0 	{}
+0003 (1122)		STOREI1		<-	R2(PF)+0, CC:0	{}
+0004 ( 299)		RET		<-		{}
+--------------------------------------------------------------------
+fopen: D:/Arbeit/dev/oscar64/include/stdio.h:40
+$00 R0(P), $00 R1(I), $02 R2(P), $03 R3(I), $00 R4(I), $05 R5(I), $06 R6(P), $08 R7(B), $00 R8(C), $00 R9(B), $09 R10(C), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1051)		CONST	R0(C)[0..0]	<-	CI:0	{}
+0001 (1052)		JUMP		<-		{}
+		==> 3
+L3: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1052)		CONV37	R5(I)[0..7]	<-	R0(C)[0..7]	{}
+0001 (1052)		LEAG	R6(P)[0..7]	<-	V(9 'files' A)+0 , R5(I)[0..7]	{}
+0002 (1052)		LOADI1	R1(C)[-128..127]	<-	R6(P)+0 {V(9 'files' A)} [0..7]	{}
+0003 (1052)		BRANCH		<-	R1(CF)[-128..127]	{}
+		==> 1
+		==> 2
+L1: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1053)		BINOP1	R0(C)[1..8]	<-	R0(CF)[0..7], CI:1	{}
+0001 (1052)		RELOP28	R1(B)[0..1]	<-	R0(C)[1..8], CC:8	{}
+0002 (1052)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 3
+		==> 4
+L4: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1116)		CONST	R0(P)[0..0]	<-	CA0(-1:0 '')	{S}
+0001 (1116)		RETV		<-	R0(PF)+0 {V(-1 'ABS')} [0..0]	{}
+L2: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1058)		CONST	R4(C)[0..0]	<-	CI:0	{}
+0001 (1059)		CONST	R0(C)[0..0]	<-	CI:0	{}
+0002 (1059)		CONST	R10(C)[8..8]	<-	CI:8	{}
+0003 (1059)		CONST	R1(C)[0..0]	<-	CI:0	{}
+0004 (1061)		LOADZ2	R2(P)	<-	V(3 '')+0 	{IS}
+0005 (1061)		JUMP		<-		{}
+		==> 5
+L5: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1061)		CONV37	R3(I)[0..255]	<-	R4(C)[0..]	{}
+0001 (1061)		LEAI	R3(P)+0	<-	R2(P)+0, R3(IF)[0..255]	{}
+0002 (1061)		LOADI1	R3(C)[0..255]	<-	R3(PF)+0	{}
+0003 (1061)		RELOP25	R7(B)[0..1]	<-	R3(C)[0..255], CC:48	{}
+0004 (1061)		BRANCH		<-	R7(BF)[0..1]	{}
+		==> 8
+		==> 10
+L8: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1061)		RELOP26	R7(B)[0..1]	<-	R3(C)[48..255], CC:57	{}
+0001 (1061)		BRANCH		<-	R7(BF)[0..1]	{}
+		==> 6
+		==> 7
+L6: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1062)		CONV37	R1(I)[0..255]	<-	R1(CF)[0..2559]	{}
+0001 (1062)		BINOP3	R1(I)[0..2550]	<-	R1(IF)[0..255], CI:10	{}
+0002 (1061)		CONV37	R3(I)[48..57]	<-	R3(CF)[48..57]	{}
+0003 (1062)		BINOP2	R3(I)[0..9]	<-	R3(IF)[48..57], CI:48	{}
+0004 (1062)		BINOP1	R1(I)[0..2559]	<-	R3(IF)[0..9], R1(IF)[0..2550]	{}
+0005 (1062)		BINOP1	R4(C)[1..]	<-	R4(CF)[0..], CI:1	{}
+0006 (1061)		JUMP		<-		{}
+		==> 5
+L7: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1063)		RELOP19	R3(B)[0..1]	<-	R3(CF)[58..255], CC:58	{}
+0001 (1063)		BRANCH		<-	R3(BF)[0..1]	{}
+		==> 9
+		==> 10
+L9: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1065)		BINOP1	R7(C)[1..]	<-	R4(CF)[0..], CI:1	{}
+0001 (1068)		MOVE	R8(C)[1..]	<-	R7(C)[1..]	{}
+0002 (1066)		MOVE	R0(C)[0..255]	<-	R1(C)[0..2559]	{}
+0003 (1069)		CONST	R3(C)[0..0]	<-	CI:0	{}
+0004 (1070)		JUMP		<-		{}
+		==> 12
+L12: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1070)		CONV37	R4(I)[1..255]	<-	R8(C)[1..255]	{}
+0001 (1070)		LEAI	R4(P)+0	<-	R2(P)+0, R4(IF)[1..255]	{}
+0002 (1070)		LOADI1	R4(C)[0..255]	<-	R4(PF)+0	{}
+0003 (1070)		RELOP25	R9(B)[0..1]	<-	R4(C)[0..255], CC:48	{}
+0004 (1070)		BRANCH		<-	R9(BF)[0..1]	{}
+		==> 15
+		==> 11
+L15: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1070)		RELOP26	R9(B)[0..1]	<-	R4(C)[48..255], CC:57	{}
+0001 (1070)		BRANCH		<-	R9(BF)[0..1]	{}
+		==> 13
+		==> 14
+L13: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1071)		CONV37	R3(I)[0..255]	<-	R3(CF)[0..2559]	{}
+0001 (1071)		BINOP3	R3(I)[0..2550]	<-	R3(IF)[0..255], CI:10	{}
+0002 (1070)		CONV37	R4(I)[48..57]	<-	R4(CF)[48..57]	{}
+0003 (1071)		BINOP2	R4(I)[0..9]	<-	R4(IF)[48..57], CI:48	{}
+0004 (1071)		BINOP1	R3(I)[0..2559]	<-	R4(IF)[0..9], R3(IF)[0..2550]	{}
+0005 (1071)		BINOP1	R8(C)	<-	R8(CF)[1..255], CI:1	{}
+0006 (1070)		JUMP		<-		{}
+		==> 12
+L14: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1072)		RELOP19	R4(B)[0..1]	<-	R4(CF)[58..255], CC:58	{}
+0001 (1072)		BRANCH		<-	R4(BF)[0..1]	{}
+		==> 16
+		==> 11
+L16: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1075)		MOVE	R10(C)[0..255]	<-	R1(CF)[0..255]	{}
+0001 (1076)		MOVE	R0(C)[0..255]	<-	R3(CF)[0..2559]	{}
+0002 (1074)		BINOP1	R7(C)	<-	R8(CF)[1..255], CI:1	{}
+0003 (1072)		JUMP		<-		{}
+		==> 11
+L11: <= D-1: (4)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1090)		CONST	R1(P)[2..2]	<-	CG32(11:2 'cbmname' A)	{}
+0001 (1085)		RELOP25	R3(B)[0..1]	<-	R0(C)[-48..255], CC:10	{}
+0002 (1085)		BRANCH		<-	R3(BF)[0..1]	{}
+		==> 17
+		==> 32
+L17: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1085)		CONV37	R0(I)[10..255]	<-	R0(CF)[10..255]	{}
+0001 (1087)		BINOP4	R3(I)[0..25]	<-	R0(I)[10..255], CI:10	{}
+0002 (1088)		BINOP6	R0(I)[10..9]	<-	R0(IF)[10..255], CI:10	{}
+0003 (1087)		BINOP1	R3(I)[48..73]	<-	R3(IF)[0..25], CI:48	{}
+0004 (1087)		STOREG1		<-	V(11 'cbmname' A)+1 , R3(CF)[48..73]	{}
+0005 (1091)		CONST	R3(P)[3..3]	<-	CG32(11:3 'cbmname' A)	{}
+0006 (1091)		CONST	R4(C)[4..4]	<-	CI:4	{}
+0007 (1085)		JUMP		<-		{}
+		==> 18
+L18: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1091)		STOREI1		<-	R3(PF)+0 {V(11 'null')} [2..3], CC:58	{}
+0001 (1090)		BINOP1	R0(C)[48..57]	<-	R0(CF)[0..9], CI:48	{}
+0002 (1090)		STOREI1		<-	R1(PF)+0 {V(11 'null')} [1..2], R0(CF)[48..57]	{}
+0003 (1084)		CONST	R3(C)[1..1]	<-	CI:1	{}
+0004 (1093)		JUMP		<-		{}
+		==> 19
+L19: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1093)		CONV37	R0(I)[3..255]	<-	R4(C)[3..255]	{}
+0001 (1093)		LEAG	R0(P)[3..255]	<-	V(11 'cbmname' A)+0 , R0(IF)[3..32]	{}
+0002 (1092)		CONV37	R1(I)[0..255]	<-	R7(C)	{}
+0003 (1092)		LEAI	R1(P)+0	<-	R2(P)+0, R1(IF)[0..255]	{}
+0004 (1092)		LOADI1	R1(C)[0..255]	<-	R1(PF)+0	{}
+0005 (1092)		BRANCH		<-	R1(C)[0..255]	{}
+		==> 20
+		==> 21
+L20: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1093)		STOREI1		<-	R0(PF)+0 {V(11 'cbmname' A)} [3..255], R1(CF)[0..255]	{}
+0001 (1093)		BINOP1	R4(C)	<-	R4(CF)[3..255], CI:1	{}
+0002 (1093)		BINOP1	R7(C)	<-	R7(CF), CI:1	{}
+0003 (1092)		JUMP		<-		{}
+		==> 19
+L21: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1094)		STOREI1		<-	R0(P)+0 {V(11 'cbmname' A)} [3..255], CC:44	{}
+0001 (1095)		STOREI1		<-	R0(P)+1 {V(11 'cbmname' A)} [3..29], CC:83	{}
+0002 (1096)		STOREI1		<-	R0(P)+2 {V(11 'cbmname' A)} [3..29], CC:44	{}
+0003 (1097)		LOADZ2	R1(P)	<-	V(5 '')+0 	{S}
+0004 (1097)		LOADI1	R1(C)[0..255]	<-	R1(PF)+0	{}
+0005 (1097)		RELOP19	R2(B)[0..1]	<-	R1(C)[0..255], CC:119	{}
+0006 (1097)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 22
+		==> 25
+L22: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1099)		STOREI1		<-	R0(PF)+3 {V(11 'cbmname' A)} [3..255], CC:87	{}
+0001 (1100)		STOREG1		<-	V(11 'cbmname' A)+0 , CC:64	{}
+0002 (1099)		BINOP1	R2(C)[7..32]	<-	R4(CF)[3..28], CI:4	{}
+0003 (1100)		CONST	R3(C)[0..0]	<-	CI:0	{}
+0004 (1097)		JUMP		<-		{}
+		==> 24
+L24: <= D-1: (3)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1106)		CONV37	R0(I)[6..31]	<-	R2(CF)[6..31]	{}
+0001 (1106)		LEAG	R0(P)[6..31]	<-	V(11 'cbmname' A)+0 , R0(IF)[6..31]	{}
+0002 (1106)		STOREI1		<-	R0(PF)+0 {V(11 'cbmname' A)} [6..31], CC:0	{}
+0003 (1108)		CONV37	R0(I)[0..1]	<-	R3(CF)[0..1]	{}
+0004 (1108)		LEAG	R0(P)[0..1]	<-	V(11 'cbmname' A)+0 , R0(IF)[0..1]	{}
+0005 (1108)		STOREC2		<-	V(0 '')+0 , R0(PF)+0 {V(11 'cbmname' A)} [0..1]	{}
+0006 (1108)		CALLN		<-	V(6 'krnio_setnam')+0 	{}
+0007 (1109)		STOREC1		<-	V(1 '')+0 , R10(CF)[-48..255]	{}
+0008 (1109)		BINOP1	R5(I)[2..9]	<-	R5(IF)[0..7], CI:2	{}
+0009 (1109)		STOREC1		<-	V(0 '')+0 , R5(C)[2..9]	{}
+000a (1109)		STOREC1		<-	V(2 '')+0 , R5(C)[2..9]	{}
+000b (1109)		CALLN	R0(B)	<-	V(7 'krnio_open')+0 	{}
+000c (1109)		BRANCH		<-	R0(BF)	{}
+		==> 31
+		==> 4
+L31: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1111)		STOREI1		<-	R6(P)+0 {V(9 'files' A)} [0..7], R5(CF)[2..9]	{}
+0001 (1112)		RETV		<-	R6(PF)+0 {V(9 'files' A)} [0..7]	{}
+L25: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1097)		RELOP19	R2(B)[0..1]	<-	R1(C)[0..255], CC:87	{}
+0001 (1097)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 22
+		==> 23
+L23: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1102)		RELOP19	R2(B)[0..1]	<-	R1(C)[0..255], CC:114	{}
+0001 (1102)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 26
+		==> 28
+L26: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1103)		STOREI1		<-	R0(PF)+3 {V(11 'cbmname' A)} [3..255], CC:82	{}
+0001 (1102)		JUMP		<-		{}
+		==> 33
+L33: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1105)		BINOP1	R2(C)[7..32]	<-	R4(CF)[3..28], CI:4	{}
+0001 (1104)		JUMP		<-		{}
+		==> 24
+L28: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1102)		RELOP19	R2(B)[0..1]	<-	R1(C)[0..255], CC:82	{}
+0001 (1102)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 26
+		==> 27
+L27: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1104)		RELOP19	R2(B)[0..1]	<-	R1(C)[0..255], CC:97	{}
+0001 (1104)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 29
+		==> 30
+L29: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1105)		STOREI1		<-	R0(PF)+3 {V(11 'cbmname' A)} [3..255], CC:65	{}
+0001 (1104)		JUMP		<-		{}
+		==> 33
+L30: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1096)		BINOP1	R2(C)[6..32]	<-	R4(C)[3..29], CI:3	{}
+0001 (1104)		RELOP19	R1(B)[0..1]	<-	R1(CF)[0..255], CC:65	{}
+0002 (1104)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 29
+		==> 24
+L32: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1090)		MOVE	R3(P)+0 {V(11 'cbmname' A)} [2..2]	<-	R1(PF)+0 {V(11 'cbmname' A)} [2..2]	{}
+0001 (1090)		CONST	R1(P)[1..1]	<-	CG32(11:1 'cbmname' A)	{}
+0002 (1091)		CONST	R4(C)[3..3]	<-	CI:3	{}
+0003 (1085)		JUMP		<-		{}
+		==> 18
+L10: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1069)		CONST	R7(C)[0..0]	<-	CI:0	{}
+0001 (1063)		JUMP		<-		{}
+		==> 11
+--------------------------------------------------------------------
+krnio_setnam: D:/Arbeit/dev/oscar64/include/c64/kernalio.h:29
+
+L0: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 (  92)		JSR		<-	V(0 '')+0 , V(-1 '')+0 	{}
+0001 ( 113)		RET		<-		{}
+--------------------------------------------------------------------
+krnio_open: D:/Arbeit/dev/oscar64/include/c64/kernalio.h:35
+$00 R0(L), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 140)		LOADZ1	R0(C)[0..15]	<-	V(0 '')+0 	{S}
+0001 ( 140)		CONV37	R0(I)[0..15]	<-	R0(CF)[0..15]	{S}
+0002 ( 140)		LEAG	R0(P)[0..15]	<-	V(10 'krnio_pstatus' A)+0 , R0(IF)[0..15]	{S}
+0003 ( 140)		STOREI1		<-	R0(PF)+0 {V(10 'krnio_pstatus' A)} [0..15], CC:0	{}
+0004 ( 144)		JSR	R0(L)	<-	V(2 '')+0 , V(1 '')+0 , V(0 '')+0 , V(-1 '')+0 	{}
+0005 ( 177)		RELOP20	R0(B)[0..1]	<-	R0(CF), CC:0	{}
+0006 ( 142)		RETV		<-	R0(BF)[0..1]	{}
+--------------------------------------------------------------------
+printf: D:/Arbeit/dev/oscar64/include/stdio.h:18
+$00 R0(L), $10 R1(I), $12 R2(P), $13 R3(P), $00 R4(P), $15 R5(P), $17 R6(B), $18 R7(C), $00 R8(C), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 558)		CONST	R3(P)[2..2]	<-	CG2(-1:2 'sstack')	{}
+0001 ( 354)		CONST	R4(P)[0..0]	<-	CG50(28:0 'buff' A)	{S}
+0002 ( 356)		CONST	R7(C)[0..0]	<-	CI:0	{}
+0003 ( 558)		LOADG2	R5(P)	<-	V(-1 'sstack')+0 	{}
+0004 ( 359)		JUMP		<-		{}
+		==> 2
+L2: <= D-1: (12) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 359)		LOADI1	R1(C)[0..255]	<-	R5(P)+0	{}
+0001 ( 359)		BRANCH		<-	R1(C)[0..255]	{}
+		==> 3
+		==> 4
+L3: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 361)		RELOP19	R0(B)[0..1]	<-	R1(C)[0..255], CC:37	{}
+0001 ( 361)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 5
+		==> 6
+L5: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 363)		BRANCH		<-	R7(C)	{}
+		==> 7
+		==> 8
+L7: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 368)		STOREC2		<-	V(0 '')+0 , R4(P)+0 {V(28 'buff' A)} [0..0]	{}
+0001 ( 363)		CONV37	R0(I)[0..49]	<-	R7(CF)[0..49]	{}
+0002 ( 367)		LEAG	R0(P)[0..49]	<-	V(28 'buff' A)+0 , R0(IF)[0..49]	{}
+0003 ( 367)		STOREI1		<-	R0(PF)+0 {V(28 'buff' A)} [0..49], CC:0	{}
+0004 ( 368)		CALLN		<-	V(9 'puts')+0 	{}
+0005 ( 372)		CONST	R7(C)[0..0]	<-	CI:0	{}
+0006 ( 363)		JUMP		<-		{}
+		==> 8
+L8: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 380)		STOREG1		<-	V(29 'si' A)+5 , CB:0	{}
+0001 ( 381)		STOREG1		<-	V(29 'si' A)+6 , CB:0	{}
+0002 ( 382)		STOREG1		<-	V(29 'si' A)+7 , CB:0	{}
+0003 ( 374)		LOADI1	R2(C)[0..255]	<-	R5(P)+1	{}
+0004 ( 379)		STOREG1		<-	V(29 'si' A)+0 , CC:32	{}
+0005 ( 377)		STOREG1		<-	V(29 'si' A)+1 , CC:0	{}
+0006 ( 378)		STOREG1		<-	V(29 'si' A)+2 , CC:255	{}
+0007 ( 376)		STOREG1		<-	V(29 'si' A)+4 , CC:10	{}
+0008 ( 374)		LEAI	R5(P)+0	<-	R5(PF)+0, CI:2	{}
+0009 ( 386)		JUMP		<-		{}
+		==> 9
+L9: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 386)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:43	{}
+0001 ( 386)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 11
+		==> 12
+L11: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 387)		STOREG1		<-	V(29 'si' A)+5 , CB:1	{}
+0001 ( 384)		JUMP		<-		{}
+		==> 85
+L85: <= D-1: (4)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 396)		LOADI1	R2(C)[0..255]	<-	R5(P)+0	{}
+0001 ( 396)		LEAI	R5(P)+0	<-	R5(PF)+0, CI:1	{}
+0002 ( 384)		JUMP		<-		{}
+		==> 9
+L12: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 388)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:48	{}
+0001 ( 388)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 13
+		==> 14
+L13: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 389)		STOREG1		<-	V(29 'si' A)+0 , CC:48	{}
+0001 ( 384)		JUMP		<-		{}
+		==> 85
+L14: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 390)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:35	{}
+0001 ( 390)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 15
+		==> 16
+L15: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 391)		STOREG1		<-	V(29 'si' A)+7 , CB:1	{}
+0001 ( 384)		JUMP		<-		{}
+		==> 85
+L16: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 392)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:45	{}
+0001 ( 392)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 17
+		==> 10
+L17: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 393)		STOREG1		<-	V(29 'si' A)+6 , CB:1	{}
+0001 ( 384)		JUMP		<-		{}
+		==> 85
+L10: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 399)		RELOP25	R0(B)[0..1]	<-	R2(C)[0..255], CC:48	{}
+0001 ( 399)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 20
+		==> 19
+L20: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 399)		RELOP26	R0(B)[0..1]	<-	R2(C)[48..255], CC:57	{}
+0001 ( 399)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 18
+		==> 25
+L18: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 401)		CONST	R0(C)[0..0]	<-	CI:0	{}
+0001 ( 402)		JUMP		<-		{}
+		==> 23
+L23: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 402)		RELOP26	R1(B)[0..1]	<-	R2(C)[48..255], CC:57	{}
+0001 ( 402)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 21
+		==> 22
+L21: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 402)		CONV37	R1(I)[48..57]	<-	R2(CF)[48..57]	{}
+0001 ( 404)		CONV37	R0(I)[0..255]	<-	R0(CF)[0..2559]	{}
+0002 ( 404)		BINOP3	R0(I)[0..2550]	<-	R0(IF)[0..255], CI:10	{}
+0003 ( 404)		BINOP1	R0(I)[48..2607]	<-	R0(IF)[0..2550], R1(IF)[48..57]	{}
+0004 ( 404)		BINOP2	R0(I)[0..2559]	<-	R0(IF)[48..2607], CI:48	{}
+0005 ( 405)		LOADI1	R2(C)[0..255]	<-	R5(P)+0	{}
+0006 ( 405)		LEAI	R5(P)+0	<-	R5(PF)+0, CI:1	{}
+0007 ( 402)		RELOP25	R1(B)[0..1]	<-	R2(C)[0..255], CC:48	{}
+0008 ( 402)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 23
+		==> 22
+L22: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 407)		STOREG1		<-	V(29 'si' A)+1 , R0(CF)[0..2559]	{}
+0001 ( 410)		JUMP		<-		{}
+		==> 19
+L19: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 410)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:46	{}
+0001 ( 410)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 24
+		==> 25
+L24: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 412)		CONST	R0(C)[0..0]	<-	CI:0	{}
+0001 ( 417)		JUMP		<-		{}
+		==> 80
+L80: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 417)		LOADI1	R2(C)[0..255]	<-	R5(P)+0	{}
+0001 ( 417)		LEAI	R5(P)+0	<-	R5(PF)+0, CI:1	{}
+0002 ( 414)		RELOP25	R1(B)[0..1]	<-	R2(C)[0..255], CC:48	{}
+0003 ( 414)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 28
+		==> 27
+L28: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 414)		RELOP26	R1(B)[0..1]	<-	R2(C)[48..255], CC:57	{}
+0001 ( 414)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 26
+		==> 27
+L26: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 414)		CONV37	R1(I)[48..57]	<-	R2(CF)[48..57]	{}
+0001 ( 416)		CONV37	R0(I)[0..255]	<-	R0(CF)[0..2559]	{}
+0002 ( 416)		BINOP3	R0(I)[0..2550]	<-	R0(IF)[0..255], CI:10	{}
+0003 ( 416)		BINOP1	R0(I)[48..2607]	<-	R0(IF)[0..2550], R1(IF)[48..57]	{}
+0004 ( 416)		BINOP2	R0(I)[0..2559]	<-	R0(IF)[48..2607], CI:48	{}
+0005 ( 414)		JUMP		<-		{}
+		==> 80
+L27: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 419)		STOREG1		<-	V(29 'si' A)+2 , R0(CF)[0..2559]	{}
+0001 ( 422)		JUMP		<-		{}
+		==> 25
+L25: <= D-1: (3)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 422)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:100	{}
+0001 ( 422)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 29
+		==> 33
+L29: <= D-1: (4)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 424)		LOADI2	R0(I)[-32768..32767]	<-	R3(P)+0 {V(12 '')} [2..]	{}
+0001 ( 424)		STOREC1		<-	V(6 '')+0 , CB:1	{}
+0002 ( 422)		JUMP		<-		{}
+		==> 81
+L81: <= D-1: (3)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 424)		STOREC2		<-	V(4 '')+0 , R0(IF)[-32768..32767]	{}
+0001 ( 424)		STOREC2		<-	V(2 '')+0 , R4(P)+0 {V(28 'buff' A)} [0..0]	{}
+0002 ( 428)		CONST	R0(P)[0..0]	<-	CG8(29:0 'si' A)	{S}
+0003 ( 428)		STOREC2		<-	V(0 '')+0 , R0(PF)+0 {V(29 'si' A)} [0..0]	{}
+0004 ( 428)		CALLN	R7(C)	<-	V(10 'nformi')+0 	{}
+0005 ( 428)		LEAI	R3(P)+0 {V(12 '')} [4..]	<-	R3(PF)+0 {V(12 '')} [2..], CI:2	{}
+0006 ( 426)		JUMP		<-		{}
+		==> 2
+L33: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 422)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:68	{}
+0001 ( 422)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 29
+		==> 32
+L32: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 422)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:105	{}
+0001 ( 422)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 29
+		==> 31
+L31: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 422)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:73	{}
+0001 ( 422)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 29
+		==> 30
+L30: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 426)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:117	{}
+0001 ( 426)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 34
+		==> 36
+L34: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 428)		LOADI2	R0(I)[-32768..32767]	<-	R3(P)+0 {V(12 '')} [2..]	{}
+0001 ( 428)		STOREC1		<-	V(6 '')+0 , CB:0	{}
+0002 ( 426)		JUMP		<-		{}
+		==> 81
+L36: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 426)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:85	{}
+0001 ( 426)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 34
+		==> 35
+L35: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 422)		CONV37	R1(I)[0..255]	<-	R2(C)[0..255]	{}
+0001 ( 430)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:120	{}
+0002 ( 430)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 37
+		==> 39
+L37: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 434)		STOREC1		<-	V(6 '')+0 , CB:0	{}
+0001 ( 433)		STOREG1		<-	V(29 'si' A)+4 , CC:16	{}
+0002 ( 434)		LOADI2	R0(I)[-32768..32767]	<-	R3(P)+0 {V(12 '')} [2..]	{}
+0003 ( 432)		BINOP9	R1(I)[0..224]	<-	R1(IF)[0..255], CI:224	{}
+0004 ( 432)		BINOP8	R1(I)[0..255]	<-	R1(IF)[0..224], CI:1	{}
+0005 ( 432)		STOREG1		<-	V(29 'si' A)+3 , R1(CF)[0..255]	{}
+0006 ( 430)		JUMP		<-		{}
+		==> 81
+L39: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 430)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:88	{}
+0001 ( 430)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 37
+		==> 38
+L38: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 437)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:108	{}
+0001 ( 437)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 40
+		==> 42
+L40: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 439)		LOADI4	R0(L)[-2147483648..2147483647]	<-	R3(P)+0 {V(12 '')} [2..]	{}
+0001 ( 441)		LEAI	R3(P)+0 {V(12 '')} [6..]	<-	R3(PF)+0 {V(12 '')} [2..], CI:4	{}
+0002 ( 443)		LOADI1	R2(C)[0..255]	<-	R5(P)+0	{}
+0003 ( 443)		LEAI	R5(P)+0	<-	R5(PF)+0, CI:1	{}
+0004 ( 444)		RELOP19	R1(B)[0..1]	<-	R2(C)[0..255], CC:100	{}
+0005 ( 444)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 43
+		==> 47
+L43: <= D-1: (4)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 446)		STOREC1		<-	V(8 '')+0 , CB:1	{}
+0001 ( 444)		JUMP		<-		{}
+		==> 82
+L82: <= D-1: (3)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 446)		STOREC2		<-	V(2 '')+0 , R4(P)+0 {V(28 'buff' A)} [0..0]	{}
+0001 ( 446)		STOREC4		<-	V(4 '')+0 , R0(LF)[-2147483648..2147483647]	{}
+0002 ( 450)		CONST	R0(P)[0..0]	<-	CG8(29:0 'si' A)	{S}
+0003 ( 450)		STOREC2		<-	V(0 '')+0 , R0(PF)+0 {V(29 'si' A)} [0..0]	{}
+0004 ( 450)		CALLN	R7(C)	<-	V(11 'nforml')+0 	{}
+0005 ( 448)		JUMP		<-		{}
+		==> 2
+L47: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 444)		RELOP19	R1(B)[0..1]	<-	R2(C)[0..255], CC:68	{}
+0001 ( 444)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 43
+		==> 46
+L46: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 444)		RELOP19	R1(B)[0..1]	<-	R2(C)[0..255], CC:105	{}
+0001 ( 444)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 43
+		==> 45
+L45: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 444)		RELOP19	R1(B)[0..1]	<-	R2(C)[0..255], CC:73	{}
+0001 ( 444)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 43
+		==> 44
+L44: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 448)		RELOP19	R1(B)[0..1]	<-	R2(C)[0..255], CC:117	{}
+0001 ( 448)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 48
+		==> 50
+L48: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 450)		STOREC1		<-	V(8 '')+0 , CB:0	{}
+0001 ( 448)		JUMP		<-		{}
+		==> 82
+L50: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 448)		RELOP19	R1(B)[0..1]	<-	R2(C)[0..255], CC:85	{}
+0001 ( 448)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 48
+		==> 49
+L49: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 444)		CONV37	R1(I)[0..255]	<-	R2(C)[0..255]	{}
+0001 ( 452)		RELOP19	R6(B)[0..1]	<-	R2(C)[0..255], CC:120	{}
+0002 ( 452)		BRANCH		<-	R6(BF)[0..1]	{}
+		==> 51
+		==> 52
+L51: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 456)		STOREC1		<-	V(8 '')+0 , CB:0	{}
+0001 ( 455)		STOREG1		<-	V(29 'si' A)+4 , CC:16	{}
+0002 ( 454)		BINOP9	R1(I)[0..224]	<-	R1(IF)[0..255], CI:224	{}
+0003 ( 454)		BINOP8	R1(I)[0..255]	<-	R1(IF)[0..224], CI:1	{}
+0004 ( 454)		STOREG1		<-	V(29 'si' A)+3 , R1(CF)[0..255]	{}
+0005 ( 452)		JUMP		<-		{}
+		==> 82
+L52: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 452)		RELOP19	R2(B)[0..1]	<-	R2(CF)[0..255], CC:88	{}
+0001 ( 452)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 51
+		==> 2
+L42: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 437)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:76	{}
+0001 ( 437)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 40
+		==> 41
+L41: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 462)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:102	{}
+0001 ( 462)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 53
+		==> 59
+L53: <= D-1: (6)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 467)		STOREC2		<-	V(2 '')+0 , R4(P)+0 {V(28 'buff' A)} [0..0]	{}
+0001 ( 467)		LOADI4	R0(F)	<-	R3(P)+0 {V(12 '')} [2..]	{}
+0002 ( 467)		STOREC4		<-	V(4 '')+0 , R0(FF)	{}
+0003 ( 466)		BINOP9	R0(I)[0..224]	<-	R1(I)[0..255], CI:224	{}
+0004 ( 466)		BINOP8	R0(I)[0..255]	<-	R0(IF)[0..224], CI:1	{}
+0005 ( 466)		STOREG1		<-	V(29 'si' A)+3 , R0(C)[0..255]	{}
+0006 ( 466)		CONST	R2(P)[0..0]	<-	CG8(29:0 'si' A)	{S}
+0007 ( 467)		STOREC2		<-	V(0 '')+0 , R2(PF)+0 {V(29 'si' A)} [0..0]	{}
+0008 ( 467)		BINOP2	R0(I)[-255..255]	<-	R1(IF)[0..255], R0(IF)[0..255]	{}
+0009 ( 467)		BINOP1	R0(I)[-158..352]	<-	R0(IF)[-255..255], CI:97	{}
+000a ( 467)		STOREC1		<-	V(8 '')+0 , R0(CF)[-158..352]	{}
+000b ( 467)		CALLN	R7(C)	<-	V(12 'nformf')+0 	{}
+000c ( 469)		LEAI	R3(P)+0 {V(12 '')} [6..]	<-	R3(PF)+0 {V(12 '')} [2..], CI:4	{}
+000d ( 461)		JUMP		<-		{}
+		==> 2
+L59: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 462)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:103	{}
+0001 ( 462)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 53
+		==> 58
+L58: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 462)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:101	{}
+0001 ( 462)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 53
+		==> 57
+L57: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 463)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:70	{}
+0001 ( 463)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 53
+		==> 56
+L56: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 463)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:71	{}
+0001 ( 463)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 53
+		==> 55
+L55: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 463)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:69	{}
+0001 ( 463)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 53
+		==> 54
+L54: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 472)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:115	{}
+0001 ( 472)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 60
+		==> 62
+L60: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 474)		LOADI2	R0(I)[-32768..32767]	<-	R3(P)+0 {V(12 '')} [2..]	{}
+0001 ( 474)		CAST	R1(P)	<-	R0(IF)[-32768..32767]	{}
+0002 ( 474)		LEAI	R3(P)+0 {V(12 '')} [4..]	<-	R3(PF)+0 {V(12 '')} [2..], CI:2	{}
+0003 ( 476)		CONST	R6(C)[0..0]	<-	CI:0	{}
+0004 ( 477)		LOADG1	R8(C)[0..255]	<-	V(29 'si' A)+1 	{}
+0005 ( 477)		BRANCH		<-	R8(C)[0..255]	{}
+		==> 64
+		==> 63
+L64: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 479)		CONV37	R0(I)[0..255]	<-	R6(C)[0..]	{}
+0001 ( 479)		LEAI	R0(P)+0	<-	R1(P)+0, R0(IF)[0..255]	{}
+0002 ( 479)		LOADI1	R0(C)[0..255]	<-	R0(PF)+0	{}
+0003 ( 479)		BRANCH		<-	R0(CF)[0..255]	{}
+		==> 65
+		==> 63
+L65: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 480)		BINOP1	R6(C)[1..]	<-	R6(CF)[0..], CI:1	{}
+0001 ( 479)		JUMP		<-		{}
+		==> 64
+L63: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 483)		LOADG1	R2(B)[0..1]	<-	V(29 'si' A)+6 	{}
+0001 ( 483)		BRANCH		<-	R2(B)[0..1]	{}
+		==> 68
+		==> 77
+L68: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 500)		STOREC2		<-	V(0 '')+0 , R1(PF)	{}
+0001 ( 500)		CALLN		<-	V(9 'puts')+0 	{}
+0002 ( 509)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 76
+		==> 2
+L76: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 511)		RELOP28	R0(B)[0..1]	<-	R6(C)[0..], R8(C)[0..255]	{}
+0001 ( 511)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 78
+		==> 2
+L78: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 513)		LOADG1	R1(C)[0..255]	<-	V(29 'si' A)+0 	{I}
+0001 ( 513)		JUMP		<-		{}
+		==> 69
+L69: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 513)		CONV37	R0(I)[0..49]	<-	R7(C)[0..49]	{}
+0001 ( 513)		LEAG	R0(P)[0..49]	<-	V(28 'buff' A)+0 , R0(IF)[0..49]	{}
+0002 ( 513)		STOREI1		<-	R0(PF)+0 {V(28 'buff' A)} [0..49], R1(C)[0..255]	{}
+0003 ( 513)		BINOP1	R7(C)[1..50]	<-	R7(CF)[0..49], CI:1	{}
+0004 ( 514)		BINOP1	R6(C)[1..255]	<-	R6(CF)[0..254], CI:1	{}
+0005 ( 511)		RELOP28	R0(B)[0..1]	<-	R6(C)[1..255], R8(C)[0..255]	{}
+0006 ( 511)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 69
+		==> 2
+L77: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 485)		RELOP28	R0(B)[0..1]	<-	R6(C)[0..], R8(C)[0..255]	{}
+0001 ( 485)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 79
+		==> 68
+L79: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 487)		LOADG1	R2(C)[0..255]	<-	V(29 'si' A)+0 	{I}
+0001 ( 487)		JUMP		<-		{}
+		==> 66
+L66: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 487)		CONV37	R0(I)[0..49]	<-	R7(C)[0..49]	{}
+0001 ( 487)		LEAG	R0(P)[0..49]	<-	V(28 'buff' A)+0 , R0(IF)[0..49]	{}
+0002 ( 487)		STOREI1		<-	R0(PF)+0 {V(28 'buff' A)} [0..49], R2(C)[0..255]	{}
+0003 ( 487)		BINOP1	R7(C)[1..50]	<-	R7(CF)[0..49], CI:1	{}
+0004 ( 488)		BINOP1	R6(C)[1..255]	<-	R6(CF)[0..254], CI:1	{}
+0005 ( 485)		RELOP28	R0(B)[0..1]	<-	R6(C)[1..255], R8(C)[0..255]	{}
+0006 ( 485)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 66
+		==> 67
+L67: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 497)		STOREC2		<-	V(0 '')+0 , R4(P)+0 {V(28 'buff' A)} [0..0]	{}
+0001 ( 494)		CONV37	R0(I)[1..49]	<-	R7(CF)[1..49]	{}
+0002 ( 496)		LEAG	R0(P)[1..49]	<-	V(28 'buff' A)+0 , R0(IF)[1..49]	{}
+0003 ( 496)		STOREI1		<-	R0(PF)+0 {V(28 'buff' A)} [1..49], CC:0	{}
+0004 ( 497)		CALLN		<-	V(9 'puts')+0 	{}
+0005 ( 500)		STOREC2		<-	V(0 '')+0 , R1(PF)	{}
+0006 ( 509)		JUMP		<-		{}
+		==> 83
+L83: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 535)		CALLN		<-	V(9 'puts')+0 	{}
+0001 ( 539)		CONST	R7(C)[0..0]	<-	CI:0	{}
+0002 ( 530)		JUMP		<-		{}
+		==> 2
+L62: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 472)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:83	{}
+0001 ( 472)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 60
+		==> 61
+L61: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 518)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:99	{}
+0001 ( 518)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 70
+		==> 72
+L70: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 520)		LOADI2	R0(I)[-32768..32767]	<-	R3(P)+0 {V(12 '')} [2..]	{}
+0001 ( 520)		STOREG1		<-	V(28 'buff' A)+0 , R0(CF)[-32768..32767]	{}
+0002 ( 520)		LEAI	R3(P)+0 {V(12 '')} [4..]	<-	R3(PF)+0 {V(12 '')} [2..], CI:2	{}
+0003 ( 518)		JUMP		<-		{}
+		==> 84
+L84: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 524)		CONST	R7(C)[1..1]	<-	CI:1	{}
+0001 ( 522)		JUMP		<-		{}
+		==> 2
+L72: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 518)		RELOP19	R0(B)[0..1]	<-	R2(C)[0..255], CC:67	{}
+0001 ( 518)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 70
+		==> 71
+L71: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 522)		BRANCH		<-	R2(C)[0..255]	{}
+		==> 73
+		==> 2
+L73: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 524)		STOREG1		<-	V(28 'buff' A)+0 , R2(CF)[0..255]	{}
+0001 ( 522)		JUMP		<-		{}
+		==> 84
+L6: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 529)		CONV37	R0(I)[0..49]	<-	R7(C)[0..49]	{}
+0001 ( 529)		LEAG	R0(P)[0..49]	<-	V(28 'buff' A)+0 , R0(IF)[0..49]	{}
+0002 ( 529)		STOREI1		<-	R0(PF)+0 {V(28 'buff' A)} [0..49], R1(CF)[0..255]	{}
+0003 ( 359)		LEAI	R5(P)+0	<-	R5(PF)+0, CI:1	{}
+0004 ( 529)		BINOP1	R7(C)[1..50]	<-	R7(CF)[0..49], CI:1	{}
+0005 ( 530)		RELOP25	R0(B)[0..1]	<-	R7(C)[1..50], CC:40	{}
+0006 ( 530)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 74
+		==> 2
+L74: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 535)		STOREC2		<-	V(0 '')+0 , R4(P)+0 {V(28 'buff' A)} [0..0]	{}
+0001 ( 530)		CONV37	R0(I)[40..49]	<-	R7(CF)[40..49]	{}
+0002 ( 534)		LEAG	R0(P)[40..49]	<-	V(28 'buff' A)+0 , R0(IF)[40..49]	{}
+0003 ( 534)		STOREI1		<-	R0(PF)+0 {V(28 'buff' A)} [40..49], CC:0	{}
+0004 ( 530)		JUMP		<-		{}
+		==> 83
+L4: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 543)		CONV37	R0(I)[0..49]	<-	R7(C)[0..49]	{}
+0001 ( 543)		LEAG	R0(P)[0..49]	<-	V(28 'buff' A)+0 , R0(IF)[0..49]	{}
+0002 ( 543)		STOREI1		<-	R0(PF)+0 {V(28 'buff' A)} [0..49], CC:0	{}
+0003 ( 544)		BRANCH		<-	R7(CF)[0..49]	{}
+		==> 75
+		==> 1
+L75: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 547)		STOREC2		<-	V(0 '')+0 , R4(PF)+0 {V(28 'buff' A)} [0..0]	{}
+0001 ( 547)		CALLN		<-	V(9 'puts')+0 	{}
+0002 ( 559)		RET		<-		{}
+L1: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 559)		RET		<-		{}
+--------------------------------------------------------------------
+puts: D:/Arbeit/dev/oscar64/include/stdio.h:12
+$00 R0(P), $01 R1(P), $00 R2(B), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (  18)		JUMP		<-		{}
+		==> 1
+L1: <= D-1: (3) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (  18)		LOADZ2	R0(P)	<-	V(0 '')+0 	{}
+0001 (  18)		LEAI	R1(P)+0	<-	R0(P)+0, CI:1	{}
+0002 (  18)		STOREZ2		<-	V(0 '')+0 , R1(PF)	{}
+0003 (  18)		LOADI1	R0(C)[0..255]	<-	R0(PF)+0	{}
+0004 (  18)		BRANCH		<-	R0(C)[0..255]	{}
+		==> 2
+		==> 3
+L2: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/conio.c
+0000 ( 206)		RELOP19	R1(B)[0..1]	<-	R0(C)[0..255], CC:10	{}
+0001 ( 206)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 4
+		==> 5
+L4: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/conio.c
+0000 ( 207)		CONST	R0(I)[13..13]	<-	CI:13	{S}
+0001 ( 239)		JUMP		<-		{}
+		==> 8
+L8: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/conio.c
+0000 ( 193)		JSR		<-	R0(CF)[0..255], V(-1 '')+0 	{}
+0001 ( 239)		JUMP		<-		{}
+		==> 1
+L5: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/conio.c
+0000 ( 208)		RELOP19	R1(B)[0..1]	<-	R0(C)[0..255], CC:9	{}
+0001 ( 208)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 6
+		==> 8
+L6: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/conio.c
+0000 ( 411)		LOADA1	R0(C)[0..255]	<-	V(-1 '')+202 	{V}
+0001 ( 210)		CONV37	R0(I)[0..255]	<-	R0(CF)[0..255]	{}
+0002 ( 210)		BINOP9	R0(I)[0..3]	<-	R0(IF)[0..255], CI:3	{}
+0003 ( 212)		CONST	R1(C)[32..32]	<-	CI:32	{IS}
+0004 ( 193)		JUMP		<-		{}
+		==> 7
+L7: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/conio.c
+0000 ( 193)		JSR		<-	R1(C)[32..32], V(-1 '')+0 	{}
+0001 ( 213)		BINOP1	R0(C)[1..4]	<-	R0(CF)[0..3], CI:1	{}
+0002 ( 213)		RELOP28	R2(B)[0..1]	<-	R0(C)[1..4], CC:4	{}
+0003 ( 213)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 7
+		==> 1
+L3: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (  20)		RET		<-		{}
+--------------------------------------------------------------------
+nformi: D:/Arbeit/dev/oscar64/include/stdio.c:79
+$00 R0(I), $00 R1(P), $00 R2(I), $00 R3(I), $00 R4(I), $00 R5(B), $01 R6(C), $02 R7(C), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (  85)		CONST	R5(B)[0..0]	<-	CI:0	{}
+0001 (  84)		LOADZ2	R0(I)[-32768..32767]	<-	V(4 '')+0 	{}
+0002 (  82)		LOADZ2	R1(P)	<-	V(0 '')+0 	{S}
+0003 (  82)		LOADI1	R6(C)[0..255]	<-	R1(P)+4	{}
+0004 (  79)		LOADZ1	R2(B)[0..1]	<-	V(6 '')+0 	{S}
+0005 (  87)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 2
+		==> 22
+L2: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (  87)		RELOP24	R2(B)[0..1]	<-	R0(I)[-32768..32767], CI:0	{S}
+0001 (  87)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 1
+		==> 22
+L1: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (  90)		UNOP11	R0(I)[1..32768]	<-	R0(IF)[-32768..-1]	{}
+0001 (  89)		CONST	R5(B)[1..1]	<-	CI:1	{}
+0002 (  94)		JUMP		<-		{}
+		==> 22
+L22: <= D-1: (3)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (  93)		CONST	R7(C)[16..16]	<-	CI:16	{}
+0001 (  94)		RELOP27	R2(B)[0..1]	<-	R0(I)[-32768..32768], CI:0	{}
+0002 (  94)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 25
+		==> 4
+L25: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (  96)		CONV37	R2(I)[0..255]	<-	R6(C)[0..255]	{I}
+0001 (  96)		JUMP		<-		{}
+		==> 3
+L3: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (  96)		BINOP6	R3(I)[0..254]	<-	R0(I)[1..], R2(I)[0..255]	{}
+0001 (  99)		BINOP4	R0(I)[0..]	<-	R0(IF)[1..], R2(I)[0..255]	{}
+0002 (  97)		RELOP25	R4(B)[0..1]	<-	R3(C)[0..254], CC:10	{}
+0003 (  97)		BRANCH		<-	R4(BF)[0..1]	{}
+		==> 26
+		==> 27
+L26: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (  97)		LOADI1	R4(C)[0..255]	<-	R1(P)+3	{}
+0001 (  97)		CONV37	R4(I)[0..255]	<-	R4(CF)[0..255]	{}
+0002 (  97)		BINOP2	R4(I)[-10..245]	<-	R4(IF)[0..255], CI:10	{}
+0003 (  97)		JUMP		<-		{}
+		==> 28
+L28: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (  97)		CONV37	R3(I)[0..254]	<-	R3(CF)[0..254]	{}
+0001 (  97)		BINOP1	R3(I)[-10..499]	<-	R3(IF)[0..254], R4(IF)[-10..245]	{}
+0002 (  98)		CONV37	R4(I)[1..16]	<-	R7(C)[1..16]	{}
+0003 (  98)		LEAG	R4(P)[0..15]	<-	V(19 'buffer' A)+-1 , R4(IF)[1..16]	{}
+0004 (  98)		STOREI1		<-	R4(PF)+0 {V(19 'buffer' A)} [0..15], R3(CF)[-10..499]	{}
+0005 (  98)		BINOP1	R7(C)[0..15]	<-	R7(CF)[1..16], CI:-1	{}
+0006 (  94)		RELOP27	R3(B)[0..1]	<-	R0(I)[0..], CI:0	{}
+0007 (  94)		BRANCH		<-	R3(BF)[0..1]	{}
+		==> 3
+		==> 4
+L4: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 102)		LOADI1	R0(C)[0..255]	<-	R1(P)+2	{}
+0001 ( 102)		RELOP20	R2(B)[0..1]	<-	R0(C)[0..255], CC:255	{}
+0002 ( 102)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 29
+		==> 30
+L29: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 102)		CONV37	R0(I)[0..255]	<-	R0(CF)[0..255]	{}
+0001 ( 102)		BINOP2	R0(I)[-239..16]	<-	CI:16, R0(IF)[0..255]	{}
+0002 ( 102)		JUMP		<-		{}
+		==> 31
+L31: <= D-1: (3) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 104)		RELOP27	R2(B)[0..1]	<-	R7(C)[0..16], R0(C)[-239..16]	{}
+0001 ( 104)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 5
+		==> 6
+L5: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 105)		CONV37	R2(I)[1..16]	<-	R7(C)[1..16]	{}
+0001 ( 105)		LEAG	R2(P)[0..15]	<-	V(19 'buffer' A)+-1 , R2(IF)[1..16]	{}
+0002 ( 105)		STOREI1		<-	R2(PF)+0 {V(19 'buffer' A)} [0..15], CC:48	{}
+0003 ( 105)		BINOP1	R7(C)[0..15]	<-	R7(CF)[1..16], CI:-1	{}
+0004 ( 104)		JUMP		<-		{}
+		==> 31
+L6: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 107)		LOADI1	R0(B)[0..1]	<-	R1(P)+7	{}
+0001 ( 107)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 9
+		==> 8
+L9: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 107)		RELOP19	R0(B)[0..1]	<-	R6(CF)[0..255], CC:16	{}
+0001 ( 107)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 7
+		==> 8
+L7: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 109)		LOADI1	R2(C)[0..255]	<-	R1(P)+3	{}
+0001 ( 109)		CONV37	R0(I)[2..16]	<-	R7(C)[2..16]	{}
+0002 ( 110)		LEAG	R0(P)[0..14]	<-	V(19 'buffer' A)+-2 , R0(IF)[2..16]	{}
+0003 ( 110)		STOREI1		<-	R0(P)+0 {V(19 'buffer' A)} [0..14], CC:48	{}
+0004 ( 109)		BINOP1	R2(C)[23..278]	<-	R2(CF)[0..255], CI:23	{}
+0005 ( 109)		STOREI1		<-	R0(PF)+1 {V(19 'buffer' A)} [0..14], R2(CF)[23..278]	{}
+0006 ( 110)		BINOP1	R7(C)[0..14]	<-	R7(CF)[2..16], CI:-2	{}
+0007 ( 113)		JUMP		<-		{}
+		==> 8
+L8: <= D-1: (3)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 118)		CONST	R4(C)[0..0]	<-	CI:0	{}
+0001 ( 113)		BRANCH		<-	R5(BF)[0..1]	{}
+		==> 10
+		==> 11
+L10: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 114)		CONV37	R0(I)[1..16]	<-	R7(C)[1..16]	{}
+0001 ( 114)		LEAG	R0(P)[0..15]	<-	V(19 'buffer' A)+-1 , R0(IF)[1..16]	{}
+0002 ( 114)		STOREI1		<-	R0(PF)+0 {V(19 'buffer' A)} [0..15], CC:45	{}
+0003 ( 119)		JUMP		<-		{}
+		==> 33
+L33: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 116)		BINOP1	R7(C)[0..15]	<-	R7(CF)[1..16], CI:-1	{}
+0001 ( 119)		JUMP		<-		{}
+		==> 32
+L32: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 119)		LOADI1	R0(B)[0..1]	<-	R1(P)+6	{}
+0001 ( 119)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 20
+		==> 17
+L20: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 121)		RELOP28	R0(B)[0..1]	<-	R7(C)[0..16], CC:16	{}
+0001 ( 121)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 23
+		==> 15
+L23: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 122)		LOADZ2	R0(P)	<-	V(2 '')+0 	{IS}
+0001 ( 122)		JUMP		<-		{}
+		==> 14
+L14: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 122)		CONV37	R2(I)[0..255]	<-	R4(C)[0..]	{}
+0001 ( 122)		CONV37	R3(I)[0..15]	<-	R7(C)[0..15]	{}
+0002 ( 122)		LEAG	R3(P)[0..15]	<-	V(19 'buffer' A)+0 , R3(IF)[0..15]	{}
+0003 ( 122)		LOADI1	R3(C)[0..255]	<-	R3(PF)+0 {V(19 'buffer' A)} [0..15]	{}
+0004 ( 122)		LEAI	R2(P)+0	<-	R0(P)+0, R2(IF)[0..255]	{}
+0005 ( 122)		STOREI1		<-	R2(PF)+0, R3(CF)[0..255]	{}
+0006 ( 122)		BINOP1	R4(C)[1..]	<-	R4(CF)[0..], CI:1	{}
+0007 ( 122)		BINOP1	R7(C)[1..16]	<-	R7(CF)[0..15], CI:1	{}
+0008 ( 121)		RELOP28	R2(B)[0..1]	<-	R7(C)[1..16], CC:16	{}
+0009 ( 121)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 14
+		==> 15
+L15: <= D-1: (3) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 123)		LOADI1	R0(C)[0..255]	<-	R1(P)+1	{}
+0001 ( 123)		RELOP28	R0(B)[0..1]	<-	R4(C)[0..], R0(CF)[0..255]	{}
+0002 ( 123)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 16
+		==> 13
+L16: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 123)		CONV37	R0(I)[0..254]	<-	R4(C)[0..254]	{}
+0001 ( 124)		LOADZ2	R2(P)	<-	V(2 '')+0 	{S}
+0002 ( 124)		LEAI	R2(P)+0	<-	R2(PF)+0, R0(IF)[0..254]	{}
+0003 ( 124)		LOADI1	R0(C)[0..255]	<-	R1(P)+0	{}
+0004 ( 124)		STOREI1		<-	R2(PF)+0, R0(CF)[0..255]	{}
+0005 ( 124)		BINOP1	R4(C)[1..255]	<-	R4(CF)[0..254], CI:1	{}
+0006 ( 123)		JUMP		<-		{}
+		==> 15
+L13: <= D-1: (3)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 134)		RETV		<-	R4(CF)[0..]	{}
+L17: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 128)		LOADI1	R0(C)[0..255]	<-	R1(P)+1	{}
+0001 ( 128)		CONV37	R0(I)[0..255]	<-	R0(CF)[0..255]	{}
+0002 ( 128)		CONV37	R2(I)[0..16]	<-	R7(C)[0..16]	{}
+0003 ( 128)		BINOP1	R0(I)[0..271]	<-	R2(I)[0..16], R0(IF)[0..255]	{}
+0004 ( 128)		RELOP27	R0(B)[0..1]	<-	R0(IF)[0..271], CI:16	{}
+0005 ( 128)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 18
+		==> 21
+L18: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 129)		LOADI1	R3(C)[0..255]	<-	R1(P)+0	{}
+0001 ( 129)		LEAG	R0(P)[0..15]	<-	V(19 'buffer' A)+-1 , R2(IF)[1..16]	{}
+0002 ( 129)		STOREI1		<-	R0(PF)+0 {V(19 'buffer' A)} [0..15], R3(CF)[0..255]	{}
+0003 ( 129)		BINOP1	R7(C)[0..15]	<-	R7(CF)[1..16], CI:-1	{}
+0004 ( 128)		JUMP		<-		{}
+		==> 17
+L21: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 130)		RELOP28	R0(B)[0..1]	<-	R7(C)[0..16], CC:16	{}
+0001 ( 130)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 24
+		==> 13
+L24: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 131)		LOADZ2	R0(P)	<-	V(2 '')+0 	{IS}
+0001 ( 131)		JUMP		<-		{}
+		==> 19
+L19: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 131)		CONV37	R1(I)[0..255]	<-	R4(C)[0..]	{}
+0001 ( 131)		CONV37	R2(I)[0..15]	<-	R7(C)[0..15]	{}
+0002 ( 131)		LEAG	R2(P)[0..15]	<-	V(19 'buffer' A)+0 , R2(IF)[0..15]	{}
+0003 ( 131)		LOADI1	R2(C)[0..255]	<-	R2(PF)+0 {V(19 'buffer' A)} [0..15]	{}
+0004 ( 131)		LEAI	R1(P)+0	<-	R0(P)+0, R1(IF)[0..255]	{}
+0005 ( 131)		STOREI1		<-	R1(PF)+0, R2(CF)[0..255]	{}
+0006 ( 131)		BINOP1	R4(C)[1..]	<-	R4(CF)[0..], CI:1	{}
+0007 ( 131)		BINOP1	R7(C)[1..16]	<-	R7(CF)[0..15], CI:1	{}
+0008 ( 130)		RELOP28	R1(B)[0..1]	<-	R7(C)[1..16], CC:16	{}
+0009 ( 130)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 19
+		==> 13
+L11: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 115)		LOADI1	R0(B)[0..1]	<-	R1(P)+5	{}
+0001 ( 115)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 12
+		==> 32
+L12: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 116)		CONV37	R0(I)[1..16]	<-	R7(C)[1..16]	{}
+0001 ( 116)		LEAG	R0(P)[0..15]	<-	V(19 'buffer' A)+-1 , R0(IF)[1..16]	{}
+0002 ( 116)		STOREI1		<-	R0(PF)+0 {V(19 'buffer' A)} [0..15], CC:43	{}
+0003 ( 119)		JUMP		<-		{}
+		==> 33
+L30: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 102)		CONST	R0(I)[15..15]	<-	CI:15	{}
+0001 ( 102)		JUMP		<-		{}
+		==> 31
+L27: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (  97)		CONST	R4(I)[48..48]	<-	CI:48	{}
+0001 (  97)		JUMP		<-		{}
+		==> 28
+--------------------------------------------------------------------
+nforml: D:/Arbeit/dev/oscar64/include/stdio.c:137
+$00 R0(L), $00 R1(L), $00 R2(L), $00 R3(P), $00 R4(B), $01 R5(C), $00 R6(C), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 142)		CONST	R4(B)[0..0]	<-	CI:0	{}
+0001 ( 141)		LOADZ4	R0(L)[-2147483648..2147483647]	<-	V(4 '')+0 	{}
+0002 ( 137)		LOADZ1	R1(B)[0..1]	<-	V(8 '')+0 	{S}
+0003 ( 144)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 2
+		==> 22
+L2: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 144)		RELOP24	R1(B)[0..1]	<-	R0(L)[-2147483648..2147483647], CL:0	{S}
+0001 ( 144)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 1
+		==> 22
+L1: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 147)		UNOP11	R0(L)[1..2147483648]	<-	R0(LF)[-2147483648..-1]	{}
+0001 ( 146)		CONST	R4(B)[1..1]	<-	CI:1	{}
+0002 ( 152)		JUMP		<-		{}
+		==> 22
+L22: <= D-1: (3)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 150)		CONST	R5(C)[16..16]	<-	CI:16	{}
+0001 ( 152)		RELOP27	R1(B)[0..1]	<-	R0(L)[-2147483648..2147483648], CL:0	{}
+0002 ( 152)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 25
+		==> 4
+L25: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 154)		LOADZ2	R3(P)	<-	V(0 '')+0 	{IS}
+0001 ( 154)		JUMP		<-		{}
+		==> 3
+L3: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 154)		LOADI1	R1(C)[0..255]	<-	R3(P)+4	{}
+0001 ( 154)		CONV38	R1(L)[0..255]	<-	R1(CF)[0..255]	{}
+0002 ( 157)		BINOP4	R2(L)[0..]	<-	R0(L)[1..], R1(L)[0..255]	{}
+0003 ( 154)		BINOP6	R0(L)[0..254]	<-	R0(LF)[1..], R1(LF)[0..255]	{}
+0004 ( 155)		RELOP25	R1(B)[0..1]	<-	R0(I)[0..254], CI:10	{}
+0005 ( 155)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 26
+		==> 27
+L26: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 155)		LOADI1	R1(C)[0..255]	<-	R3(P)+3	{}
+0001 ( 155)		CONV37	R1(I)[0..255]	<-	R1(CF)[0..255]	{}
+0002 ( 155)		BINOP2	R1(I)[-10..245]	<-	R1(IF)[0..255], CI:10	{}
+0003 ( 155)		JUMP		<-		{}
+		==> 28
+L28: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 155)		BINOP1	R0(I)[-10..499]	<-	R1(IF)[-10..245], R0(IF)[0..254]	{}
+0001 ( 156)		CONV37	R1(I)[1..16]	<-	R5(C)[1..16]	{}
+0002 ( 156)		LEAG	R1(P)[0..15]	<-	V(21 'buffer' A)+-1 , R1(IF)[1..16]	{}
+0003 ( 156)		STOREI1		<-	R1(PF)+0 {V(21 'buffer' A)} [0..15], R0(CF)[-10..499]	{}
+0004 ( 156)		BINOP1	R5(C)[0..15]	<-	R5(CF)[1..16], CI:-1	{}
+0005 ( 157)		MOVE	R0(L)[0..]	<-	R2(L)[0..]	{}
+0006 ( 152)		RELOP27	R1(B)[0..1]	<-	R2(LF)[0..], CL:0	{}
+0007 ( 152)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 3
+		==> 4
+L4: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 160)		LOADZ2	R0(P)	<-	V(0 '')+0 	{S}
+0001 ( 160)		LOADI1	R1(C)[0..255]	<-	R0(P)+2	{}
+0002 ( 160)		RELOP20	R2(B)[0..1]	<-	R1(C)[0..255], CC:255	{}
+0003 ( 160)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 29
+		==> 30
+L29: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 160)		CONV37	R1(I)[0..255]	<-	R1(CF)[0..255]	{}
+0001 ( 160)		BINOP2	R1(I)[-239..16]	<-	CI:16, R1(IF)[0..255]	{}
+0002 ( 160)		JUMP		<-		{}
+		==> 31
+L31: <= D-1: (3) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 162)		RELOP27	R2(B)[0..1]	<-	R5(C)[0..16], R1(C)[-239..16]	{}
+0001 ( 162)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 5
+		==> 6
+L5: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 163)		CONV37	R2(I)[1..16]	<-	R5(C)[1..16]	{}
+0001 ( 163)		LEAG	R2(P)[0..15]	<-	V(21 'buffer' A)+-1 , R2(IF)[1..16]	{}
+0002 ( 163)		STOREI1		<-	R2(PF)+0 {V(21 'buffer' A)} [0..15], CC:48	{}
+0003 ( 163)		BINOP1	R5(C)[0..15]	<-	R5(CF)[1..16], CI:-1	{}
+0004 ( 162)		JUMP		<-		{}
+		==> 31
+L6: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 165)		LOADI1	R1(B)[0..1]	<-	R0(P)+7	{}
+0001 ( 165)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 9
+		==> 8
+L9: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 165)		LOADI1	R1(C)[0..255]	<-	R0(P)+4	{}
+0001 ( 165)		RELOP19	R1(B)[0..1]	<-	R1(CF)[0..255], CC:16	{}
+0002 ( 165)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 7
+		==> 8
+L7: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 167)		LOADI1	R2(C)[0..255]	<-	R0(P)+3	{}
+0001 ( 167)		CONV37	R1(I)[2..16]	<-	R5(C)[2..16]	{}
+0002 ( 168)		LEAG	R1(P)[0..14]	<-	V(21 'buffer' A)+-2 , R1(IF)[2..16]	{}
+0003 ( 168)		STOREI1		<-	R1(P)+0 {V(21 'buffer' A)} [0..14], CC:48	{}
+0004 ( 167)		BINOP1	R2(C)[23..278]	<-	R2(CF)[0..255], CI:23	{}
+0005 ( 167)		STOREI1		<-	R1(PF)+1 {V(21 'buffer' A)} [0..14], R2(CF)[23..278]	{}
+0006 ( 168)		BINOP1	R5(C)[0..14]	<-	R5(CF)[2..16], CI:-2	{}
+0007 ( 171)		JUMP		<-		{}
+		==> 8
+L8: <= D-1: (3)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 176)		CONST	R6(C)[0..0]	<-	CI:0	{}
+0001 ( 171)		BRANCH		<-	R4(BF)[0..1]	{}
+		==> 10
+		==> 11
+L10: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 172)		CONV37	R1(I)[1..16]	<-	R5(C)[1..16]	{}
+0001 ( 172)		LEAG	R1(P)[0..15]	<-	V(21 'buffer' A)+-1 , R1(IF)[1..16]	{}
+0002 ( 172)		STOREI1		<-	R1(PF)+0 {V(21 'buffer' A)} [0..15], CC:45	{}
+0003 ( 177)		JUMP		<-		{}
+		==> 33
+L33: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 174)		BINOP1	R5(C)[0..15]	<-	R5(CF)[1..16], CI:-1	{}
+0001 ( 177)		JUMP		<-		{}
+		==> 32
+L32: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 177)		LOADI1	R1(B)[0..1]	<-	R0(P)+6	{}
+0001 ( 177)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 20
+		==> 17
+L20: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 179)		RELOP28	R1(B)[0..1]	<-	R5(C)[0..16], CC:16	{}
+0001 ( 179)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 23
+		==> 15
+L23: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 180)		LOADZ2	R1(P)	<-	V(2 '')+0 	{IS}
+0001 ( 180)		JUMP		<-		{}
+		==> 14
+L14: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 180)		CONV37	R2(I)[0..255]	<-	R6(C)[0..]	{}
+0001 ( 180)		CONV37	R3(I)[0..15]	<-	R5(C)[0..15]	{}
+0002 ( 180)		LEAG	R3(P)[0..15]	<-	V(21 'buffer' A)+0 , R3(IF)[0..15]	{}
+0003 ( 180)		LOADI1	R3(C)[0..255]	<-	R3(PF)+0 {V(21 'buffer' A)} [0..15]	{}
+0004 ( 180)		LEAI	R2(P)+0	<-	R1(P)+0, R2(IF)[0..255]	{}
+0005 ( 180)		STOREI1		<-	R2(PF)+0, R3(CF)[0..255]	{}
+0006 ( 180)		BINOP1	R6(C)[1..]	<-	R6(CF)[0..], CI:1	{}
+0007 ( 180)		BINOP1	R5(C)[1..16]	<-	R5(CF)[0..15], CI:1	{}
+0008 ( 179)		RELOP28	R2(B)[0..1]	<-	R5(C)[1..16], CC:16	{}
+0009 ( 179)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 14
+		==> 15
+L15: <= D-1: (3) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 181)		LOADI1	R1(C)[0..255]	<-	R0(P)+1	{}
+0001 ( 181)		RELOP28	R1(B)[0..1]	<-	R6(C)[0..], R1(CF)[0..255]	{}
+0002 ( 181)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 16
+		==> 13
+L16: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 181)		CONV37	R1(I)[0..254]	<-	R6(C)[0..254]	{}
+0001 ( 182)		LOADZ2	R2(P)	<-	V(2 '')+0 	{S}
+0002 ( 182)		LEAI	R2(P)+0	<-	R2(PF)+0, R1(IF)[0..254]	{}
+0003 ( 182)		LOADI1	R1(C)[0..255]	<-	R0(P)+0	{}
+0004 ( 182)		STOREI1		<-	R2(PF)+0, R1(CF)[0..255]	{}
+0005 ( 182)		BINOP1	R6(C)[1..255]	<-	R6(CF)[0..254], CI:1	{}
+0006 ( 181)		JUMP		<-		{}
+		==> 15
+L13: <= D-1: (3)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 192)		RETV		<-	R6(CF)[0..]	{}
+L17: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 186)		LOADI1	R1(C)[0..255]	<-	R0(P)+1	{}
+0001 ( 186)		CONV37	R1(I)[0..255]	<-	R1(CF)[0..255]	{}
+0002 ( 186)		CONV37	R2(I)[0..16]	<-	R5(C)[0..16]	{}
+0003 ( 186)		BINOP1	R1(I)[0..271]	<-	R2(I)[0..16], R1(IF)[0..255]	{}
+0004 ( 186)		RELOP27	R1(B)[0..1]	<-	R1(IF)[0..271], CI:16	{}
+0005 ( 186)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 18
+		==> 21
+L18: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 187)		LOADI1	R3(C)[0..255]	<-	R0(P)+0	{}
+0001 ( 187)		LEAG	R1(P)[0..15]	<-	V(21 'buffer' A)+-1 , R2(IF)[1..16]	{}
+0002 ( 187)		STOREI1		<-	R1(PF)+0 {V(21 'buffer' A)} [0..15], R3(CF)[0..255]	{}
+0003 ( 187)		BINOP1	R5(C)[0..15]	<-	R5(CF)[1..16], CI:-1	{}
+0004 ( 186)		JUMP		<-		{}
+		==> 17
+L21: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 188)		RELOP28	R0(B)[0..1]	<-	R5(C)[0..16], CC:16	{}
+0001 ( 188)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 24
+		==> 13
+L24: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 189)		LOADZ2	R0(P)	<-	V(2 '')+0 	{IS}
+0001 ( 189)		JUMP		<-		{}
+		==> 19
+L19: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 189)		CONV37	R1(I)[0..255]	<-	R6(C)[0..]	{}
+0001 ( 189)		CONV37	R2(I)[0..15]	<-	R5(C)[0..15]	{}
+0002 ( 189)		LEAG	R2(P)[0..15]	<-	V(21 'buffer' A)+0 , R2(IF)[0..15]	{}
+0003 ( 189)		LOADI1	R2(C)[0..255]	<-	R2(PF)+0 {V(21 'buffer' A)} [0..15]	{}
+0004 ( 189)		LEAI	R1(P)+0	<-	R0(P)+0, R1(IF)[0..255]	{}
+0005 ( 189)		STOREI1		<-	R1(PF)+0, R2(CF)[0..255]	{}
+0006 ( 189)		BINOP1	R6(C)[1..]	<-	R6(CF)[0..], CI:1	{}
+0007 ( 189)		BINOP1	R5(C)[1..16]	<-	R5(CF)[0..15], CI:1	{}
+0008 ( 188)		RELOP28	R1(B)[0..1]	<-	R5(C)[1..16], CC:16	{}
+0009 ( 188)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 19
+		==> 13
+L11: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 173)		LOADI1	R1(B)[0..1]	<-	R0(P)+5	{}
+0001 ( 173)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 12
+		==> 32
+L12: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 174)		CONV37	R1(I)[1..16]	<-	R5(C)[1..16]	{}
+0001 ( 174)		LEAG	R1(P)[0..15]	<-	V(21 'buffer' A)+-1 , R1(IF)[1..16]	{}
+0002 ( 174)		STOREI1		<-	R1(PF)+0 {V(21 'buffer' A)} [0..15], CC:43	{}
+0003 ( 177)		JUMP		<-		{}
+		==> 33
+L30: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 160)		CONST	R1(I)[15..15]	<-	CI:15	{}
+0001 ( 160)		JUMP		<-		{}
+		==> 31
+L27: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 155)		CONST	R1(I)[48..48]	<-	CI:48	{}
+0001 ( 155)		JUMP		<-		{}
+		==> 28
+--------------------------------------------------------------------
+nformf: D:/Arbeit/dev/oscar64/include/stdio.c:199
+$00 R0(F), $04 R1(F), $00 R2(P), $00 R3(P), $08 R4(I), $0a R5(I), $0c R6(I), $0d R7(P), $0e R8(I), $0f R9(C), $10 R10(B), $11 R11(C), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 201)		LOADZ2	R2(P)	<-	V(2 '')+0 	{S}
+0001 ( 205)		LOADZ4	R0(F)	<-	V(4 '')+0 	{}
+0002 ( 205)		RELOP24	R1(B)[0..1]	<-	R0(F), CF:0.000000 (00000000)	{}
+0003 ( 205)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 1
+		==> 2
+L1: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 208)		STOREI1		<-	R2(P)+0, CC:45	{}
+0001 ( 207)		UNOP11	R0(F)	<-	R0(FF)	{}
+0002 ( 207)		STOREZ4		<-	V(4 '')+0 , R0(FF)	{}
+0003 ( 205)		JUMP		<-		{}
+		==> 62
+L62: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 211)		CONST	R9(C)[1..1]	<-	CI:1	{}
+0001 ( 210)		JUMP		<-		{}
+		==> 3
+L3: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 213)		LOADZ4	R0(F)	<-	V(4 '')+0 	{}
+0001 ( 224)		STOREG4		<-	V(25 'x')+0 , R0(F)	{}
+0002 ( 215)		LOADZ2	R3(P)	<-	V(0 '')+0 	{S}
+0003 ( 226)		LOADG2	R1(I)[0..65535]	<-	V(25 'x')+2 	{}
+0004 ( 226)		BINOP17	R1(I)[0..511]	<-	R1(IF)[0..65535], CI:7	{}
+0005 ( 226)		BINOP9	R1(I)[0..255]	<-	R1(IF)[0..511], CI:255	{}
+0006 ( 226)		RELOP19	R1(B)[0..1]	<-	R1(IF)[0..255], CI:255	{}
+0007 ( 213)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 5
+		==> 6
+L5: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 215)		CONV37	R0(I)[0..1]	<-	R9(C)[0..1]	{}
+0001 ( 215)		LOADI1	R1(C)[0..255]	<-	R3(P)+3	{}
+0002 ( 215)		BINOP1	R1(C)[8..263]	<-	R1(CF)[0..255], CI:8	{}
+0003 ( 215)		LEAI	R0(P)+0	<-	R2(P)+0, R0(IF)[0..1]	{}
+0004 ( 215)		STOREI1		<-	R0(P)+0, R1(CF)[8..263]	{}
+0005 ( 216)		LOADI1	R1(C)[0..255]	<-	R3(P)+3	{}
+0006 ( 216)		BINOP1	R1(C)[13..268]	<-	R1(CF)[0..255], CI:13	{}
+0007 ( 216)		STOREI1		<-	R0(P)+1, R1(CF)[13..268]	{}
+0008 ( 217)		LOADI1	R1(C)[0..255]	<-	R3(P)+3	{}
+0009 ( 217)		BINOP1	R1(C)	<-	R1(CF)[0..255], CI:5	{}
+000a ( 217)		STOREI1		<-	R0(PF)+2, R1(CF)	{}
+000b ( 217)		BINOP1	R9(C)[3..4]	<-	R9(CF)[0..1], CI:3	{}
+000c ( 213)		JUMP		<-		{}
+		==> 7
+L7: <= D-1: (3)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 331)		LOADI1	R0(C)[0..255]	<-	R3(P)+1	{}
+0001 ( 331)		RELOP28	R0(B)[0..1]	<-	R9(C), R0(CF)[0..255]	{}
+0002 ( 331)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 40
+		==> 41
+L40: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 333)		LOADI1	R0(B)[0..1]	<-	R3(P)+6	{}
+0001 ( 333)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 44
+		==> 42
+L44: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 335)		LOADI1	R0(C)[0..255]	<-	R3(P)+1	{}
+0001 ( 335)		RELOP28	R0(B)[0..1]	<-	R9(C)[0..255], R0(CF)[0..255]	{}
+0002 ( 335)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 45
+		==> 43
+L45: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 335)		CONV37	R0(I)[0..254]	<-	R9(C)[0..254]	{}
+0001 ( 336)		LEAI	R0(P)+0	<-	R2(P)+0, R0(IF)[0..254]	{}
+0002 ( 336)		STOREI1		<-	R0(PF)+0, CC:32	{}
+0003 ( 335)		BINOP1	R9(C)[1..255]	<-	R9(CF)[0..254], CI:1	{}
+0004 ( 335)		JUMP		<-		{}
+		==> 44
+L43: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 345)		LOADI1	R0(C)[0..255]	<-	R3(PF)+1	{}
+0001 ( 348)		RETV		<-	R0(CF)[0..255]	{}
+L42: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 340)		RELOP26	R0(B)[0..1]	<-	CC:1, R9(C)[0..254]	{}
+0001 ( 340)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 55
+		==> 47
+L55: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 341)		CONV37	R0(I)[0..254]	<-	R9(C)[0..254]	{I}
+0001 ( 341)		BINOP2	R0(I)[-1..253]	<-	R0(IF)[0..254], CI:1	{}
+0002 ( 341)		LEAI	R0(P)+0	<-	R2(P)+0, R0(IF)[-1..253]	{}
+0003 ( 340)		CONST	R4(C)[1..1]	<-	CI:1	{}
+0004 ( 341)		JUMP		<-		{}
+		==> 46
+L46: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 341)		LOADI1	R1(C)[0..255]	<-	R3(P)+1	{}
+0001 ( 341)		CONV37	R1(I)[0..255]	<-	R1(CF)[0..255]	{}
+0002 ( 341)		BINOP2	R1(I)[-254..254]	<-	R1(IF)[0..255], R4(I)[1..254]	{}
+0003 ( 341)		LOADI1	R5(C)[0..255]	<-	R0(P)+0	{}
+0004 ( 341)		LEAI	R1(P)+0	<-	R2(P)+0, R1(IF)[-254..254]	{}
+0005 ( 341)		STOREI1		<-	R1(PF)+0, R5(CF)[0..255]	{}
+0006 ( 341)		LEAI	R0(P)+0	<-	R0(PF)+0, CI:-1	{}
+0007 ( 340)		BINOP1	R4(C)[2..255]	<-	R4(CF)[1..254], CI:1	{}
+0008 ( 340)		RELOP26	R1(B)[0..1]	<-	R4(C)[2..255], R9(C)[0..254]	{}
+0009 ( 340)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 46
+		==> 47
+L47: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 342)		CONST	R4(C)[0..0]	<-	CI:0	{}
+0001 ( 342)		JUMP		<-		{}
+		==> 48
+L48: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 342)		LOADI1	R0(C)[0..255]	<-	R3(P)+1	{}
+0001 ( 342)		CONV37	R0(I)[0..255]	<-	R0(CF)[0..255]	{}
+0002 ( 342)		CONV37	R1(I)[0..254]	<-	R9(C)[0..254]	{I}
+0003 ( 342)		BINOP2	R0(I)[-254..255]	<-	R0(IF)[0..255], R1(IF)[0..254]	{}
+0004 ( 342)		CONV37	R1(I)[0..255]	<-	R4(C)[0..]	{}
+0005 ( 342)		RELOP28	R0(B)[0..1]	<-	R1(I)[0..255], R0(IF)[-254..255]	{}
+0006 ( 342)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 49
+		==> 43
+L49: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 343)		LEAI	R0(P)+0	<-	R2(P)+0, R1(IF)[0..254]	{}
+0001 ( 343)		STOREI1		<-	R0(PF)+0, CC:32	{}
+0002 ( 342)		BINOP1	R4(C)[1..]	<-	R4(CF)[0..], CI:1	{}
+0003 ( 342)		JUMP		<-		{}
+		==> 48
+L41: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 348)		RETV		<-	R9(CF)	{}
+L6: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 223)		LOADI1	R1(C)[0..255]	<-	R3(P)+2	{}
+0001 ( 223)		RELOP20	R4(B)[0..1]	<-	R1(C)[0..255], CC:255	{}
+0002 ( 223)		BRANCH		<-	R4(BF)[0..1]	{}
+		==> 56
+		==> 57
+L56: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 223)		CONV37	R4(I)[0..255]	<-	R1(CF)[0..255]	{}
+0001 ( 223)		JUMP		<-		{}
+		==> 58
+L58: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 223)		MOVE	R7(C)[0..255]	<-	R4(C)[0..255]	{}
+0001 ( 221)		CONST	R5(I)[0..0]	<-	CI:0	{}
+0002 ( 225)		RELOP20	R1(B)[0..1]	<-	R0(F), CF:0.000000 (00000000)	{}
+0003 ( 225)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 54
+		==> 8
+L54: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 227)		RELOP21	R1(B)[0..1]	<-	R0(F), CF:1000.000000 (447a0000)	{}
+0001 ( 227)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 9
+		==> 53
+L9: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 230)		BINOP1	R5(I)[3..]	<-	R5(IF)[0..], CI:3	{}
+0001 ( 229)		BINOP5	R0(F)	<-	R0(FF), CF:1000.000000 (447a0000)	{}
+0002 ( 227)		RELOP21	R1(B)[0..1]	<-	R0(F), CF:1000.000000 (447a0000)	{}
+0003 ( 227)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 9
+		==> 53
+L53: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 233)		RELOP24	R1(B)[0..1]	<-	R0(F), CF:1.000000 (3f800000)	{}
+0001 ( 233)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 10
+		==> 52
+L10: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 236)		BINOP2	R5(I)	<-	R5(IF), CI:3	{}
+0001 ( 235)		BINOP3	R0(F)	<-	R0(FF), CF:1000.000000 (447a0000)	{}
+0002 ( 233)		RELOP24	R1(B)[0..1]	<-	R0(F), CF:1.000000 (3f800000)	{}
+0003 ( 233)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 10
+		==> 52
+L52: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 239)		RELOP21	R1(B)[0..1]	<-	R0(F), CF:10.000000 (41200000)	{}
+0001 ( 239)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 11
+		==> 8
+L11: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 242)		BINOP1	R5(I)	<-	R5(IF), CI:1	{}
+0001 ( 241)		BINOP5	R0(F)	<-	R0(FF), CF:10.000000 (41200000)	{}
+0002 ( 239)		RELOP21	R1(B)[0..1]	<-	R0(F), CF:10.000000 (41200000)	{}
+0003 ( 239)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 11
+		==> 8
+L8: <= D-1: (3)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 248)		LOADZ1	R8(C)[0..255]	<-	V(8 '')+0 	{S}
+0001 ( 248)		RELOP19	R10(B)[0..1]	<-	R8(C)[0..255], CC:101	{}
+0002 ( 247)		CONV37	R1(I)[0..255]	<-	R4(C)[0..255]	{}
+0003 ( 247)		BINOP1	R6(I)[1..256]	<-	R1(I)[0..255], CI:1	{}
+0004 ( 250)		RELOP19	R8(B)[0..1]	<-	R8(CF)[0..255], CC:103	{S}
+0005 ( 250)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 12
+		==> 13
+L12: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 252)		RELOP23	R8(B)[0..1]	<-	R5(I), CI:3	{}
+0001 ( 252)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 14
+		==> 15
+L14: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 253)		CONST	R10(B)[1..1]	<-	CI:1	{}
+0001 ( 256)		JUMP		<-		{}
+		==> 16
+L16: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 279)		RELOP28	R1(B)[0..1]	<-	R6(C)[1..255], CC:7	{}
+0001 ( 279)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 23
+		==> 24
+L23: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 280)		BINOP16	R1(I)[4..24]	<-	R6(C)[1..6], CI:2	{}
+0001 ( 280)		LEAG	R1(P)[0..20]	<-	V(23 'fround5' A)+-4 , R1(IF)[4..24]	{}
+0002 ( 280)		LOADI4	R1(F)	<-	R1(PF)+0 {V(23 'fround5' A)} [0..20]	{}
+0003 ( 284)		JUMP		<-		{}
+		==> 60
+L60: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 282)		BINOP1	R0(F)	<-	R1(FF), R0(FF)	{}
+0001 ( 282)		STOREZ4		<-	V(4 '')+0 , R0(F)	{}
+0002 ( 284)		RELOP21	R1(B)[0..1]	<-	R0(F), CF:10.000000 (41200000)	{}
+0003 ( 284)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 25
+		==> 17
+L25: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 286)		BINOP5	R0(F)	<-	R0(FF), CF:10.000000 (41200000)	{}
+0001 ( 286)		STOREZ4		<-	V(4 '')+0 , R0(FF)	{}
+0002 ( 287)		BINOP1	R5(I)	<-	R5(IF), CI:1	{}
+0003 ( 284)		JUMP		<-		{}
+		==> 17
+L17: <= D-1: (4)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 292)		CONV37	R0(I)[0..255]	<-	R6(C)[1..33023]	{}
+0001 ( 292)		CONV37	R1(I)[0..255]	<-	R7(CF)[-1..255]	{}
+0002 ( 292)		BINOP2	R4(I)[-255..255]	<-	R0(IF)[0..255], R1(IF)[0..255]	{}
+0003 ( 294)		RELOP27	R0(B)[0..1]	<-	R6(C)[1..33023], CC:20	{}
+0004 ( 294)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 26
+		==> 27
+L26: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 295)		CONST	R6(C)[20..20]	<-	CI:20	{}
+0001 ( 297)		BRANCH		<-	R4(C)[-128..255]	{}
+		==> 50
+		==> 28
+L50: <= D-1: (3)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 300)		CONST	R11(C)[0..0]	<-	CI:0	{}
+0001 ( 302)		JUMP		<-		{}
+		==> 30
+L30: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 302)		RELOP19	R0(B)[0..1]	<-	R11(C)[0..19], R4(C)[-128..255]	{}
+0001 ( 302)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 32
+		==> 33
+L32: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 303)		CONV37	R0(I)[0..255]	<-	R9(C)[0..]	{}
+0001 ( 303)		LEAI	R0(P)+0	<-	R2(P)+0, R0(IF)[0..255]	{}
+0002 ( 303)		STOREI1		<-	R0(PF)+0, CC:46	{}
+0003 ( 303)		BINOP1	R9(C)[1..]	<-	R9(CF)[0..], CI:1	{}
+0004 ( 304)		JUMP		<-		{}
+		==> 33
+L33: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 305)		CONV37	R0(I)[0..255]	<-	R9(C)[0..]	{}
+0001 ( 305)		LEAI	R7(P)+0	<-	R2(P)+0, R0(IF)[0..255]	{}
+0002 ( 304)		RELOP27	R0(B)[0..1]	<-	R11(C)[0..19], CC:6	{}
+0003 ( 304)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 34
+		==> 35
+L34: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 305)		STOREI1		<-	R7(PF)+0, CC:48	{}
+0001 ( 300)		JUMP		<-		{}
+		==> 29
+L29: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 305)		BINOP1	R9(C)[1..]	<-	R9(CF)[0..], CI:1	{}
+0001 ( 300)		BINOP1	R11(C)[1..20]	<-	R11(CF)[0..19], CI:1	{}
+0002 ( 300)		RELOP28	R0(B)[0..1]	<-	R11(C)[1..20], R6(C)[1..20]	{}
+0003 ( 300)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 30
+		==> 31
+L31: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 315)		BRANCH		<-	R10(BF)[0..1]	{}
+		==> 36
+		==> 7
+L36: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 317)		CONV37	R0(I)[1..254]	<-	R9(C)[1..254]	{}
+0001 ( 317)		LOADI1	R1(C)[0..255]	<-	R3(P)+3	{}
+0002 ( 317)		BINOP1	R1(C)[4..259]	<-	R1(CF)[0..255], CI:4	{}
+0003 ( 317)		LEAI	R0(P)+0	<-	R2(P)+0, R0(IF)[1..254]	{}
+0004 ( 317)		STOREI1		<-	R0(PF)+0, R1(CF)[4..259]	{}
+0005 ( 317)		BINOP1	R9(C)[2..255]	<-	R9(CF)[1..254], CI:1	{}
+0006 ( 320)		CONV37	R0(I)[2..255]	<-	R9(C)[2..255]	{}
+0007 ( 320)		LEAI	R0(P)+0	<-	R2(P)+0, R0(IF)[2..255]	{}
+0008 ( 318)		RELOP24	R1(B)[0..1]	<-	R5(I), CI:0	{}
+0009 ( 318)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 37
+		==> 38
+L37: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 320)		STOREI1		<-	R0(PF)+0, CC:45	{}
+0001 ( 321)		UNOP11	R5(I)[1..32768]	<-	R5(IF)[-32768..-1]	{}
+0002 ( 318)		JUMP		<-		{}
+		==> 39
+L39: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 320)		BINOP1	R9(C)	<-	R9(CF)[2..255], CI:1	{}
+0001 ( 326)		CONV37	R0(I)[0..255]	<-	R9(C)	{}
+0002 ( 326)		BINOP5	R1(I)	<-	R5(I)[0..32768], CI:10	{}
+0003 ( 326)		BINOP1	R1(I)	<-	R1(IF), CI:48	{}
+0004 ( 326)		LEAI	R0(P)+0	<-	R2(P)+0, R0(IF)[0..255]	{}
+0005 ( 326)		STOREI1		<-	R0(PF)+0, R1(CF)	{}
+0006 ( 326)		BINOP1	R9(C)	<-	R9(CF), CI:1	{}
+0007 ( 327)		CONV37	R0(I)[0..255]	<-	R9(C)	{}
+0008 ( 327)		BINOP7	R5(I)	<-	R5(IF)[0..32768], CI:10	{}
+0009 ( 327)		BINOP1	R5(I)	<-	R5(IF), CI:48	{}
+000a ( 327)		LEAI	R0(P)+0	<-	R2(P)+0, R0(IF)[0..255]	{}
+000b ( 327)		STOREI1		<-	R0(PF)+0, R5(CF)	{}
+000c ( 327)		BINOP1	R9(C)	<-	R9(CF), CI:1	{}
+000d ( 315)		JUMP		<-		{}
+		==> 7
+L38: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 324)		STOREI1		<-	R0(PF)+0, CC:43	{}
+0001 ( 318)		JUMP		<-		{}
+		==> 39
+L35: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 308)		LOADZ4	R0(F)	<-	V(4 '')+0 	{}
+0001 ( 308)		CONV29	R8(I)	<-	R0(F)	{}
+0002 ( 309)		CONV30	R1(F)	<-	R8(I)	{}
+0003 ( 309)		BINOP2	R0(F)	<-	R0(FF), R1(FF)	{}
+0004 ( 310)		BINOP3	R0(F)	<-	R0(FF), CF:10.000000 (41200000)	{}
+0005 ( 310)		STOREZ4		<-	V(4 '')+0 , R0(FF)	{}
+0006 ( 311)		BINOP1	R8(I)	<-	R8(IF), CI:48	{}
+0007 ( 311)		STOREI1		<-	R7(PF)+0, R8(CF)	{}
+0008 ( 300)		JUMP		<-		{}
+		==> 29
+L28: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 298)		CONV37	R0(I)[0..1]	<-	R9(C)[0..1]	{}
+0001 ( 298)		LEAI	R0(P)+0	<-	R2(P)+0, R0(IF)[0..1]	{}
+0002 ( 298)		STOREI1		<-	R0(PF)+0, CC:48	{}
+0003 ( 298)		BINOP1	R9(C)[1..2]	<-	R9(CF)[0..1], CI:1	{}
+0004 ( 300)		JUMP		<-		{}
+		==> 50
+L27: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 297)		BRANCH		<-	R4(C)[-128..255]	{}
+		==> 50
+		==> 28
+L24: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 282)		LOADG4	R1(F)	<-	V(23 'fround5' A)+24 	{}
+0001 ( 284)		JUMP		<-		{}
+		==> 60
+L15: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 252)		RELOP24	R8(B)[0..1]	<-	R5(I)[-32768..3], CI:0	{}
+0001 ( 252)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 14
+		==> 13
+L13: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 256)		BRANCH		<-	R10(B)[0..1]	{}
+		==> 16
+		==> 51
+L51: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 258)		RELOP24	R6(B)[0..1]	<-	R5(I), CI:0	{}
+0001 ( 258)		BRANCH		<-	R6(BF)[0..1]	{}
+		==> 18
+		==> 19
+L18: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 260)		BINOP5	R0(F)	<-	R0(FF), CF:10.000000 (41200000)	{}
+0001 ( 261)		BINOP1	R5(I)[-32767..0]	<-	R5(IF)[-32768..-1], CI:1	{}
+0002 ( 258)		RELOP24	R6(B)[0..1]	<-	R5(I)[-32767..0], CI:0	{}
+0003 ( 258)		BRANCH		<-	R6(BF)[0..1]	{}
+		==> 18
+		==> 19
+L19: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 264)		BINOP1	R1(I)[0..33022]	<-	R1(IF)[0..255], R5(I)[0..32767]	{}
+0001 ( 264)		BINOP1	R6(I)[1..33023]	<-	R1(IF)[0..33022], CI:1	{}
+0002 ( 266)		RELOP28	R1(B)[0..1]	<-	R6(C)[1..33023], CC:7	{}
+0003 ( 266)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 20
+		==> 21
+L20: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 267)		BINOP16	R1(I)[4..24]	<-	R6(I)[1..6], CI:2	{}
+0001 ( 267)		LEAG	R1(P)[0..20]	<-	V(23 'fround5' A)+-4 , R1(IF)[4..24]	{}
+0002 ( 267)		LOADI4	R1(F)	<-	R1(PF)+0 {V(23 'fround5' A)} [0..20]	{}
+0003 ( 271)		JUMP		<-		{}
+		==> 61
+L61: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 269)		BINOP1	R0(F)	<-	R1(FF), R0(FF)	{}
+0001 ( 269)		STOREZ4		<-	V(4 '')+0 , R0(F)	{}
+0002 ( 271)		RELOP21	R1(B)[0..1]	<-	R0(F), CF:10.000000 (41200000)	{}
+0003 ( 271)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 22
+		==> 17
+L22: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 273)		BINOP5	R0(F)	<-	R0(FF), CF:10.000000 (41200000)	{}
+0001 ( 273)		STOREZ4		<-	V(4 '')+0 , R0(FF)	{}
+0002 ( 274)		BINOP1	R7(C)[-1..254]	<-	R4(CF)[0..255], CI:-1	{}
+0003 ( 271)		JUMP		<-		{}
+		==> 17
+L21: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 269)		LOADG4	R1(F)	<-	V(23 'fround5' A)+24 	{}
+0001 ( 271)		JUMP		<-		{}
+		==> 61
+L57: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 223)		CONST	R4(I)[6..6]	<-	CI:6	{}
+0001 ( 223)		JUMP		<-		{}
+		==> 58
+L2: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 210)		LOADZ2	R0(P)	<-	V(0 '')+0 	{S}
+0001 ( 210)		LOADI1	R0(B)[0..1]	<-	R0(PF)+5	{}
+0002 ( 210)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 4
+		==> 59
+L4: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 211)		STOREI1		<-	R2(P)+0, CC:43	{}
+0001 ( 210)		JUMP		<-		{}
+		==> 62
+L59: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 ( 203)		CONST	R9(C)[0..0]	<-	CI:0	{}
+0001 ( 210)		JUMP		<-		{}
+		==> 3
+--------------------------------------------------------------------
+fgets: D:/Arbeit/dev/oscar64/include/stdio.h:46
+$00 R0(P), $00 R1(I), $01 R2(P), $02 R3(P), $00 R4(I), $00 R5(C), $00 R6(B), $04 R7(C), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1136)		LOADZ2	R0(P)	<-	V(3 '')+0 	{S}
+0001 (1136)		LOADI1	R1(C)[0..15]	<-	R0(PF)+0	{}
+0002 ( 513)		CONV37	R0(I)[0..15]	<-	R1(C)[0..15]	{}
+0003 ( 513)		LEAG	R2(P)[0..15]	<-	V(10 'krnio_pstatus' A)+0 , R0(IF)[0..15]	{}
+0004 ( 513)		LOADI1	R0(C)[0..128]	<-	R2(P)+0 {V(10 'krnio_pstatus' A)} [0..15]	{}
+0005 ( 513)		RELOP19	R0(B)[0..1]	<-	R0(CF)[0..128], CC:64	{}
+0006 ( 513)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 2
+		==> 3
+L2: <= D-1: (3)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1138)		CONST	R0(P)[0..0]	<-	CA0(-1:0 '')	{S}
+0001 (1138)		RETV		<-	R0(PF)+0 {V(-1 'ABS')} [0..0]	{}
+L3: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 516)		STOREC1		<-	V(0 '')+0 , R1(CF)[0..15]	{}
+0001 ( 516)		CALLN	R0(B)	<-	V(14 'krnio_chkin')+0 	{}
+0002 ( 516)		BRANCH		<-	R0(BF)	{}
+		==> 4
+		==> 2
+L4: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 518)		CONST	R5(C)[0..0]	<-	CI:0	{}
+0001 ( 519)		CONST	R1(I)[0..0]	<-	CI:0	{}
+0002 (1136)		LOADZ2	R3(P)	<-	V(1 '')+0 	{S}
+0003 ( 521)		JUMP		<-		{}
+		==> 5
+L5: <= D-1: (2) Head P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 521)		BINOP1	R4(I)[1..64]	<-	R1(I)[0..63], CI:1	{}
+0001 ( 521)		RELOP28	R0(B)[0..1]	<-	R4(I)[1..64], CI:64	{}
+0002 ( 521)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 6
+		==> 7
+L6: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 523)		CALLN	R7(C)	<-	V(15 'krnio_chrin')+0 	{}
+0001 ( 524)		CALLN	R5(C)	<-	V(16 'krnio_status')+0 	{}
+0002 ( 523)		CONV37	R0(I)[0..255]	<-	R7(C)	{}
+0003 ( 525)		BRANCH		<-	R5(C)	{}
+		==> 9
+		==> 8
+L9: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 525)		RELOP20	R6(B)[0..1]	<-	R5(C), CC:64	{}
+0001 ( 525)		BRANCH		<-	R6(BF)[0..1]	{}
+		==> 7
+		==> 8
+L7: <= D-1: (5)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 531)		STOREI1		<-	R2(PF)+0 {V(10 'krnio_pstatus' A)} [0..15], R5(CF)	{}
+0001 ( 532)		LEAI	R0(P)+0	<-	R3(P)+0, R1(I)[0..63]	{}
+0002 ( 532)		STOREI1		<-	R0(PF)+0, CC:0	{}
+0003 ( 533)		CALLN		<-	V(17 'krnio_clrchn')+0 	{}
+0004 (1136)		RELOP27	R0(B)[0..1]	<-	R1(IF)[0..63], CI:0	{}
+0005 (1136)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 1
+		==> 2
+L1: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1137)		RETV		<-	R3(PF)	{}
+L8: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 527)		LEAI	R1(P)+0	<-	R3(P)+0, R1(IF)[0..63]	{}
+0001 ( 527)		STOREI1		<-	R1(PF)+0, R0(CF)[0..255]	{}
+0002 ( 527)		MOVE	R1(I)[1..63]	<-	R4(IF)[1..63]	{}
+0003 ( 528)		RELOP19	R0(B)[0..1]	<-	R7(C), CC:13	{}
+0004 ( 528)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 7
+		==> 11
+L11: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 528)		RELOP19	R0(B)[0..1]	<-	R7(CF), CC:10	{}
+0001 ( 528)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 7
+		==> 10
+L10: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 528)		BRANCH		<-	R5(C)[0..64]	{}
+		==> 7
+		==> 5
+--------------------------------------------------------------------
+krnio_chkin: D:/Arbeit/dev/oscar64/include/c64/kernalio.h:55
+$00 R0(L), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 295)		JSR	R0(L)	<-	V(0 '')+0 , V(-1 '')+0 	{}
+0001 ( 307)		RELOP20	R0(B)[0..1]	<-	R0(CF), CC:0	{}
+0002 ( 293)		RETV		<-	R0(BF)[0..1]	{}
+--------------------------------------------------------------------
+krnio_chrin: D:/Arbeit/dev/oscar64/include/c64/kernalio.h:67
+$00 R0(L), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 342)		JSR	R0(L)	<-	V(-1 '')+0 	{}
+0001 ( 340)		RETV		<-	R0(CF)	{}
+--------------------------------------------------------------------
+krnio_status: D:/Arbeit/dev/oscar64/include/c64/kernalio.h:43
+$00 R0(L), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 206)		JSR	R0(L)	<-	V(-1 '')+0 	{}
+0001 ( 201)		RETV		<-	R0(CF)	{}
+--------------------------------------------------------------------
+krnio_clrchn: D:/Arbeit/dev/oscar64/include/c64/kernalio.h:59
+
+L0: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 316)		JSR		<-	V(-1 '')+0 	{}
+0001 ( 320)		RET		<-		{}
+--------------------------------------------------------------------
+parse_next_int: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:235
+$00 R0(P), $02 R1(P), $00 R2(P), $04 R3(C), $00 R4(B), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 240)		LOADZ2	R0(P)	<-	V(0 '')+0 	{}
+0001 ( 240)		LOADI1	R1(C)[0..255]	<-	R0(PF)+0	{}
+0002 ( 236)		CONST	R0(I)[0..0]	<-	CI:0	{}
+0003 ( 237)		CONST	R3(C)[1..1]	<-	CI:1	{}
+0004 ( 240)		BRANCH		<-	R1(CF)[0..255]	{}
+		==> 4
+		==> 2
+L4: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 240)		LOADZ2	R1(P)	<-	V(0 '')+0 	{}
+0001 ( 240)		LOADI1	R2(C)[0..255]	<-	R1(P)+0	{}
+0002 ( 240)		RELOP28	R4(B)[0..1]	<-	R2(C)[0..255], CC:48	{}
+0003 ( 240)		BRANCH		<-	R4(BF)[0..1]	{}
+		==> 3
+		==> 5
+L3: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 240)		RELOP20	R2(B)[0..1]	<-	R2(CF)[0..47], CC:45	{}
+0001 ( 240)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 1
+		==> 2
+L1: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 240)		LEAI	R2(P)+0	<-	R1(P)+0, CI:1	{}
+0001 ( 240)		STOREZ2		<-	V(0 '')+0 , R2(PF)	{}
+0002 ( 240)		LOADI1	R1(C)[0..255]	<-	R1(PF)+1	{}
+0003 ( 240)		BRANCH		<-	R1(CF)[0..255]	{}
+		==> 4
+		==> 2
+L2: <= D-1: (4)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 242)		LOADZ2	R1(P)	<-	V(0 '')+0 	{}
+0001 ( 242)		LOADI1	R2(C)[0..255]	<-	R1(P)+0	{}
+0002 ( 242)		RELOP19	R2(B)[0..1]	<-	R2(CF)[0..255], CC:45	{}
+0003 ( 242)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 6
+		==> 10
+L6: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 244)		LEAI	R1(P)+0	<-	R1(PF)+0, CI:1	{}
+0001 ( 244)		STOREZ2		<-	V(0 '')+0 , R1(PF)	{}
+0002 ( 243)		CONST	R3(C)[-1..-1]	<-	CI:-1	{}
+0003 ( 242)		JUMP		<-		{}
+		==> 10
+L10: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 247)		LOADZ2	R1(P)	<-	V(0 '')+0 	{}
+0001 ( 247)		LOADI1	R1(C)[0..255]	<-	R1(PF)+0	{}
+0002 ( 247)		JUMP		<-		{}
+		==> 11
+L11: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 247)		RELOP25	R1(B)[0..1]	<-	R1(CF)[0..255], CC:48	{}
+0001 ( 247)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 9
+		==> 8
+L9: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 247)		LOADZ2	R1(P)	<-	V(0 '')+0 	{}
+0001 ( 247)		LOADI1	R4(C)[0..255]	<-	R1(P)+0	{}
+0002 ( 247)		RELOP26	R2(B)[0..1]	<-	R4(C)[0..255], CC:57	{}
+0003 ( 247)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 7
+		==> 8
+L7: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 249)		LEAI	R2(P)+0	<-	R1(P)+0, CI:1	{}
+0001 ( 249)		STOREZ2		<-	V(0 '')+0 , R2(PF)	{}
+0002 ( 248)		BINOP3	R0(I)	<-	R0(IF), CI:10	{}
+0003 ( 247)		CONV37	R2(I)[0..57]	<-	R4(CF)[0..57]	{}
+0004 ( 248)		BINOP2	R2(I)[-48..9]	<-	R2(IF)[0..57], CI:48	{}
+0005 ( 248)		BINOP1	R0(I)	<-	R2(IF)[-48..9], R0(IF)	{}
+0006 ( 247)		LOADI1	R1(C)[0..255]	<-	R1(PF)+1	{}
+0007 ( 247)		JUMP		<-		{}
+		==> 11
+L8: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 252)		CONV40	R1(I)[-1..1]	<-	R3(CF)[-1..1]	{}
+0001 ( 252)		BINOP3	R0(I)	<-	R1(IF)[-1..1], R0(IF)	{}
+0002 ( 252)		LOADZ2	R1(P)	<-	V(2 '')+0 	{S}
+0003 ( 252)		STOREI2		<-	R1(PF)+0, R0(IF)	{}
+0004 ( 253)		LOADZ2	R0(P)	<-	V(0 '')+0 	{}
+0005 ( 253)		RETV		<-	R0(PF)	{}
+L5: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 240)		RELOP27	R2(B)[0..1]	<-	R2(CF)[48..255], CC:57	{}
+0001 ( 240)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 1
+		==> 2
+--------------------------------------------------------------------
+drawline: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:190
+$00 R0(I), $00 R1(I), $00 R2(I), $00 R3(I), $02 R4(I), $04 R5(I), $06 R6(I), $00 R7(I), $08 R8(I), $00 R9(I), $0a R10(I), $00 R11(I), $00 R12(I), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 191)		LOADZ2	R0(I)[-32768..32767]	<-	V(4 '')+0 	{S}
+0001 ( 191)		LOADZ2	R1(I)[-32768..32767]	<-	V(0 '')+0 	{}
+0002 ( 193)		RELOP24	R2(B)[0..1]	<-	R1(I)[-32768..32767], R0(I)[-32768..32767]	{}
+0003 ( 193)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 13
+		==> 14
+L13: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 193)		CONST	R2(I)[1..1]	<-	CI:1	{}
+0001 ( 193)		JUMP		<-		{}
+		==> 15
+L15: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 192)		LOADZ2	R3(I)[-32768..32767]	<-	V(6 '')+0 	{S}
+0001 ( 192)		LOADZ2	R4(I)[-32768..32767]	<-	V(2 '')+0 	{}
+0002 ( 194)		RELOP24	R5(B)[0..1]	<-	R4(I)[-32768..32767], R3(I)[-32768..32767]	{}
+0003 ( 194)		BRANCH		<-	R5(BF)[0..1]	{}
+		==> 16
+		==> 17
+L16: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 194)		CONST	R5(I)[1..1]	<-	CI:1	{}
+0001 ( 194)		JUMP		<-		{}
+		==> 18
+L18: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 191)		BINOP2	R1(I)[-32768..65535]	<-	R0(I)[-32768..32767], R1(IF)[-32768..32767]	{}
+0001 ( 545)		RELOP24	R6(B)[0..1]	<-	R1(I)[-32768..65535], CI:0	{}
+0002 ( 545)		BRANCH		<-	R6(BF)[0..1]	{}
+		==> 19
+		==> 20
+L19: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdlib.c
+0000 ( 545)		UNOP11	R1(I)[1..32768]	<-	R1(IF)[-32768..-1]	{}
+0001 ( 545)		JUMP		<-		{}
+		==> 20
+L20: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 192)		BINOP2	R4(I)[-32768..65535]	<-	R3(I)[-32768..32767], R4(IF)[-32768..32767]	{}
+0001 ( 545)		RELOP24	R6(B)[0..1]	<-	R4(I)[-32768..65535], CI:0	{}
+0002 ( 545)		BRANCH		<-	R6(BF)[0..1]	{}
+		==> 21
+		==> 22
+L21: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdlib.c
+0000 ( 545)		UNOP11	R4(I)[1..32768]	<-	R4(IF)[-32768..-1]	{}
+0001 ( 545)		JUMP		<-		{}
+		==> 22
+L22: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 192)		UNOP11	R4(I)[-32768..0]	<-	R4(IF)[0..65535]	{}
+0001 ( 195)		BINOP1	R6(I)[-32768..65535]	<-	R4(I)[-32768..0], R1(I)[0..65535]	{}
+0002 ( 204)		JUMP		<-		{}
+		==> 1
+L1: <= D-1: (3) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 204)		LOADZ2	R7(I)[-32768..32767]	<-	V(0 '')+0 	{}
+0001 ( 204)		RELOP28	R8(B)[0..1]	<-	R7(I)[-32768..32767], CI:320	{}
+0002 ( 204)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 5
+		==> 4
+L5: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 204)		LOADZ2	R8(I)[-32768..32767]	<-	V(2 '')+0 	{}
+0001 ( 204)		RELOP28	R9(B)[0..1]	<-	R8(I)[-32768..32767], CI:200	{}
+0002 ( 204)		BRANCH		<-	R9(BF)[0..1]	{}
+		==> 3
+		==> 4
+L3: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 210)		BINOP9	R9(I)[0..7]	<-	R7(I)[0..319], CI:7	{}
+0001 ( 210)		LEAG	R9(P)[0..7]	<-	V(52 'bit_tab')+0 , R9(IF)[0..7]	{}
+0002 ( 210)		LOADI1	R9(C)[1..128]	<-	R9(PF)+0 {V(52 'bit_tab')} [0..7]	{}
+0003 ( 213)		CONV37	R9(I)[1..128]	<-	R9(CF)[1..128]	{}
+0004 ( 206)		BINOP17	R10(I)[0..24]	<-	R8(I)[0..199], CI:3	{}
+0005 ( 209)		BINOP16	R11(I)[0..6144]	<-	R10(I)[0..24], CI:8	{}
+0006 ( 209)		LOADG2	R12(I)[0..65535]	<-	V(8 'bitmap')+0 	{}
+0007 ( 209)		BINOP1	R11(I)	<-	R12(IF)[0..65535], R11(IF)[0..6144]	{}
+0008 ( 209)		BINOP16	R10(I)[0..1536]	<-	R10(IF)[0..24], CI:6	{}
+0009 ( 209)		BINOP1	R10(I)	<-	R10(IF)[0..1536], R11(IF)	{}
+000a ( 209)		BINOP9	R11(I)[0..504]	<-	R7(I)[0..319], CI:504	{}
+000b ( 209)		BINOP1	R10(I)	<-	R11(IF)[0..504], R10(IF)	{}
+000c ( 209)		BINOP9	R8(I)[0..7]	<-	R8(IF)[0..199], CI:7	{}
+000d ( 209)		BINOP1	R8(I)	<-	R8(IF)[0..7], R10(IF)	{}
+000e ( 213)		CAST	R8(P)	<-	R8(IF)	{}
+000f ( 213)		LOADI1	R10(C)[0..255]	<-	R8(P)+0	{V}
+0010 ( 213)		CONV37	R10(I)[0..255]	<-	R10(CF)[0..255]	{}
+0011 ( 212)		LOADG2	R11(I)[-32768..32767]	<-	V(53 'drawing_mode')+0 	{}
+0012 ( 212)		RELOP19	R11(B)[0..1]	<-	R11(IF)[-32768..32767], CI:0	{}
+0013 ( 212)		BRANCH		<-	R11(BF)[0..1]	{}
+		==> 6
+		==> 7
+L6: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 213)		BINOP8	R9(I)[0..255]	<-	R9(IF)[1..128], R10(IF)[0..255]	{}
+0001 ( 220)		JUMP		<-		{}
+		==> 23
+L23: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 215)		STOREI1		<-	R8(PF)+0, R9(CF)	{V}
+0001 ( 220)		JUMP		<-		{}
+		==> 4
+L4: <= D-1: (3)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 220)		RELOP19	R8(B)[0..1]	<-	R7(I)[-32768..32767], R0(I)[-32768..32767]	{}
+0001 ( 220)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 9
+		==> 8
+L9: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 220)		LOADZ2	R8(I)[-32768..32767]	<-	V(2 '')+0 	{}
+0001 ( 220)		RELOP19	R8(B)[0..1]	<-	R8(IF)[-32768..32767], R3(I)[-32768..32767]	{}
+0002 ( 220)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 2
+		==> 8
+L2: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 233)		RET		<-		{}
+L8: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 222)		BINOP16	R8(I)	<-	R6(I), CI:1	{}
+0001 ( 224)		RELOP21	R9(B)[0..1]	<-	R8(I), R4(I)[-32768..0]	{}
+0002 ( 224)		BRANCH		<-	R9(BF)[0..1]	{}
+		==> 10
+		==> 11
+L10: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 226)		BINOP1	R7(I)	<-	R7(IF)[-32768..32767], R2(I)[-1..1]	{}
+0001 ( 226)		STOREZ2		<-	V(0 '')+0 , R7(IF)	{}
+0002 ( 225)		BINOP1	R6(I)	<-	R6(IF), R4(I)[-32768..0]	{}
+0003 ( 228)		JUMP		<-		{}
+		==> 11
+L11: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 228)		RELOP22	R7(B)[0..1]	<-	R8(IF), R1(I)[0..65535]	{}
+0001 ( 228)		BRANCH		<-	R7(BF)[0..1]	{}
+		==> 12
+		==> 1
+L12: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 230)		LOADZ2	R7(I)[-32768..32767]	<-	V(2 '')+0 	{}
+0001 ( 230)		BINOP1	R7(I)	<-	R7(IF)[-32768..32767], R5(I)[-1..1]	{}
+0002 ( 230)		STOREZ2		<-	V(2 '')+0 , R7(IF)	{}
+0003 ( 229)		BINOP1	R6(I)	<-	R6(IF), R1(I)[0..65535]	{}
+0004 ( 228)		JUMP		<-		{}
+		==> 1
+L7: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 215)		UNOP15	R9(I)	<-	R9(IF)[1..128]	{}
+0001 ( 215)		BINOP9	R9(I)	<-	R9(IF), R10(IF)[0..255]	{}
+0002 ( 220)		JUMP		<-		{}
+		==> 23
+L17: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 194)		CONST	R5(I)[-1..-1]	<-	CI:-1	{}
+0001 ( 194)		JUMP		<-		{}
+		==> 18
+L14: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 193)		CONST	R2(I)[-1..-1]	<-	CI:-1	{}
+0001 ( 193)		JUMP		<-		{}
+		==> 15
+--------------------------------------------------------------------
+krnio_close: D:/Arbeit/dev/oscar64/include/c64/kernalio.h:39
+
+L0: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 186)		JSR		<-	V(0 '')+0 , V(-1 '')+0 	{}
+0001 ( 195)		RET		<-		{}
+--------------------------------------------------------------------
+load_plane_data: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:301
+$00 R0(L), $0c R1(L), $0e R2(P), $00 R3(I), $10 R4(P), $12 R5(I), $14 R6(I), $04 R7(B), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 310)		CONST	R0(P)[0..0]	<-	CG0(66:0 '')	{S}
+0001 ( 310)		STOREC2		<-	V(3 '')+0 , R0(PF)+0 {V(66 '')} [0..0]	{}
+0002 ( 310)		CONST	R0(P)[0..0]	<-	CG0(67:0 '')	{S}
+0003 ( 310)		STOREC2		<-	V(5 '')+0 , R0(PF)+0 {V(67 '')} [0..0]	{}
+0004 ( 310)		CALLN	R2(P)	<-	V(5 'fopen')+0 	{}
+0005 ( 311)		RELOP19	R0(B)[0..1]	<-	R2(P), V(-1 '')+0 	{}
+0006 ( 311)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 1
+		==> 2
+L1: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 311)		RET		<-		{}
+L2: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 314)		LOADZ2	R3(I)[-32768..32767]	<-	V(8 '')+0 	{S}
+0001 ( 314)		BINOP16	R0(I)[-32768..65534]	<-	R3(I)[-32768..32767], CI:1	{S}
+0002 ( 314)		MALLOC	R4(P)+0{R1}	<-	R0(IF)[-32768..65534]	{}
+0003 ( 314)		STOREG2		<-	V(68 'plane_data')+0 , R4(P)+0{R1}	{}
+0004 ( 304)		CONST	R5(I)[0..0]	<-	CI:0	{}
+0005 ( 331)		JUMP		<-		{}
+		==> 14
+L14: <= D-1: (3) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 331)		CONST	R1(I)[0..0]	<-	CI:0	{}
+0001 ( 332)		CONST	R6(I)[0..0]	<-	CI:0	{}
+0002 ( 317)		JUMP		<-		{}
+		==> 3
+L3: <= D-1: (3) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 317)		STOREC2		<-	V(1 '')+0 , R2(P)	{}
+0001 ( 317)		CALLN	R0(I)	<-	V(22 'fgetc')+0 	{}
+0002 ( 317)		RELOP20	R7(B)[0..1]	<-	R0(I), CI:-1	{}
+0003 ( 317)		BRANCH		<-	R7(BF)[0..1]	{}
+		==> 4
+		==> 5
+L4: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 318)		RELOP21	R7(B)[0..1]	<-	R0(I), CI:48	{}
+0001 ( 318)		BRANCH		<-	R7(BF)[0..1]	{}
+		==> 8
+		==> 7
+L8: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 318)		RELOP26	R7(B)[0..1]	<-	R0(I)[48..32767], CI:57	{}
+0001 ( 318)		BRANCH		<-	R7(BF)[0..1]	{}
+		==> 6
+		==> 7
+L6: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 319)		BINOP3	R1(I)	<-	R1(IF), CI:10	{}
+0001 ( 319)		BINOP2	R0(I)[0..9]	<-	R0(IF)[48..57], CI:48	{}
+0002 ( 319)		BINOP1	R1(I)	<-	R0(IF)[0..9], R1(IF)	{}
+0003 ( 320)		CONST	R6(I)[1..1]	<-	CI:1	{}
+0004 ( 318)		JUMP		<-		{}
+		==> 3
+L7: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 323)		RELOP20	R0(B)[0..1]	<-	R6(I)[0..1], CI:0	{}
+0001 ( 323)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 9
+		==> 3
+L9: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 324)		RELOP24	R0(B)[0..1]	<-	R5(I)[0..32767], R3(I)[-32768..32767]	{}
+0001 ( 324)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 10
+		==> 14
+L10: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 329)		STOREC2		<-	V(2 '')+0 , CI:2	{}
+0001 ( 329)		STOREC2		<-	V(6 '')+0 , CI:2	{}
+0002 ( 325)		BINOP16	R0(I)[0..65532]	<-	R5(I)[0..32766], CI:1	{}
+0003 ( 325)		LEAI	R0(P)+0{R1}	<-	R4(P)+0{R1}, R0(IF)[0..65532]	{}
+0004 ( 325)		STOREI2		<-	R0(PF)+0{R1}, R1(IF)	{}
+0005 ( 328)		CONV42	R0(L)[-32768..32767]	<-	R3(I)[-32768..32767]	{S}
+0006 ( 328)		BINOP5	R0(L)	<-	CL:20480, R0(LF)[-32768..32767]	{S}
+0007 ( 325)		BINOP1	R5(I)[1..32767]	<-	R5(IF)[0..32766], CI:1	{}
+0008 ( 328)		CONV42	R1(L)[1..32767]	<-	R5(I)[1..32767]	{}
+0009 ( 328)		BINOP3	R0(L)	<-	R1(LF)[1..32767], R0(LF)	{}
+000a ( 328)		BINOP18	R0(L)[-33554432..33554431]	<-	R0(LF), CL:6	{}
+000b ( 329)		STOREC2		<-	V(0 '')+0 , R0(I)[-33554432..33554431]	{}
+000c ( 329)		STOREC2		<-	V(4 '')+0 , R0(IF)[-33554432..33554431]	{}
+000d ( 329)		CALLN		<-	V(19 'drawline')+0 	{}
+000e ( 323)		JUMP		<-		{}
+		==> 14
+L5: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1121)		LOADI1	R0(C)[-128..127]	<-	R2(P)+0	{}
+0001 (1121)		STOREC1		<-	V(0 '')+0 , R0(CF)[-128..127]	{}
+0002 ( 338)		RELOP20	R0(B)[0..1]	<-	R6(IF)[0..1], CI:0	{}
+0003 ( 338)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 13
+		==> 12
+L13: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 338)		RELOP24	R0(B)[0..1]	<-	R5(I)[0..32767], R3(IF)[-32768..32767]	{}
+0001 ( 338)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 11
+		==> 12
+L11: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 339)		BINOP16	R0(I)[0..65532]	<-	R5(I)[0..32766], CI:1	{}
+0001 ( 339)		LEAI	R0(P)+0{R1}	<-	R4(PF)+0{R1}, R0(IF)[0..65532]	{}
+0002 ( 339)		STOREI2		<-	R0(PF)+0{R1}, R1(IF)	{}
+0003 ( 339)		BINOP1	R5(I)[1..32767]	<-	R5(IF)[0..32766], CI:1	{}
+0004 ( 338)		JUMP		<-		{}
+		==> 12
+L12: <= D-1: (3)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 342)		STOREG2		<-	V(76 'plane_data_count')+0 , R5(IF)[0..32767]	{}
+0001 (1121)		CALLN		<-	V(20 'krnio_close')+0 	{}
+0002 (1122)		STOREI1		<-	R2(PF)+0, CC:0	{}
+0003 ( 344)		RET		<-		{}
+--------------------------------------------------------------------
+fgetc: D:/Arbeit/dev/oscar64/include/stdio.h:44
+$00 R0(L), $00 R1(C), $02 R2(C), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1128)		LOADZ2	R0(P)	<-	V(1 '')+0 	{S}
+0001 (1128)		LOADI1	R1(C)[-128..127]	<-	R0(PF)+0	{}
+0002 (1128)		RELOP21	R0(B)[0..1]	<-	R1(C)[-128..127], CC:0	{}
+0003 (1128)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 1
+		==> 2
+L1: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 357)		CONV37	R0(I)[0..15]	<-	R1(C)[0..15]	{}
+0001 ( 357)		LEAG	R0(P)[0..15]	<-	V(10 'krnio_pstatus' A)+0 , R0(IF)[0..15]	{}
+0002 ( 357)		LOADI1	R2(C)[0..128]	<-	R0(P)+0 {V(10 'krnio_pstatus' A)} [0..15]	{}
+0003 ( 357)		RELOP19	R2(B)[0..1]	<-	R2(CF)[0..128], CC:64	{}
+0004 ( 357)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 3
+		==> 4
+L3: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1129)		RETV		<-	CI:-1	{}
+L4: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 361)		STOREC1		<-	V(0 '')+0 , R1(CF)[0..15]	{}
+0001 ( 361)		CALLN	R1(B)	<-	V(14 'krnio_chkin')+0 	{}
+0002 ( 361)		BRANCH		<-	R1(BF)	{}
+		==> 5
+		==> 12
+L5: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 363)		CALLN	R2(C)	<-	V(15 'krnio_chrin')+0 	{}
+0001 ( 364)		CALLN	R1(C)	<-	V(16 'krnio_status')+0 	{}
+0002 ( 365)		STOREI1		<-	R0(PF)+0 {V(10 'krnio_pstatus' A)} [0..15], R1(C)	{}
+0003 ( 363)		CONV37	R0(I)[0..255]	<-	R2(CF)	{}
+0004 ( 366)		BRANCH		<-	R1(C)	{}
+		==> 7
+		==> 6
+L7: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 368)		RELOP19	R1(B)[0..1]	<-	R1(CF), CC:64	{}
+0001 ( 368)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 8
+		==> 9
+L8: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 374)		CALLN		<-	V(17 'krnio_clrchn')+0 	{}
+0001 ( 369)		BINOP8	R0(I)[0..511]	<-	R0(IF)[0..255], CI:256	{}
+0002 (1129)		RETV		<-	R0(IF)[0..511]	{}
+L9: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 374)		CALLN		<-	V(17 'krnio_clrchn')+0 	{}
+0001 (1129)		RETV		<-	CI:-1	{}
+L6: <= D-1: (2)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 374)		CALLN		<-	V(17 'krnio_clrchn')+0 	{}
+0001 (1129)		RETV		<-	R0(IF)[-1..255]	{}
+L12: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/c64/kernalio.c
+0000 ( 360)		CONST	R0(I)[-1..-1]	<-	CI:-1	{}
+0001 ( 361)		JUMP		<-		{}
+		==> 6
+L2: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/conio.c
+0000 ( 269)		JSR	R0(L)	<-	V(-1 '')+0 	{}
+0001 ( 248)		RELOP19	R1(B)[0..1]	<-	R0(C), CC:13	{}
+0002 ( 248)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 10
+		==> 11
+L10: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/stdio.c
+0000 (1131)		RETV		<-	CI:10	{}
+L11: <= D-1: (1)  P-1 D:/Arbeit/dev/oscar64/include/conio.c
+0000 ( 248)		CONV37	R0(I)[0..255]	<-	R0(CF)	{}
+0001 (1131)		RETV		<-	R0(IF)[0..255]	{}
+--------------------------------------------------------------------
+SetViewPage1: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:65
+
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 (  67)		JSR		<-	V(-1 '')+0 	{}
+0001 (  72)		RET		<-		{}
+--------------------------------------------------------------------
+render_full_rotation: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:346
+$00 R0(L), $03 R1(L), $05 R2(L), $08 R3(I), $0a R4(I), $0c R5(I), $0e R6(I), $10 R7(I), $12 R8(I), $14 R9(I), $16 R10(I), $18 R11(I), $1a R12(P), $1c R13(P), $1e R14(P), $20 R15(P), $22 R16(P), $24 R17(P), $00 R18(I), $00 R19(I), $00 R20(I), $26 R21(I), $28 R22(I), $2a R23(I), $00 R24(I), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 372)		LOADG2	R3(I)[-32768..32767]	<-	V(-1 'sstack')+2 	{S}
+0001 ( 372)		RELOP24	R0(B)[0..1]	<-	CI:0, R3(I)[-32768..32767]	{S}
+0002 ( 372)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 3
+		==> 2
+L3: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 351)		LOADZ2	R0(I)[-32768..32767]	<-	V(0 '')+0 	{S}
+0001 ( 351)		BINOP7	R0(I)	<-	R0(IF)[-32768..32767], CI:360	{S}
+0002 ( 351)		BINOP5	R0(I)	<-	R0(IF), CI:5	{S}
+0003 ( 355)		CONV37	R0(I)[0..255]	<-	R0(CF)	{S}
+0004 ( 355)		BINOP1	R1(I)[18..273]	<-	R0(I)[0..255], CI:18	{S}
+0005 ( 355)		BINOP6	R1(I)[0..71]	<-	R1(IF)[18..273], CI:72	{S}
+0006 ( 355)		LEAG	R1(P)[0..71]	<-	V(81 'sin_tab')+0 , R1(IF)[0..71]	{S}
+0007 ( 355)		LOADI1	R1(C)[-64..64]	<-	R1(PF)+0 {V(81 'sin_tab')} [0..71]	{}
+0008 ( 379)		CONV40	R4(I)[-64..64]	<-	R1(CF)[-64..64]	{I}
+0009 ( 355)		BINOP6	R0(I)[0..71]	<-	R0(IF)[0..255], CI:72	{S}
+000a ( 355)		LEAG	R0(P)[0..71]	<-	V(81 'sin_tab')+0 , R0(IF)[0..71]	{S}
+000b ( 355)		LOADI1	R0(C)[-64..64]	<-	R0(PF)+0 {V(81 'sin_tab')} [0..71]	{}
+000c ( 379)		CONV40	R5(I)[-64..64]	<-	R0(CF)[-64..64]	{I}
+000d ( 352)		LOADZ2	R0(I)[-32768..32767]	<-	V(2 '')+0 	{S}
+000e ( 352)		BINOP7	R0(I)	<-	R0(IF)[-32768..32767], CI:360	{S}
+000f ( 352)		BINOP5	R0(I)	<-	R0(IF), CI:5	{S}
+0010 ( 356)		CONV37	R0(I)[0..255]	<-	R0(CF)	{S}
+0011 ( 356)		BINOP1	R1(I)[18..273]	<-	R0(I)[0..255], CI:18	{S}
+0012 ( 356)		BINOP6	R1(I)[0..71]	<-	R1(IF)[18..273], CI:72	{S}
+0013 ( 356)		LEAG	R1(P)[0..71]	<-	V(81 'sin_tab')+0 , R1(IF)[0..71]	{S}
+0014 ( 356)		LOADI1	R1(C)[-64..64]	<-	R1(PF)+0 {V(81 'sin_tab')} [0..71]	{}
+0015 ( 384)		CONV40	R6(I)[-64..64]	<-	R1(CF)[-64..64]	{I}
+0016 ( 356)		BINOP6	R0(I)[0..71]	<-	R0(IF)[0..255], CI:72	{S}
+0017 ( 356)		LEAG	R0(P)[0..71]	<-	V(81 'sin_tab')+0 , R0(IF)[0..71]	{S}
+0018 ( 356)		LOADI1	R0(C)[-64..64]	<-	R0(PF)+0 {V(81 'sin_tab')} [0..71]	{}
+0019 ( 384)		CONV40	R7(I)[-64..64]	<-	R0(CF)[-64..64]	{I}
+001a ( 385)		UNOP11	R8(I)[-64..64]	<-	R7(I)[-64..64]	{I}
+001b ( 353)		LOADZ2	R0(I)[-32768..32767]	<-	V(4 '')+0 	{S}
+001c ( 353)		BINOP7	R0(I)	<-	R0(IF)[-32768..32767], CI:360	{S}
+001d ( 353)		BINOP5	R0(I)	<-	R0(IF), CI:5	{S}
+001e ( 357)		CONV37	R0(I)[0..255]	<-	R0(CF)	{S}
+001f ( 357)		BINOP6	R1(I)[0..71]	<-	R0(I)[0..255], CI:72	{S}
+0020 ( 357)		LEAG	R1(P)[0..71]	<-	V(81 'sin_tab')+0 , R1(IF)[0..71]	{S}
+0021 ( 357)		LOADI1	R1(C)[-64..64]	<-	R1(PF)+0 {V(81 'sin_tab')} [0..71]	{}
+0022 ( 389)		CONV40	R9(I)[-64..64]	<-	R1(CF)[-64..64]	{I}
+0023 ( 357)		BINOP1	R0(I)[18..273]	<-	R0(IF)[0..255], CI:18	{S}
+0024 ( 357)		BINOP6	R0(I)[0..71]	<-	R0(IF)[18..273], CI:72	{S}
+0025 ( 357)		LEAG	R0(P)[0..71]	<-	V(81 'sin_tab')+0 , R0(IF)[0..71]	{S}
+0026 ( 357)		LOADI1	R0(C)[-64..64]	<-	R0(PF)+0 {V(81 'sin_tab')} [0..71]	{}
+0027 ( 389)		CONV40	R10(I)[-64..64]	<-	R0(CF)[-64..64]	{I}
+0028 ( 397)		LOADG2	R11(I)[-32768..32767]	<-	V(-1 'sstack')+0 	{IS}
+0029 ( 399)		CONV42	R0(L)[-32768..32767]	<-	R11(I)[-32768..32767]	{IS}
+002a ( 360)		LOADG2	R12(P)	<-	V(44 'x_pct')+0 	{}
+002b ( 361)		LOADG2	R13(P)	<-	V(45 'y_pct')+0 	{}
+002c ( 362)		LOADG2	R14(P)	<-	V(46 'z_pct')+0 	{}
+002d ( 363)		LOADG2	R15(P)	<-	V(48 'vx_pct')+0 	{}
+002e ( 364)		LOADG2	R16(P)	<-	V(49 'vy_pct')+0 	{}
+002f ( 365)		LOADG2	R17(P)	<-	V(47 'z_rotated')+0 	{}
+0030 ( 370)		LOADZ2	R18(I)[-32768..32767]	<-	V(10 '')+0 	{S}
+0031 ( 399)		LOADZ2	R19(I)[-32768..32767]	<-	V(6 '')+0 	{IS}
+0032 ( 400)		LOADZ2	R20(I)[-32768..32767]	<-	V(8 '')+0 	{IS}
+0033 ( 376)		JUMP		<-		{}
+		==> 1
+L1: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 376)		LOADI2	R1(I)[-32768..32767]	<-	R14(P)+0	{}
+0001 ( 376)		BINOP3	R1(I)	<-	R1(IF)[-32768..32767], R18(I)[-32768..32767]	{}
+0002 ( 374)		LOADG2	R2(I)[-32768..32767]	<-	V(41 'd' A)+0 	{}
+0003 ( 376)		BINOP5	R1(I)	<-	R1(IF), R2(I)[-32768..32767]	{}
+0004 ( 380)		BINOP3	R21(I)	<-	R1(I), R4(I)[-64..64]	{}
+0005 ( 375)		LOADI2	R22(I)[-32768..32767]	<-	R13(P)+0	{}
+0006 ( 375)		BINOP3	R22(I)	<-	R22(IF)[-32768..32767], R18(I)[-32768..32767]	{}
+0007 ( 375)		BINOP5	R22(I)	<-	R22(IF), R2(I)[-32768..32767]	{}
+0008 ( 380)		BINOP3	R23(I)	<-	R22(I), R5(I)[-64..64]	{}
+0009 ( 380)		BINOP1	R21(I)	<-	R23(IF), R21(IF)	{}
+000a ( 380)		BINOP18	R21(I)[-512..511]	<-	R21(IF), CI:6	{}
+000b ( 385)		BINOP3	R23(I)	<-	R21(I)[-512..511], R6(I)[-64..64]	{}
+000c ( 374)		LOADI2	R24(I)[-32768..32767]	<-	R12(P)+0	{}
+000d ( 374)		BINOP3	R24(I)	<-	R24(IF)[-32768..32767], R18(I)[-32768..32767]	{}
+000e ( 374)		BINOP5	R2(I)	<-	R24(IF), R2(IF)[-32768..32767]	{}
+000f ( 385)		BINOP3	R24(I)	<-	R2(I), R8(I)[-64..64]	{}
+0010 ( 385)		BINOP1	R23(I)	<-	R24(IF), R23(IF)	{}
+0011 ( 385)		BINOP18	R23(I)[-512..511]	<-	R23(IF), CI:6	{}
+0012 ( 393)		STOREI2		<-	R17(P)+0, R23(I)[-512..511]	{}
+0013 ( 379)		BINOP3	R22(I)	<-	R4(I)[-64..64], R22(IF)	{}
+0014 ( 379)		BINOP3	R1(I)	<-	R1(IF), R5(I)[-64..64]	{}
+0015 ( 379)		BINOP2	R1(I)	<-	R22(IF), R1(IF)	{}
+0016 ( 379)		BINOP18	R22(I)[-512..511]	<-	R1(IF), CI:6	{}
+0017 ( 389)		BINOP3	R1(I)	<-	R22(I)[-512..511], R9(I)[-64..64]	{}
+0018 ( 384)		BINOP3	R2(I)	<-	R6(I)[-64..64], R2(IF)	{}
+0019 ( 384)		BINOP3	R21(I)	<-	R21(IF)[-512..511], R7(I)[-64..64]	{}
+001a ( 384)		BINOP1	R2(I)	<-	R21(IF), R2(IF)	{}
+001b ( 384)		BINOP18	R21(I)[-512..511]	<-	R2(IF), CI:6	{}
+001c ( 389)		BINOP3	R2(I)	<-	R21(I)[-512..511], R10(I)[-64..64]	{}
+001d ( 389)		BINOP2	R1(I)	<-	R2(IF), R1(IF)	{}
+001e ( 389)		BINOP18	R1(I)[-512..511]	<-	R1(IF), CI:6	{}
+001f ( 399)		CONV42	R1(L)[-512..511]	<-	R1(IF)[-512..511]	{}
+0020 ( 399)		BINOP3	R1(L)	<-	R1(LF)[-512..511], R0(L)[-32768..32767]	{}
+0021 ( 397)		BINOP1	R2(I)	<-	R11(I)[-32768..32767], R23(IF)[-512..511]	{}
+0022 ( 399)		CONV42	R2(L)[-65536..65535]	<-	R2(IF)	{}
+0023 ( 399)		BINOP5	R1(L)	<-	R1(LF), R2(L)[-65536..65535]	{}
+0024 ( 399)		BINOP1	R1(I)	<-	R1(IF), R19(I)[-32768..32767]	{}
+0025 ( 399)		STOREI2		<-	R15(P)+0, R1(IF)	{}
+0026 ( 390)		BINOP3	R1(I)	<-	R9(I)[-64..64], R21(IF)[-512..511]	{}
+0027 ( 390)		BINOP3	R21(I)	<-	R22(IF)[-512..511], R10(I)[-64..64]	{}
+0028 ( 390)		BINOP1	R1(I)	<-	R21(IF), R1(IF)	{}
+0029 ( 390)		BINOP18	R1(I)[-512..511]	<-	R1(IF), CI:6	{}
+002a ( 400)		CONV42	R1(L)[-512..511]	<-	R1(IF)[-512..511]	{}
+002b ( 400)		BINOP3	R1(L)	<-	R1(LF)[-512..511], R0(L)[-32768..32767]	{}
+002c ( 400)		BINOP5	R1(L)	<-	R1(LF), R2(LF)[-65536..65535]	{}
+002d ( 400)		BINOP1	R1(I)	<-	R1(IF), R20(I)[-32768..32767]	{}
+002e ( 400)		STOREI2		<-	R16(P)+0, R1(IF)	{}
+002f ( 374)		LEAI	R12(P)+0	<-	R12(PF)+0, CI:2	{}
+0030 ( 375)		LEAI	R13(P)+0	<-	R13(PF)+0, CI:2	{}
+0031 ( 376)		LEAI	R14(P)+0	<-	R14(PF)+0, CI:2	{}
+0032 ( 393)		LEAI	R17(P)+0	<-	R17(PF)+0, CI:2	{}
+0033 ( 399)		LEAI	R15(P)+0	<-	R15(PF)+0, CI:2	{}
+0034 ( 400)		LEAI	R16(P)+0	<-	R16(PF)+0, CI:2	{}
+0035 ( 372)		BINOP2	R3(I)[0..32766]	<-	R3(IF)[1..32767], CI:1	{}
+0036 ( 372)		RELOP27	R1(B)[0..1]	<-	R3(I)[0..32766], CI:0	{}
+0037 ( 372)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 1
+		==> 2
+L2: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 402)		RET		<-		{}
+--------------------------------------------------------------------
+sort_and_render_faces: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:509
+$00 R0(L), $04 R1(L), $08 R2(L), $0c R3(I), $10 R4(I), $12 R5(I), $14 R6(P), $16 R7(P), $0e R8(I), $18 R9(I), $1a R10(I), $1c R11(P), $00 R12(P), $00 R13(I), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 511)		LOADG2	R0(I)[-32768..32767]	<-	V(90 'wireframeOn')+0 	{}
+0001 ( 511)		RELOP19	R0(B)[0..1]	<-	R0(IF)[-32768..32767], CI:1	{}
+0002 ( 511)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 1
+		==> 2
+L1: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 512)		CALLN		<-	V(26 'render_wireframe')+0 	{}
+0001 ( 513)		RET		<-		{}
+L2: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 520)		FILLG512		<-	V(92 'bucket_head' A)+0 , CC:-1	{}
+0001 ( 522)		LOADG2	R3(I)[-32768..32767]	<-	V(76 'plane_data_count')+0 	{}
+0002 ( 522)		RELOP24	R0(B)[0..1]	<-	CI:0, R3(I)[-32768..32767]	{}
+0003 ( 522)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 28
+		==> 5
+L28: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 517)		CONST	R4(I)[0..0]	<-	CI:0	{}
+0001 ( 517)		CONST	R5(I)[0..0]	<-	CI:0	{}
+0002 ( 522)		JUMP		<-		{}
+		==> 6
+L6: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 522)		RELOP28	R0(B)[0..1]	<-	R4(I)[0..1024], CI:1024	{}
+0001 ( 522)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 4
+		==> 5
+L4: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 534)		BINOP16	R0(I)[0..65532]	<-	R5(I)[0..32766], CI:1	{I}
+0001 ( 529)		LOADG2	R6(P)	<-	V(68 'plane_data')+0 	{I}
+0002 ( 534)		LEAI	R7(P)+0	<-	R6(P)+0, R0(IF)[0..65532]	{I}
+0003 ( 523)		MOVE	R8(I)[0..32766]	<-	R5(I)[0..32766]	{}
+0004 ( 524)		CONST	R9(I)[0..0]	<-	CI:0	{}
+0005 ( 525)		CONST	R10(I)[-32767..-32767]	<-	CI:-32767	{}
+0006 ( 526)		CONST	R0(L)[0..0]	<-	CI:0	{}
+0007 ( 529)		JUMP		<-		{}
+		==> 7
+L7: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 529)		BINOP16	R1(I)[0..]	<-	R5(I)[0..], CI:1	{}
+0001 ( 529)		LEAI	R1(P)+0	<-	R6(P)+0, R1(IF)[0..]	{}
+0002 ( 529)		LOADI2	R2(I)[-32768..32767]	<-	R1(P)+0	{}
+0003 ( 529)		RELOP20	R11(B)[0..1]	<-	R2(I)[-32768..32767], CI:0	{}
+0004 ( 529)		BRANCH		<-	R11(BF)[0..1]	{}
+		==> 8
+		==> 9
+L8: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 531)		LOADI2	R1(I)[-32768..32767]	<-	R1(PF)+2	{}
+0001 ( 534)		RELOP19	R11(B)[0..1]	<-	R1(I)[-32768..32767], CI:0	{}
+0002 ( 534)		BRANCH		<-	R11(BF)[0..1]	{}
+		==> 10
+		==> 11
+L10: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 534)		LOADI2	R1(I)[-32768..32767]	<-	R7(P)+0	{}
+0001 ( 534)		JUMP		<-		{}
+		==> 11
+L11: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 535)		BINOP2	R1(I)	<-	R1(IF)[-32768..32767], CI:1	{}
+0001 ( 538)		BINOP16	R2(I)[-32768..65534]	<-	R2(IF)[-32768..32767], CI:1	{}
+0002 ( 538)		BINOP2	R2(I)	<-	R2(IF)[-32768..65534], CI:2	{}
+0003 ( 538)		LOADG2	R11(P)	<-	V(47 'z_rotated')+0 	{}
+0004 ( 538)		LEAI	R11(P)+0	<-	R11(PF)+0, R2(I)	{}
+0005 ( 538)		LOADI2	R11(I)[-32768..32767]	<-	R11(PF)+0	{}
+0006 ( 538)		RELOP23	R12(B)[0..1]	<-	R11(I)[-32768..32767], R10(I)[-32768..32767]	{}
+0007 ( 538)		BRANCH		<-	R12(BF)[0..1]	{}
+		==> 12
+		==> 13
+L12: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 538)		MOVE	R10(I)[-32767..32767]	<-	R11(IF)[-32767..32767]	{}
+0001 ( 538)		JUMP		<-		{}
+		==> 13
+L13: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 531)		BINOP1	R5(I)[1..]	<-	R5(IF)[0..], CI:1	{}
+0001 ( 544)		BINOP1	R9(I)[1..]	<-	R9(IF)[0..], CI:1	{}
+0002 ( 542)		LOADG2	R11(P)	<-	V(48 'vx_pct')+0 	{}
+0003 ( 542)		LEAI	R12(P)+0	<-	R11(P)+0, R2(I)	{}
+0004 ( 542)		LOADI2	R13(I)[-32768..32767]	<-	R12(PF)+0	{}
+0005 ( 542)		BINOP16	R12(I)	<-	R1(IF), CI:1	{}
+0006 ( 542)		LEAI	R11(P)+0	<-	R11(PF)+0, R12(I)	{}
+0007 ( 542)		LOADI2	R1(I)[-32768..32767]	<-	R11(PF)+0	{}
+0008 ( 542)		BINOP1	R1(I)	<-	R1(IF)[-32768..32767], R13(IF)[-32768..32767]	{}
+0009 ( 542)		CONV42	R1(L)[-65536..65535]	<-	R1(IF)	{}
+000a ( 542)		LOADG2	R11(P)	<-	V(49 'vy_pct')+0 	{}
+000b ( 542)		LEAI	R2(P)+0	<-	R11(P)+0, R2(IF)	{}
+000c ( 542)		LOADI2	R13(I)[-32768..32767]	<-	R2(PF)+0	{}
+000d ( 542)		LEAI	R11(P)+0	<-	R11(PF)+0, R12(IF)	{}
+000e ( 542)		LOADI2	R2(I)[-32768..32767]	<-	R11(PF)+0	{}
+000f ( 542)		BINOP2	R2(I)[-32768..65535]	<-	R13(IF)[-32768..32767], R2(IF)[-32768..32767]	{}
+0010 ( 542)		CONV42	R2(L)[-32768..65535]	<-	R2(IF)[-32768..65535]	{}
+0011 ( 542)		BINOP3	R1(L)	<-	R2(LF)[-32768..65535], R1(LF)[-65536..65535]	{}
+0012 ( 542)		BINOP1	R0(L)	<-	R1(LF), R0(LF)	{}
+0013 ( 529)		JUMP		<-		{}
+		==> 7
+L9: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 548)		RELOP21	R1(B)[0..1]	<-	R9(IF)[0..], CI:3	{}
+0001 ( 548)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 15
+		==> 3
+L15: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 548)		RELOP23	R0(B)[0..1]	<-	R0(LF), CL:0	{}
+0001 ( 548)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 14
+		==> 3
+L14: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 553)		BINOP16	R0(I)[0..2046]	<-	R4(I)[0..1023], CI:1	{}
+0001 ( 553)		LEAG	R1(P)[0..2046]	<-	V(93 'face_offset' A)+0 , R0(I)[0..2046]	{}
+0002 ( 553)		STOREI2		<-	R1(PF)+0 {V(93 'face_offset' A)} [0..2046], R8(IF)[0..32766]	{}
+0003 ( 550)		LOADG2	R1(I)[-32768..32767]	<-	V(-1 'sstack')+0 	{S}
+0004 ( 550)		BINOP1	R1(I)	<-	R1(IF)[-32768..32767], R10(IF)[-32768..32767]	{}
+0005 ( 550)		BINOP1	R1(I)	<-	R1(IF), CI:256	{}
+0006 ( 550)		BINOP18	R1(I)[-8192..8191]	<-	R1(IF), CI:2	{}
+0007 ( 551)		RELOP24	R2(B)[0..1]	<-	R1(I)[-8192..8191], CI:0	{}
+0008 ( 551)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 16
+		==> 17
+L16: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 551)		CONST	R1(I)[0..0]	<-	CI:0	{}
+0001 ( 551)		JUMP		<-		{}
+		==> 19
+L19: <= D-1: (3)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 554)		BINOP16	R1(I)[0..510]	<-	R1(IF)[0..255], CI:1	{}
+0001 ( 554)		LEAG	R1(P)[0..510]	<-	V(92 'bucket_head' A)+0 , R1(IF)[0..510]	{}
+0002 ( 554)		LOADI2	R2(I)[-32768..32767]	<-	R1(P)+0 {V(92 'bucket_head' A)} [0..510]	{}
+0003 ( 555)		STOREI2		<-	R1(PF)+0 {V(92 'bucket_head' A)} [0..510], R4(I)[0..1023]	{}
+0004 ( 554)		LEAG	R0(P)[0..2046]	<-	V(94 'face_next' A)+0 , R0(IF)[0..2046]	{}
+0005 ( 554)		STOREI2		<-	R0(PF)+0 {V(94 'face_next' A)} [0..2046], R2(IF)[-32768..32767]	{}
+0006 ( 555)		BINOP1	R4(I)[1..1024]	<-	R4(IF)[0..1023], CI:1	{}
+0007 ( 522)		JUMP		<-		{}
+		==> 3
+L3: <= D-1: (3)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 557)		BINOP1	R5(I)[1..]	<-	R5(IF)[0..], CI:1	{}
+0001 ( 522)		RELOP24	R0(B)[0..1]	<-	R5(I)[1..], R3(I)[1..32767]	{}
+0002 ( 522)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 6
+		==> 5
+L5: <= D-1: (3)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 561)		CONST	R4(I)[255..255]	<-	CI:255	{}
+0001 ( 562)		JUMP		<-		{}
+		==> 20
+L20: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 562)		BINOP16	R0(I)[0..510]	<-	R4(I)[0..255], CI:1	{}
+0001 ( 562)		LEAG	R0(P)[0..510]	<-	V(92 'bucket_head' A)+0 , R0(IF)[0..510]	{}
+0002 ( 562)		LOADI2	R0(I)[-32768..32767]	<-	R0(PF)+0 {V(92 'bucket_head' A)} [0..510]	{}
+0003 ( 563)		RELOP20	R1(B)[0..1]	<-	R0(I)[-32768..32767], CI:-1	{}
+0004 ( 563)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 27
+		==> 21
+L27: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 565)		LOADG2	R5(P)	<-	V(68 'plane_data')+0 	{I}
+0001 ( 566)		LOADG2	R6(P)	<-	V(50 'u_array')+0 	{I}
+0002 ( 564)		JUMP		<-		{}
+		==> 23
+L23: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 564)		CONST	R1(I)[0..0]	<-	CI:0	{}
+0001 ( 564)		BINOP16	R7(I)[0..2046]	<-	R0(IF)[0..1023], CI:1	{}
+0002 ( 564)		LEAG	R0(P)[0..2046]	<-	V(93 'face_offset' A)+0 , R7(I)[0..2046]	{}
+0003 ( 564)		LOADI2	R0(I)[-32768..32767]	<-	R0(PF)+0 {V(93 'face_offset' A)} [0..2046]	{}
+0004 ( 565)		JUMP		<-		{}
+		==> 24
+L24: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 565)		BINOP1	R2(I)[-32768..]	<-	R0(I)[-32768..32767], R1(I)[0..]	{}
+0001 ( 565)		BINOP16	R2(I)[-32768..]	<-	R2(IF)[-32768..], CI:1	{}
+0002 ( 565)		LEAI	R2(P)+0	<-	R5(P)+0, R2(IF)[-32768..]	{}
+0003 ( 565)		LOADI2	R2(I)[-32768..32767]	<-	R2(PF)+0	{}
+0004 ( 565)		RELOP20	R3(B)[0..1]	<-	R2(I)[-32768..32767], CI:0	{}
+0005 ( 565)		BRANCH		<-	R3(BF)[0..1]	{}
+		==> 25
+		==> 26
+L25: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 566)		BINOP16	R3(I)[0..]	<-	R1(I)[0..], CI:1	{}
+0001 ( 566)		BINOP2	R2(I)	<-	R2(IF)[-32768..32767], CI:1	{}
+0002 ( 566)		LEAI	R3(P)+0	<-	R6(P)+0, R3(IF)[0..]	{}
+0003 ( 566)		STOREI2		<-	R3(PF)+0, R2(IF)	{}
+0004 ( 567)		BINOP1	R1(I)[1..]	<-	R1(IF)[0..], CI:1	{}
+0005 ( 565)		JUMP		<-		{}
+		==> 24
+L26: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 573)		STOREC2		<-	V(8 '')+0 , R6(P)	{}
+0001 ( 573)		STOREC2		<-	V(10 '')+0 , R1(IF)[0..]	{}
+0002 ( 573)		CALLN		<-	V(27 'draw_plane')+0 	{}
+0003 ( 575)		LEAG	R0(P)[0..2046]	<-	V(94 'face_next' A)+0 , R7(IF)[0..2046]	{}
+0004 ( 575)		LOADI2	R0(I)[-32768..32767]	<-	R0(PF)+0 {V(94 'face_next' A)} [0..2046]	{}
+0005 ( 563)		RELOP20	R1(B)[0..1]	<-	R0(I)[-32768..32767], CI:-1	{}
+0006 ( 563)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 23
+		==> 21
+L21: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 561)		BINOP1	R4(I)[-1..254]	<-	R4(IF)[0..255], CI:-1	{}
+0001 ( 561)		RELOP21	R0(B)[0..1]	<-	R4(I)[-1..254], CI:0	{}
+0002 ( 561)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 20
+		==> 22
+L22: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 578)		RET		<-		{}
+L17: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 551)		RELOP27	R2(B)[0..1]	<-	R1(I)[0..8191], CI:255	{}
+0001 ( 551)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 18
+		==> 19
+L18: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 551)		CONST	R1(I)[255..255]	<-	CI:255	{}
+0001 ( 551)		JUMP		<-		{}
+		==> 19
+--------------------------------------------------------------------
+render_wireframe: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:472
+$00 R0(I), $02 R1(I), $04 R2(P), $06 R3(P), $0c R4(I), $0e R5(I), $10 R6(P), $12 R7(I), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 478)		LOADG2	R4(I)[-32768..32767]	<-	V(76 'plane_data_count')+0 	{}
+0001 ( 478)		RELOP24	R0(B)[0..1]	<-	CI:0, R4(I)[-32768..32767]	{}
+0002 ( 478)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 9
+		==> 2
+L9: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 473)		CONST	R5(I)[0..0]	<-	CI:0	{}
+0001 ( 480)		LOADG2	R6(P)	<-	V(68 'plane_data')+0 	{}
+0002 ( 480)		JUMP		<-		{}
+		==> 1
+L1: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 480)		BINOP16	R0(I)[0..65532]	<-	R5(I)[0..32766], CI:1	{}
+0001 ( 480)		LEAI	R0(P)+0	<-	R6(P)+0, R0(IF)[0..65532]	{}
+0002 ( 480)		LOADI2	R0(I)[-32768..32767]	<-	R0(PF)+0	{}
+0003 ( 480)		BINOP2	R7(I)	<-	R0(IF)[-32768..32767], CI:1	{}
+0004 ( 483)		JUMP		<-		{}
+		==> 3
+L3: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 483)		BINOP16	R0(I)[0..]	<-	R5(I)[0..], CI:1	{}
+0001 ( 483)		LEAI	R0(P)+0	<-	R6(P)+0, R0(IF)[0..]	{}
+0002 ( 483)		LOADI2	R1(I)[-32768..32767]	<-	R0(P)+0	{}
+0003 ( 483)		RELOP20	R2(B)[0..1]	<-	R1(I)[-32768..32767], CI:0	{}
+0004 ( 483)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 4
+		==> 5
+L4: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 497)		BINOP16	R1(I)[-32768..65534]	<-	R1(IF)[-32768..32767], CI:1	{}
+0001 ( 497)		BINOP2	R1(I)	<-	R1(IF)[-32768..65534], CI:2	{}
+0002 ( 497)		LOADG2	R2(P)	<-	V(48 'vx_pct')+0 	{}
+0003 ( 497)		LEAI	R3(P)+0	<-	R2(P)+0, R1(I)	{}
+0004 ( 497)		LOADI2	R3(I)[-32768..32767]	<-	R3(PF)+0	{}
+0005 ( 497)		STOREC2		<-	V(0 '')+0 , R3(IF)[-32768..32767]	{}
+0006 ( 497)		LOADG2	R3(P)	<-	V(49 'vy_pct')+0 	{}
+0007 ( 497)		LEAI	R1(P)+0	<-	R3(P)+0, R1(IF)	{}
+0008 ( 497)		LOADI2	R1(I)[-32768..32767]	<-	R1(PF)+0	{}
+0009 ( 497)		STOREC2		<-	V(2 '')+0 , R1(IF)[-32768..32767]	{}
+000a ( 487)		LOADI2	R0(I)[-32768..32767]	<-	R0(PF)+2	{}
+000b ( 487)		RELOP19	R1(B)[0..1]	<-	R0(I)[-32768..32767], CI:0	{}
+000c ( 487)		BRANCH		<-	R1(BF)[0..1]	{}
+		==> 6
+		==> 7
+L6: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 489)		MOVE	R0(I)	<-	R7(I)	{}
+0001 ( 487)		JUMP		<-		{}
+		==> 8
+L8: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 498)		BINOP16	R0(I)	<-	R0(IF), CI:1	{}
+0001 ( 498)		LEAI	R3(P)+0	<-	R3(PF)+0, R0(I)	{}
+0002 ( 498)		LOADI2	R1(I)[-32768..32767]	<-	R3(PF)+0	{}
+0003 ( 497)		STOREC2		<-	V(6 '')+0 , R1(IF)[-32768..32767]	{}
+0004 ( 498)		LEAI	R2(P)+0	<-	R2(PF)+0, R0(IF)	{}
+0005 ( 498)		LOADI2	R0(I)[-32768..32767]	<-	R2(PF)+0	{}
+0006 ( 497)		STOREC2		<-	V(4 '')+0 , R0(IF)[-32768..32767]	{}
+0007 ( 497)		CALLN		<-	V(19 'drawline')+0 	{}
+0008 ( 487)		BINOP1	R5(I)[1..]	<-	R5(IF)[0..], CI:1	{}
+0009 ( 483)		JUMP		<-		{}
+		==> 3
+L7: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 492)		BINOP2	R0(I)	<-	R0(IF)[-32768..32767], CI:1	{}
+0001 ( 487)		JUMP		<-		{}
+		==> 8
+L5: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 504)		BINOP1	R5(I)[1..]	<-	R5(IF)[0..], CI:1	{}
+0001 ( 478)		RELOP24	R0(B)[0..1]	<-	R5(I)[1..], R4(I)[1..32767]	{}
+0002 ( 478)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 1
+		==> 2
+L2: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 506)		RET		<-		{}
+--------------------------------------------------------------------
+draw_plane: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:450
+$00 R0(I), $02 R1(P), $04 R2(P), $0c R3(I), $0e R4(I), $10 R5(I), $00 R6(I), $12 R7(P), $13 R8(B), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 452)		LOADG2	R0(I)[-32768..32767]	<-	V(95 'PaintersOn')+0 	{}
+0001 ( 452)		RELOP19	R0(B)[0..1]	<-	R0(IF)[-32768..32767], CI:1	{}
+0002 ( 452)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 1
+		==> 18
+L1: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 453)		CONST	R4(I)[0..0]	<-	CI:0	{}
+0001 ( 453)		CONST	R5(I)[200..200]	<-	CI:200	{}
+0002 ( 454)		LOADZ2	R6(I)[-32768..32767]	<-	V(10 '')+0 	{S}
+0003 ( 454)		RELOP24	R7(B)[0..1]	<-	CI:0, R6(I)[-32768..32767]	{S}
+0004 ( 454)		BRANCH		<-	R7(B)[0..1]	{}
+		==> 22
+		==> 4
+L22: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 454)		CONST	R0(I)[0..0]	<-	CI:0	{}
+0001 ( 455)		LOADZ2	R1(P)	<-	V(8 '')+0 	{IS}
+0002 ( 457)		LOADG2	R2(P)	<-	V(49 'vy_pct')+0 	{I}
+0003 ( 455)		JUMP		<-		{}
+		==> 3
+L3: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 455)		BINOP16	R3(I)[0..65532]	<-	R0(I)[0..32766], CI:1	{}
+0001 ( 455)		LEAI	R3(P)+0	<-	R1(P)+0, R3(IF)[0..65532]	{}
+0002 ( 455)		LOADI2	R3(I)[-32768..32767]	<-	R3(PF)+0	{}
+0003 ( 457)		BINOP16	R3(I)[-32768..65534]	<-	R3(IF)[-32768..32767], CI:1	{}
+0004 ( 457)		LEAI	R3(P)+0	<-	R2(P)+0, R3(IF)[-32768..65534]	{}
+0005 ( 457)		LOADI2	R3(I)[-32768..32767]	<-	R3(PF)+0	{}
+0006 ( 457)		RELOP24	R8(B)[0..1]	<-	R3(I)[-32768..32767], R5(I)[-32768..32767]	{}
+0007 ( 457)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 5
+		==> 6
+L5: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 457)		MOVE	R5(I)[-32768..32766]	<-	R3(I)[-32768..32766]	{}
+0001 ( 457)		JUMP		<-		{}
+		==> 6
+L6: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 458)		RELOP23	R8(B)[0..1]	<-	R3(I)[-32768..32767], R4(I)[-32768..32767]	{}
+0001 ( 458)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 7
+		==> 2
+L7: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 458)		MOVE	R4(I)[-32767..32767]	<-	R3(IF)[-32767..32767]	{}
+0001 ( 454)		JUMP		<-		{}
+		==> 2
+L2: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 454)		BINOP1	R0(I)[1..32767]	<-	R0(IF)[0..32766], CI:1	{}
+0001 ( 454)		RELOP28	R3(B)[0..1]	<-	R0(I)[1..32767], R6(I)[1..32767]	{}
+0002 ( 454)		BRANCH		<-	R3(BF)[0..1]	{}
+		==> 3
+		==> 4
+L4: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 461)		RELOP22	R8(B)[0..1]	<-	R5(I)[-32768..32767], R4(I)[-32768..32767]	{}
+0001 ( 461)		BRANCH		<-	R8(B)[0..1]	{}
+		==> 21
+		==> 9
+L21: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 461)		BINOP16	R0(I)[0..398]	<-	R5(I)[0..199], CI:1	{}
+0001 ( 461)		LEAG	R1(P)[0..398]	<-	V(96 'min_x' A)+0 , R0(I)[0..398]	{}
+0002 ( 461)		LEAG	R0(P)[0..398]	<-	V(97 'max_x' A)+0 , R0(IF)[0..398]	{}
+0003 ( 461)		MOVE	R2(I)[0..199]	<-	R5(I)[0..199]	{}
+0004 ( 461)		JUMP		<-		{}
+		==> 8
+L8: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 461)		STOREI2		<-	R1(P)+0 {V(96 'min_x' A)} [0..], CI:320	{}
+0001 ( 461)		STOREI2		<-	R0(P)+0 {V(97 'max_x' A)} [0..], CI:-1	{}
+0002 ( 461)		LEAI	R0(P)+0 {V(97 'max_x' A)} [2..]	<-	R0(PF)+0 {V(97 'max_x' A)} [0..], CI:2	{}
+0003 ( 461)		LEAI	R1(P)+0 {V(96 'min_x' A)} [2..]	<-	R1(PF)+0 {V(96 'min_x' A)} [0..], CI:2	{}
+0004 ( 461)		BINOP1	R2(I)[1..32768]	<-	R2(IF)[0..32767], CI:1	{}
+0005 ( 461)		RELOP22	R3(B)[0..1]	<-	R2(I)[1..32768], R4(I)[-32768..32767]	{}
+0006 ( 461)		BRANCH		<-	R3(BF)[0..1]	{}
+		==> 8
+		==> 9
+L9: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 462)		BRANCH		<-	R7(BF)[0..1]	{}
+		==> 20
+		==> 11
+L20: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 462)		CONST	R3(I)[0..0]	<-	CI:0	{}
+0001 ( 462)		LOADZ2	R7(P)	<-	V(8 '')+0 	{IS}
+0002 ( 462)		JUMP		<-		{}
+		==> 10
+L10: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 462)		BINOP16	R0(I)[0..65532]	<-	R3(I)[0..32766], CI:1	{}
+0001 ( 462)		LEAI	R0(P)+0	<-	R7(P)+0, R0(IF)[0..65532]	{}
+0002 ( 462)		LOADI2	R0(I)[-32768..32767]	<-	R0(PF)+0	{}
+0003 ( 462)		BINOP16	R0(I)[-32768..65534]	<-	R0(IF)[-32768..32767], CI:1	{}
+0004 ( 462)		LOADG2	R1(P)	<-	V(48 'vx_pct')+0 	{}
+0005 ( 462)		LEAI	R2(P)+0	<-	R1(P)+0, R0(I)[-32768..65534]	{}
+0006 ( 462)		LOADI2	R2(I)[-32768..32767]	<-	R2(PF)+0	{}
+0007 ( 462)		STOREC2		<-	V(0 '')+0 , R2(IF)[-32768..32767]	{}
+0008 ( 462)		LOADG2	R2(P)	<-	V(49 'vy_pct')+0 	{}
+0009 ( 462)		LEAI	R0(P)+0	<-	R2(P)+0, R0(IF)[-32768..65534]	{}
+000a ( 462)		LOADI2	R0(I)[-32768..32767]	<-	R0(PF)+0	{}
+000b ( 462)		STOREC2		<-	V(2 '')+0 , R0(IF)[-32768..32767]	{}
+000c ( 462)		BINOP1	R3(I)[1..32767]	<-	R3(IF)[0..32766], CI:1	{}
+000d ( 462)		BINOP7	R0(I)	<-	R3(I)[1..32767], R6(I)[-32768..32767]	{}
+000e ( 462)		BINOP16	R0(I)	<-	R0(IF), CI:1	{}
+000f ( 462)		LEAI	R0(P)+0	<-	R7(P)+0, R0(IF)	{}
+0010 ( 462)		LOADI2	R0(I)[-32768..32767]	<-	R0(PF)+0	{}
+0011 ( 462)		BINOP16	R0(I)[-32768..65534]	<-	R0(IF)[-32768..32767], CI:1	{}
+0012 ( 462)		LEAI	R2(P)+0	<-	R2(PF)+0, R0(I)[-32768..65534]	{}
+0013 ( 462)		LOADI2	R2(I)[-32768..32767]	<-	R2(PF)+0	{}
+0014 ( 462)		STOREC2		<-	V(6 '')+0 , R2(IF)[-32768..32767]	{}
+0015 ( 462)		LEAI	R1(P)+0	<-	R1(PF)+0, R0(IF)[-32768..65534]	{}
+0016 ( 462)		LOADI2	R0(I)[-32768..32767]	<-	R1(PF)+0	{}
+0017 ( 462)		STOREC2		<-	V(4 '')+0 , R0(IF)[-32768..32767]	{}
+0018 ( 462)		CALLN		<-	V(28 'scan_edge')+0 	{}
+0019 ( 462)		RELOP24	R0(B)[0..1]	<-	R3(I)[1..32767], R6(I)[-32768..32767]	{}
+001a ( 462)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 10
+		==> 11
+L11: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 463)		STOREG2		<-	V(53 'drawing_mode')+0 , CI:1	{}
+0001 ( 464)		BRANCH		<-	R8(BF)[0..1]	{}
+		==> 13
+		==> 14
+L13: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 464)		BINOP16	R0(I)[0..398]	<-	R5(I)[0..199], CI:1	{}
+0001 ( 464)		LEAG	R1(P)[0..398]	<-	V(96 'min_x' A)+0 , R0(I)[0..398]	{}
+0002 ( 464)		LOADI2	R1(I)[-32768..32767]	<-	R1(PF)+0 {V(96 'min_x' A)} [0..398]	{}
+0003 ( 464)		LEAG	R0(P)[0..398]	<-	V(97 'max_x' A)+0 , R0(IF)[0..398]	{}
+0004 ( 464)		LOADI2	R0(I)[-32768..32767]	<-	R0(PF)+0 {V(97 'max_x' A)} [0..398]	{}
+0005 ( 464)		RELOP22	R2(B)[0..1]	<-	R1(I)[-32768..32767], R0(I)[-32768..32767]	{}
+0006 ( 464)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 15
+		==> 12
+L15: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 464)		STOREC2		<-	V(0 '')+0 , R1(IF)[-32768..32767]	{}
+0001 ( 464)		STOREC2		<-	V(2 '')+0 , R5(I)[0..199]	{}
+0002 ( 464)		STOREC2		<-	V(4 '')+0 , R0(IF)[-32768..32767]	{}
+0003 ( 464)		STOREC2		<-	V(6 '')+0 , R5(I)[0..199]	{}
+0004 ( 464)		CALLN		<-	V(19 'drawline')+0 	{}
+0005 ( 464)		JUMP		<-		{}
+		==> 12
+L12: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 464)		BINOP1	R5(I)[1..200]	<-	R5(IF)[0..199], CI:1	{}
+0001 ( 464)		RELOP22	R0(B)[0..1]	<-	R5(I)[1..200], R4(I)[-32768..32767]	{}
+0002 ( 464)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 13
+		==> 14
+L14: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 465)		STOREG2		<-	V(53 'drawing_mode')+0 , CI:0	{}
+0001 ( 468)		JUMP		<-		{}
+		==> 18
+L18: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 468)		LOADZ2	R3(I)[-32768..32767]	<-	V(10 '')+0 	{S}
+0001 ( 468)		RELOP24	R0(B)[0..1]	<-	CI:0, R3(I)[-32768..32767]	{}
+0002 ( 468)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 19
+		==> 17
+L19: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 468)		CONST	R4(I)[0..0]	<-	CI:0	{}
+0001 ( 468)		LOADZ2	R5(P)	<-	V(8 '')+0 	{IS}
+0002 ( 468)		JUMP		<-		{}
+		==> 16
+L16: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 468)		BINOP16	R0(I)[0..65532]	<-	R4(I)[0..32766], CI:1	{}
+0001 ( 468)		LEAI	R0(P)+0	<-	R5(P)+0, R0(IF)[0..65532]	{}
+0002 ( 468)		LOADI2	R0(I)[-32768..32767]	<-	R0(PF)+0	{}
+0003 ( 468)		BINOP16	R0(I)[-32768..65534]	<-	R0(IF)[-32768..32767], CI:1	{}
+0004 ( 468)		LOADG2	R1(P)	<-	V(48 'vx_pct')+0 	{}
+0005 ( 468)		LEAI	R2(P)+0	<-	R1(P)+0, R0(I)[-32768..65534]	{}
+0006 ( 468)		LOADI2	R2(I)[-32768..32767]	<-	R2(PF)+0	{}
+0007 ( 468)		STOREC2		<-	V(0 '')+0 , R2(IF)[-32768..32767]	{}
+0008 ( 468)		LOADG2	R2(P)	<-	V(49 'vy_pct')+0 	{}
+0009 ( 468)		LEAI	R0(P)+0	<-	R2(P)+0, R0(IF)[-32768..65534]	{}
+000a ( 468)		LOADI2	R0(I)[-32768..32767]	<-	R0(PF)+0	{}
+000b ( 468)		STOREC2		<-	V(2 '')+0 , R0(IF)[-32768..32767]	{}
+000c ( 468)		BINOP1	R4(I)[1..32767]	<-	R4(IF)[0..32766], CI:1	{}
+000d ( 468)		BINOP6	R0(I)[0..32766]	<-	R4(I)[1..32767], R3(I)[1..32767]	{}
+000e ( 468)		BINOP16	R0(I)[0..65532]	<-	R0(IF)[0..32766], CI:1	{}
+000f ( 468)		LEAI	R0(P)+0	<-	R5(P)+0, R0(IF)[0..65532]	{}
+0010 ( 468)		LOADI2	R0(I)[-32768..32767]	<-	R0(PF)+0	{}
+0011 ( 468)		BINOP16	R0(I)[-32768..65534]	<-	R0(IF)[-32768..32767], CI:1	{}
+0012 ( 468)		LEAI	R2(P)+0	<-	R2(PF)+0, R0(I)[-32768..65534]	{}
+0013 ( 468)		LOADI2	R2(I)[-32768..32767]	<-	R2(PF)+0	{}
+0014 ( 468)		STOREC2		<-	V(6 '')+0 , R2(IF)[-32768..32767]	{}
+0015 ( 468)		LEAI	R1(P)+0	<-	R1(PF)+0, R0(IF)[-32768..65534]	{}
+0016 ( 468)		LOADI2	R0(I)[-32768..32767]	<-	R1(PF)+0	{}
+0017 ( 468)		STOREC2		<-	V(4 '')+0 , R0(IF)[-32768..32767]	{}
+0018 ( 468)		CALLN		<-	V(19 'drawline')+0 	{}
+0019 ( 468)		RELOP28	R0(B)[0..1]	<-	R4(I)[1..32767], R3(I)[1..32767]	{}
+001a ( 468)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 16
+		==> 17
+L17: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 470)		RET		<-		{}
+--------------------------------------------------------------------
+scan_edge: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:433
+$00 R0(L), $00 R1(L), $00 R2(L), $00 R3(I), $00 R4(I), $00 R5(I), $02 R6(P), $00 R7(I), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 436)		LOADZ2	R0(I)[-32768..32767]	<-	V(2 '')+0 	{}
+0001 ( 436)		LOADZ2	R1(I)[-32768..32767]	<-	V(6 '')+0 	{}
+0002 ( 436)		RELOP19	R2(B)[0..1]	<-	R0(I)[-32768..32767], R1(I)[-32768..32767]	{}
+0003 ( 436)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 1
+		==> 2
+L1: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 436)		RET		<-		{}
+L2: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 437)		RELOP23	R2(B)[0..1]	<-	R0(I)[-32768..32767], R1(I)[-32768..32767]	{}
+0001 ( 437)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 3
+		==> 4
+L3: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 437)		STOREZ2		<-	V(2 '')+0 , R1(IF)[-32768..32766]	{}
+0001 ( 437)		STOREZ2		<-	V(6 '')+0 , R0(IF)[-32767..32767]	{}
+0002 ( 437)		LOADZ2	R0(I)[-32768..32767]	<-	V(4 '')+0 	{}
+0003 ( 437)		LOADZ2	R1(I)[-32768..32767]	<-	V(0 '')+0 	{}
+0004 ( 437)		STOREZ2		<-	V(4 '')+0 , R1(IF)[-32768..32767]	{}
+0005 ( 437)		STOREZ2		<-	V(0 '')+0 , R0(IF)[-32768..32767]	{}
+0006 ( 437)		JUMP		<-		{}
+		==> 4
+L4: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 438)		LOADZ2	R1(I)[-32768..32767]	<-	V(0 '')+0 	{}
+0001 ( 439)		CONV42	R0(L)[-32768..32767]	<-	R1(I)[-32768..32767]	{}
+0002 ( 439)		BINOP16	R0(L)[-8388608..8388352]	<-	R0(LF)[-32768..32767], CL:8	{}
+0003 ( 438)		LOADZ2	R2(I)[-32768..32767]	<-	V(4 '')+0 	{}
+0004 ( 438)		BINOP2	R1(I)[-32768..65535]	<-	R2(IF)[-32768..32767], R1(IF)[-32768..32767]	{}
+0005 ( 438)		CONV42	R1(L)[-32768..65535]	<-	R1(IF)[-32768..65535]	{}
+0006 ( 438)		BINOP16	R1(L)[-8388608..16776960]	<-	R1(LF)[-32768..65535], CL:8	{}
+0007 ( 438)		LOADZ2	R3(I)[-32768..32767]	<-	V(2 '')+0 	{}
+0008 ( 438)		LOADZ2	R4(I)[-32768..32767]	<-	V(6 '')+0 	{}
+0009 ( 438)		BINOP2	R2(I)[-32768..65535]	<-	R4(I)[-32768..32767], R3(I)[-32768..32767]	{}
+000a ( 438)		CONV42	R2(L)[-32768..65535]	<-	R2(IF)[-32768..65535]	{}
+000b ( 438)		BINOP5	R1(L)	<-	R1(LF)[-8388608..16776960], R2(LF)[-32768..65535]	{}
+000c ( 440)		JUMP		<-		{}
+		==> 11
+L11: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 440)		RELOP22	R2(B)[0..1]	<-	R3(I)[-32768..32768], R4(I)[-32768..32767]	{}
+0001 ( 440)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 6
+		==> 1
+L6: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 441)		RELOP28	R2(B)[0..1]	<-	R3(I)[-32768..32767], CI:200	{}
+0001 ( 441)		BRANCH		<-	R2(BF)[0..1]	{}
+		==> 7
+		==> 5
+L7: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 442)		BINOP18	R2(L)[-8388608..8388607]	<-	R0(L), CL:8	{}
+0001 ( 443)		BINOP16	R5(I)[0..398]	<-	R3(I)[0..199], CI:1	{}
+0002 ( 443)		LEAG	R6(P)[0..398]	<-	V(96 'min_x' A)+0 , R5(I)[0..398]	{}
+0003 ( 443)		LOADI2	R7(I)[-32768..32767]	<-	R6(P)+0 {V(96 'min_x' A)} [0..398]	{}
+0004 ( 443)		RELOP24	R7(B)[0..1]	<-	R2(I)[-8388608..8388607], R7(IF)[-32768..32767]	{}
+0005 ( 443)		BRANCH		<-	R7(BF)[0..1]	{}
+		==> 8
+		==> 9
+L8: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 443)		STOREI2		<-	R6(PF)+0 {V(96 'min_x' A)} [0..398], R2(I)[-8388608..32766]	{}
+0001 ( 443)		JUMP		<-		{}
+		==> 9
+L9: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 444)		LEAG	R5(P)[0..398]	<-	V(97 'max_x' A)+0 , R5(IF)[0..398]	{}
+0001 ( 444)		LOADI2	R6(I)[-32768..32767]	<-	R5(P)+0 {V(97 'max_x' A)} [0..398]	{}
+0002 ( 444)		RELOP23	R6(B)[0..1]	<-	R2(I)[-8388608..8388607], R6(IF)[-32768..32767]	{}
+0003 ( 444)		BRANCH		<-	R6(BF)[0..1]	{}
+		==> 10
+		==> 5
+L10: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 444)		STOREI2		<-	R5(PF)+0 {V(97 'max_x' A)} [0..398], R2(IF)[-32767..8388607]	{}
+0001 ( 440)		JUMP		<-		{}
+		==> 5
+L5: <= D-1: (3)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 440)		BINOP1	R3(I)[-32767..32768]	<-	R3(IF)[-32768..32767], CI:1	{}
+0001 ( 446)		BINOP1	R0(L)	<-	R0(LF), R1(L)	{}
+0002 ( 440)		JUMP		<-		{}
+		==> 11
+--------------------------------------------------------------------
+switchVisiblePage: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:99
+$00 R0(I), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 101)		LOADG2	R0(I)[0..65535]	<-	V(8 'bitmap')+0 	{}
+0001 ( 101)		RELOP19	R0(B)[0..1]	<-	R0(IF)[0..65535], CI:49152	{}
+0002 ( 101)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 1
+		==> 2
+L1: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 102)		CALLN		<-	V(30 'SetViewPage2')+0 	{}
+0001 ( 101)		JUMP		<-		{}
+		==> 3
+L3: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 106)		RET		<-		{}
+L2: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 104)		CALLN		<-	V(23 'SetViewPage1')+0 	{}
+0001 ( 101)		JUMP		<-		{}
+		==> 3
+--------------------------------------------------------------------
+SetViewPage2: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:74
+
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 (  76)		JSR		<-	V(-1 '')+0 	{}
+0001 (  81)		RET		<-		{}
+--------------------------------------------------------------------
+switchDrawPage: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:91
+$00 R0(I), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 (  92)		LOADG2	R0(I)[0..65535]	<-	V(8 'bitmap')+0 	{}
+0001 (  92)		RELOP19	R0(B)[0..1]	<-	R0(IF)[0..65535], CI:49152	{}
+0002 (  92)		BRANCH		<-	R0(BF)[0..1]	{}
+		==> 1
+		==> 2
+L1: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 (  93)		STOREG2		<-	V(8 'bitmap')+0 , CI:8192	{}
+0001 (  92)		JUMP		<-		{}
+		==> 3
+L3: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 (  97)		RET		<-		{}
+L2: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 (  95)		STOREG2		<-	V(8 'bitmap')+0 , CI:49152	{}
+0001 (  92)		JUMP		<-		{}
+		==> 3
+--------------------------------------------------------------------
+wait_for_key: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:617
+$00 R0(C), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 618)		STOREA1		<-	V(-1 '')+2 , CC:0	{V}
+0001 ( 620)		LOADA1	R0(C)[0..255]	<-	V(-1 '')+2 	{V}
+0002 ( 620)		BRANCH		<-	R0(CF)[0..255]	{}
+		==> 2
+		==> 1
+L2: <= D-1: (2)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 632)		LOADA1	R0(C)[0..255]	<-	V(-1 '')+2 	{V}
+0001 ( 632)		RETV		<-	R0(CF)[0..255]	{}
+L1: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 622)		JSR		<-	V(-1 '')+0 	{}
+0001 ( 620)		LOADA1	R0(C)[0..255]	<-	V(-1 '')+2 	{V}
+0002 ( 620)		BRANCH		<-	R0(CF)[0..255]	{}
+		==> 2
+		==> 1
+--------------------------------------------------------------------
+DoTranslate: D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c:598
+$00 R0(I), $02 R1(I), $04 R2(P), $06 R3(I), $08 R4(I), $0a R5(P), $0c R6(I), 
+L0: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 598)		LOADG2	R0(I)[-32768..32767]	<-	V(-1 'sstack')+4 	{S}
+0001 ( 600)		LOADG2	R1(I)[-32768..32767]	<-	V(40 'c' A)+0 	{}
+0002 ( 407)		LOADG2	R2(P)	<-	V(49 'vy_pct')+0 	{}
+0003 ( 598)		LOADG2	R3(I)[-32768..32767]	<-	V(-1 'sstack')+2 	{S}
+0004 ( 410)		RELOP20	R4(B)[0..1]	<-	R3(I)[-5..5], CI:0	{S}
+0005 ( 410)		BRANCH		<-	R4(BF)[0..1]	{}
+		==> 2
+		==> 3
+L2: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 411)		RELOP24	R4(B)[0..1]	<-	CI:0, R1(I)[-32768..32767]	{}
+0001 ( 411)		BRANCH		<-	R4(BF)[0..1]	{}
+		==> 7
+		==> 3
+L7: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 411)		MOVE	R4(I)[1..32767]	<-	R1(I)[1..32767]	{}
+0001 ( 406)		LOADG2	R5(P)	<-	V(48 'vx_pct')+0 	{}
+0002 ( 412)		JUMP		<-		{}
+		==> 4
+L4: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 412)		LOADI2	R6(I)[-32768..32767]	<-	R5(P)+0	{}
+0001 ( 412)		BINOP1	R6(I)	<-	R6(IF)[-32768..32767], R3(I)[-5..5]	{}
+0002 ( 412)		STOREI2		<-	R5(P)+0, R6(IF)	{}
+0003 ( 412)		LEAI	R5(P)+0	<-	R5(PF)+0, CI:2	{}
+0004 ( 411)		BINOP2	R4(I)[0..32766]	<-	R4(IF)[1..32767], CI:1	{}
+0005 ( 411)		RELOP27	R6(B)[0..1]	<-	R4(I)[0..32766], CI:0	{}
+0006 ( 411)		BRANCH		<-	R6(BF)[0..1]	{}
+		==> 4
+		==> 3
+L3: <= D-1: (3)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 416)		RELOP20	R3(B)[0..1]	<-	R0(I)[-5..5], CI:0	{S}
+0001 ( 416)		BRANCH		<-	R3(BF)[0..1]	{}
+		==> 5
+		==> 1
+L5: <= D-1: (1)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 417)		RELOP24	R3(B)[0..1]	<-	CI:0, R1(I)[-32768..32767]	{}
+0001 ( 417)		BRANCH		<-	R3(BF)[0..1]	{}
+		==> 6
+		==> 1
+L6: <= D-1: (2) Head P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 418)		LOADI2	R3(I)[-32768..32767]	<-	R2(P)+0	{}
+0001 ( 418)		BINOP1	R3(I)	<-	R3(IF)[-32768..32767], R0(I)[-5..5]	{}
+0002 ( 418)		STOREI2		<-	R2(P)+0, R3(IF)	{}
+0003 ( 418)		LEAI	R2(P)+0	<-	R2(PF)+0, CI:2	{}
+0004 ( 417)		BINOP2	R1(I)[0..32766]	<-	R1(IF)[1..32767], CI:1	{}
+0005 ( 417)		RELOP27	R3(B)[0..1]	<-	R1(I)[0..32766], CI:0	{}
+0006 ( 417)		BRANCH		<-	R3(BF)[0..1]	{}
+		==> 6
+		==> 1
+L1: <= D-1: (3)  P-1 D:/Arbeit/3D/repogit/3DEngine/Commodore Plus4/Oscar64/3dengineOscar.c
+0000 ( 601)		CALLN		<-	V(2 'ultra_fast_clear')+0 	{}
+0001 ( 602)		LOADG2	R0(I)[-32768..32767]	<-	V(-1 'sstack')+6 	{S}
+0002 ( 602)		STOREG2		<-	V(-1 'sstack')+0 , R0(IF)[-32768..32767]	{}
+0003 ( 602)		CALLN		<-	V(25 'sort_and_render_faces')+0 	{}
+0004 ( 604)		CALLN		<-	V(29 'switchVisiblePage')+0 	{}
+0005 ( 605)		CALLN		<-	V(31 'switchDrawPage')+0 	{}
+0006 ( 598)		RET		<-		{}
