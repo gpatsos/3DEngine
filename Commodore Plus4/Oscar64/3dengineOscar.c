@@ -1,4 +1,6 @@
 // 3D Engine Oscar64 version 1.0
+// for the Commodore Plus/4
+// programmed with Oscar64
 // release 2026-08-15
 // by Georgios Patsos@George's Channel (youtube)
 // Feel free to optimize the code and upload the optimization to this branch.

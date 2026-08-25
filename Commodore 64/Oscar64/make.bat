@@ -1,0 +1,1 @@
+..\..\oscar64\bin\oscar64 -n 3dengine64.c
