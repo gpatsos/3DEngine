@@ -1,0 +1,199 @@
+10 rem * 3dengine 2.5 patsos/palladino ml routines version for c64 * gp 10/26
+11 forq=52192to52282:readm:pokeq,m:next
+12 forq=52288to52685:readm:pokeq,m:cs=cs+m:next
+13 ifcs<>49258thenprint"errore nei data":end
+14 dimbm(7):m=1:fori=0to7:bm(i)=m:m=m*2:next:ba=57344:ln=28
+15 dp$=chr$(0)+chr$(24)+chr$(60)+chr$(126)
+16 dp$=dp$+chr$(126)+chr$(60)+chr$(24)+chr$(0)
+20 pa=5:bg=0:poke53280,0:poke53281,0:gosub850
+30 input"dot and line color (0-15)";pa
+31 input"background color (0-15)";bg
+32 ifpa<0orpa>15orbg<0orbg>15orpa=bgthenprint"invalid":goto30
+40 print"ok (y/n) ?"
+50 getpa$:ifpa$<>"y"andpa$<>"n"then50
+60 ifpa$="n"then30
+64 poke53280,bg:poke53281,bg:poke646,pa
+65 gosub2000
+70 poke52227,pa*16+bg:fc=0:gosub940
+80 gx=5:gy=150:gz=180:p=3.14159265359/180:cf=1:cd=0
+90 fs=400:dx=160:dy=100:l=16:cp=2:open8,8,12,"vertex,seq,read"
+100 input#8,c,d,h,u:ifu>126thenprint"face too large":end
+101 dimu(u):dimsl(u):dimxi(u):dimx%(c):dimy%(c):dimz%(c)
+110 dimvx%(c):dimvy%(c):fm=fre(0):iffm<0thenfm=fm+65536
+111 fr=int((fm-640)/4):iffr>819thenfr=int((fm-640+8192)/14)
+112 mf=fr:ms=fr*5-4096:ifms<1thenms=1
+113 dimoo%(fr):dimoi%(fr):dimib%(ms)
+120 gosub900:print"loading vertices"
+130 fora=1toc:input#8,x%(a),y%(a),z%(a)
+131 printchr$(19)chr$(17)chr$(17)str$(a)"/"str$(c):next
+140 close8:goto330
+150 geta$:ifa$=""then150
+160 ifa$="x"thengosub850:print"angle x-axis ("+str$(gx)+")":inputgx:gosub910
+170 ifa$="y"thengosub850:print"angle y-axis ("+str$(gy)+")":inputgy:gosub910
+180 ifa$="z"thengosub850:print"angle z-axis ("+str$(gz)+")":inputgz:gosub910
+190 ifa$="v"thengosub850:print"vert pos dy ("+str$(dy)+")":inputdy:gosub910
+200 ifa$="h"thengosub850:print"horiz pos dx ("+str$(dx)+")":inputdx:gosub910
+210 ifa$="c"thengosub850:print"only f ov cp ("+str$(cp)+")":inputcp:gosub910
+220 ifa$="e"thengosub850:print"fisheye fs ("+str$(fs)+")":inputfs:gosub910
+230 ifa$="m"thengosub850:print"zoom l ("+str$(l)+")":inputl:gosub910
+250 ifa$="f"thenfc=1-fc:poke53280,bg+fc*(pa-bg):goto150
+260 ifa$="b"thenprintchr$(147):clr:goto14
+270 ifa$="l"thensys52192:ti$="000000":goto370
+280 ifa$="q"thengosub900:poke53280,14:poke53281,6:poke646,14:end
+290 ifa$="d"thencf=1-cf:cd=1-cd
+300 ifa$="a"thengosub870:goto150
+320 ifa$="i"thengosub820:goto150
+330 sys52192:cx=cos(gx*p):sx=sin(gx*p):cy=cos(gy*p):sy=sin(gy*p):cz=cos(gz*p)
+340 sz=sin(gz*p):zm=.01:fornp=1toc:xp=x%(np)/d*l:yp=y%(np)/d*l:zp=z%(np)/d*l
+350 gosub520:x1=dx+int(xp*fs/(zp+fs)+.5):y1=dy+int(yp*fs/(zp+fs)+.5)
+351 ifabs(zp)>zmthenzm=abs(zp)
+360 vx%(np)=x1:vy%(np)=y1:px=x1:py=y1:gosub920:next
+361 mk=int(30000*l/(zm*d)):gosub960:goto150
+370 poke53280,bg:fc=0:lp=0:t$="searching faces":gosub990
+371 open8,8,12,"planes,seq,read"
+380 i=1:fr=0:ff=0:ii=0:jj=0:ov=0:fora=1toh
+390 ifi=1theninput#8,xp,yp,zp:gosub520:vs=-(zp<0)
+400 input#8,v:u(i)=v:i=i-(v>0):ifv<=0thenfr=fr+1:gosub420:i=1
+410 next:close8:t$="found"+str$(ff)+" faces - sorting"
+411 ifov=1thent$="mem full:"+str$(ff)+" faces"
+412 gosub990:gosub540:goto330
+420 if(frand7)=0thengosub970
+421 ifvs=0thenreturn
+422 ifii+i>4096andjj+i>msorff>=mfthenov=1:a=h:return
+430 ar=0:aj=i-1:forai=1toi-1
+440 ar=ar+(vx%(u(aj))+vx%(u(ai)))*(vy%(u(aj))-vy%(u(ai))):aj=ai:next
+450 ifabs(ar/2)<=cpthenreturn
+460 oo=0:forg=1toi-2:xa=vx%(u(g)):ya=vy%(u(g)):xb=vx%(u(g+1))
+461 yb=vy%(u(g+1)):gosub930
+470 xp=x%(u(g)):yp=y%(u(g)):zp=z%(u(g)):gosub520:oo=oo+zp:next
+480 xp=x%(u(g)):yp=y%(u(g)):zp=z%(u(g)):gosub520:oo=(oo+zp)/g
+490 xa=vx%(u(g)):ya=vy%(u(g)):xb=vx%(u(1)):yb=vy%(u(1)):gosub930:g=i:ff=ff+1
+500 oo%(ff)=oo*mk:ifii+i>4096then514
+501 oi%(ff)=ii+1
+510 ad=40960+2*ii:foryy=1tog-1:vv=u(yy):hh=int(vv/256)
+511 pokead,vv-256*hh:pokead+1,hh:ad=ad+2:next
+512 pokead,0:pokead+1,0:ii=ii+g:return
+514 oi%(ff)=-(jj+1):foryy=1tog-1:ib%(jj+yy)=u(yy):next
+515 ib%(jj+g)=0:jj=jj+g:return
+520 yt=yp:yp=cx*yt-sx*zp:zp=sx*yt+cx*zp:xt=xp:xp=cy*xt+sy*zp:zp=-sy*xt+cy*zp
+530 xt=xp:xp=cz*xt-sz*yp:yp=sz*xt+cz*yp:return
+540 gosub740:gosub980:t$="sorted  ,=points  .=fill":gosub990:gosub960
+550 geta$:ifa$=","thenreturn
+560 ifa$<>"."then550
+570 sys52192:forj=0toff:k=1:ifoi%(j)=0then600
+571 ifoi%(j)<0then575
+572 ad=40960+2*oi%(j)-2:hh=int(ad/256):poke251,ad-256*hh:poke252,hh
+573 poke52730,2*u+2:sys52661:bp=50176
+574 goto580
+575 bp=-oi%(j)
+576 vv=ib%(bp):bp=bp+1:ifvv>0thenu(k)=vv:k=k+1:goto576
+577 goto590
+580 vv=peek(bp)+256*peek(bp+1):bp=bp+2:ifvv>0thenu(k)=vv:k=k+1:goto580
+590 gosub630
+600 nextj
+610 getp$:ifp$=""then610
+620 return
+630 n=k-1:u(k)=u(1):yn=200:yx=0:fori=1ton:w=vy%(u(i))
+640 ifw<ynthenyn=w
+650 ifw>yxthenyx=w
+660 ey=vy%(u(i+1))-w:ex=vx%(u(i+1))-vx%(u(i)):ifey<>0thensl(i)=ex/ey
+670 next:oncd+1gosub950,940:fory=yntoyx-1:k=0:fori=1ton:w=vy%(u(i))
+680 ifw<=y<>(vy%(u(i+1))<=y)thenxi(k)=vx%(u(i))+sl(i)*(y-w):k=k+1
+690 next:forq=0tok-2:fori=0tok-2
+700 ifxi(i)>xi(i+1)thent=xi(i):xi(i)=xi(i+1):xi(i+1)=t
+710 next:next:fori=0tok-1step2:xa=xi(i):ya=y:xb=xi(i+1):yb=y:gosub930:next:next
+712 oncf+1gosub950,940
+720 fori=1ton:xa=vx%(u(i)):ya=vy%(u(i)):xb=vx%(u(i+1))
+721 yb=vy%(u(i+1)):gosub930:next
+730 return
+740 w1=ff
+750 t$=str$(ff)+"->"+str$(w1):ln=12:rw=1:gosub990:ln=28:rw=0
+751 gosub970:ifw1<=0thenreturn
+760 w1=int(w1/2):w2=ff-w1
+770 v=0:forn1=0tow2:w3=n1+w1:ifoo%(n1)<oo%(w3)thengosub800:v=1
+780 next:gosub970:ifv>0then770
+790 goto750
+800 s=oo%(n1):oo%(n1)=oo%(w3):oo%(w3)=s:s=oi%(n1):oi%(n1)=oi%(w3):
+810 oi%(w3)=s:return
+820 gosub900:mm=fre(0):mm=mm+32768*(1-sgn(mm))
+821 print"gx:"+str$(gx)+" dx:"+str$(dx)+" l:"+str$(l)
+830 print"gy:"+str$(gy)+" dy:"+str$(dy)+" fs:"+str$(fs)
+835 print"gz:"+str$(gz)+" cd:"+str$(cd)+" cp:"+str$(cp)
+840 print"free:"+str$(mm)+" faces:"+str$(mf)+" start:"+str$(fm):goto880
+850 gosub900:poke646,pa:fori=0to20:printchr$(13):next
+860 printtab(12)"3d engine 2.5":printchr$(13):return
+870 gosub2000:goto910
+880 geta$:ifa$=""then880
+890 goto910
+900 poke53272,21:poke53265,peek(53265)and223:poke56576,peek(56576)or3
+901 printchr$(147):return
+910 poke56576,peek(56576)and252:poke53272,9:poke53265,peek(53265)or32:return
+920 ifpx<0orpx>319orpy<0orpy>199thenreturn
+921 pq=ba+(py and248)*40+(py and7)+(px and504):pm=bm(7-(px and7))
+922 ifce=0thenpm=255-pm
+923 poke253,pm:poke255,pq/256:poke254,pq-peek(255)*256:sys52264:return
+930 poke52736,xa and255:poke52737,int(xa/256)and255
+931 poke52738,ya and255:poke52739,int(ya/256)and255
+932 poke52740,xb and255:poke52741,int(xb/256)and255
+933 poke52742,yb and255:poke52743,int(yb/256)and255:sys52288:return
+940 poke52273,5:ce=1:forci=0to7:poke52653+ci,bm(7-ci):next:return
+950 poke52273,37:ce=0:forci=0to7:poke52653+ci,255-bm(7-ci):next:return
+960 sv=ce:ifce=0thengosub940
+961 forq=3to4:xa=q:ya=1:xb=q:yb=10:gosub930:px=q:py=14:gosub920
+962 py=15:gosub920:next:ifsv=0thengosub950
+963 return
+970 dd=57640+lp*8:fordk=0to7:pokedd+dk,0:next:lp=lp+1:iflp>2thenlp=0
+971 dd=57640+lp*8:fordk=0to7:pokedd+dk,asc(mid$(dp$,dk+1)):next:return
+980 fordk=57640to57663:pokedk,0:next:return
+990 t$=left$(t$+"                            ",ln)
+991 poke56334,peek(56334)and254:poke1,peek(1)and251
+992 forkc=1toln:sc=asc(mid$(t$,kc,1)):ifsc>63thensc=sc-64
+993 cr=53248+sc*8:bs=57344+rw*320+8*(kc+1)
+994 fordk=0to7:pokebs+dk,peek(cr+dk):next:next
+995 poke1,peek(1)or4:poke56334,peek(56334)or1:return
+1000 data 173,2,221,9,3,141,2,221,173,0,221,41,252,141,0,221,173,24,208
+1001 data 41,1,9,8,141,24,208,173,17,208,9,32,141,17,208,169,16,162,0
+1002 data 157,0,192,157,0,193,157,0,194,157,0,195,202,208,241,169,224,133
+1003 data 255,169,0,133,254,168,145,254
+1004 data 200,208,251,230,255,208,247,96
+1005 data 120,169,5,133,1,160,0,177,254,5,253,145,254,169,7,133,1,88,96
+1006 data 162,0,189,0,206,157,8,206,189,1,206,157,9,206,56,189,4,206,253,0
+1007 data 206,157,12,206,189,5,206,253,1,206,157,13,206,169,0,157,16,206,189
+1008 data 13,206,16,22,56,169,0,253,12,206,157,12,206,169,0,253,13,206,157,13
+1009 data 206,169,255,157,16,206,232,232,224,4,208,187,56,173,12,206,237,14
+1010 data 206,141,20,206,173,13,206,237,15,206,141,21,206,32,63,205,173,8,206
+1011 data 205,4,206,208,25,173,9,206,205,5,206,208,17,173,10,206,205,6,206
+1012 data 208,9,173,11,206,205,7,206,208,1,96,173,20,206,10,141,22,206,173,21
+1013 data 206,42,141,23,206,24,173,22,206,109,14,206,141,24,206,173,23,206
+1014 data 109,15,206,48,29,13,24,206,240,24,56,173,20,206,237,14,206,141,20
+1015 data 206,173,21,206,237,15,206,141,21,206,162,0,32,37,205,56,173,22,206
+1016 data 237,12,206,173,23,206,237,13,206,16,24,24,173,20,206,109,12,206,141
+1017 data 20,206,173,21,206,109,13,206,141,21,206,162,2,32,37,205,76,154,204
+1018 data 189,16,206,208,9,254,8,206,208,3,254,9,206,96,189,8,206,208,3,222,9
+1019 data 206,222,8,206,96,173,11,206,208,104,173,10,206,201,200,176,97,173,9
+1020 data 206,240,11,201,1,208,88,173,8,206,201,64,176,81,173,8,206,41,7,170
+1021 data 189,173,205,133,253,173,10,206,74,74,74,141,24,206,173,8,206,41,248
+1022 data 133,254,173,10,206,41,7,5,254,133,254,173,24,206,74,74,24,109,24
+1023 data 206,133,255,173,9,206,41,1,24,101,255,105,224,133,255,173,24,206,41
+1024 data 3,74,106,106,24,101,254,133,254,165,255,105,0,133,255,76,40,204,96
+1025 data 128,64,32,16,8,4,2,1
+1026 data 120,169,5,133,1,174,250,205,160,0,177,251,153,0,196,200,202,208
+1027 data 247,169,7,133,1,88,96
+2000 gosub900:poke646,pa:printtab(10)"3d engine 2.5 keys":print
+2001 print"x y z rotate (angle in degrees)"
+2002 print"h v   move horizontal / vertical"
+2003 print"m     zoom"
+2004 print"e     fisheye (perspective)"
+2005 print"c     min face area shown"
+2006 print"l     find faces, sort, fill"
+2007 print"      then , = back to points"
+2008 print"           . = fill the faces"
+2009 print"d     invert fill / outline"
+2012 print"f     border: background / dots"
+2013 print"b     restart (new colors)"
+2014 print"i     info    a  this menu"
+2015 print"q     quit"
+2016 print:print"! = ready, waiting for a key"
+2017 print:print"press any key"
+2018 geta$:ifa$=""then2018
+2019 return

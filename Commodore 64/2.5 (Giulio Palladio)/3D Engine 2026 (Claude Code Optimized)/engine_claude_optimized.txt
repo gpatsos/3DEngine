@@ -1,0 +1,26 @@
+480 xp=x%(u(g)):yp=y%(u(g)):zp=z%(u(g)):gosub520:oo=(oo+zp)/g
+
+The division by `g` only affected the last vertex, while the sum of the preceding ones remained an integer.
+The depth key was not an average; it increased with the number of vertices in the face.
+
+770 v=0:forn1=1tow2:w3=n1+w1:ifoo%(n1)<oo%(w3)thengosub800:v=1
+
+The faces are numbered from 1 to `ff`, but the swapping process began at `n1=0`.
+Element 0 (key 0, index 0) was mixed in with the actual faces, and a real face
+could end up in position 0—meaning it would never be drawn.
+
+500 _char 0,1,0,"f:"+str$(ff):fv=fv+g:oo%(ff)=oo*mk:oi%(ff)=ii+1
+
+`oo%` is an array of integers (±32767), so the average was truncated.
+With small `z` values, faces at different depths (such as those on the bumper)
+would end up with the same key, leaving them in a random order. The multiplier `mk` uses the entire range:
+
+130 rm=1:fora=1toc:input#8,x%(a),y%(a),z%(a):_char 0,1,0,str$(a)+"/"+str$(c)
+135 r=x%(a)*x%(a)+y%(a)*y%(a)+z%(a)*z%(a):rm=rm-(r>rm)*(r-rm):next
+140 close8:mk=int(30000/sqr(rm)):goto330
+
+Calculating `mk` at startup (lines 130, 131, 140)
+
+Rotation does not change a vertex's distance from the origin; therefore, |z| ≤ sqrt(x²+y²+z²) for any angle.
+`mk` is calculated only once while reading the vertices, by dividing 30,000 by the maximum distance.
+The maximum is calculated using `rm=rm-(r>rm)*(r-rm)` instead of `if r>rm then rm=r`, because in BASIC 2.0, a false `if` condition would cause the `next` statement on the same line to be skipped.
